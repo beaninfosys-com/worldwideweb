@@ -39,7 +39,7 @@ main() {
     build_web_app
     find . -type f -name "*.sh" -exec dos2unix {} \;
     setup_environment_beta
-    setup_aws
+    #setup_aws
     
     deploy_terraform "$PROFILE" "$ENVIRONMENT" "$REGION" "$PROJECT_NAME" "$domain_name" "$web_app_build_path" "$web_s3_bucket_name" "$certificate_arn"  "$apex_domain_name"
 }
