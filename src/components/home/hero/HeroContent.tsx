@@ -16,7 +16,7 @@ const HeroContent: React.FC<HeroContentProps> = ({ isLoaded }) => {
   
   return (
     <div className="relative z-30">
-      <div className="text-right">
+      <div className="">
         <ScrollAnimator animation="fade-in" threshold={0.1} delay={500}>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-shadow" style={{fontSize:'3.5rem'}}>
             <span className="text-white">Empowering Innovation </span>
@@ -34,7 +34,7 @@ const HeroContent: React.FC<HeroContentProps> = ({ isLoaded }) => {
         </ScrollAnimator>
         
         <ScrollAnimator animation="fade-in" threshold={0.1} delay={1100}>
-          <div className={`flex justify-end space-x-4 ${baseTextClasses} ${loadedTextClasses}`}
+          <div className={`flex justify-center space-x-4 ${baseTextClasses} ${loadedTextClasses}`}
                style={{ transitionDelay: "600ms" }}>
             <MagneticButton className="px-6 py-3 bg-[#3F321F] rounded-full transition-all duration-300 hover:bg-[#2D2417] group">
               <Link to="/about" className="flex items-center text-white font-medium">

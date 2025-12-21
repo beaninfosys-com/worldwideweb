@@ -27,13 +27,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-7 ml-12">
               <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                <Github size={20} />
+                <Github size={20} className="text-[#3F321F]"/>
               </a>
               <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                <Linkedin size={20} />
+                <Linkedin size={20} className="text-[#3F321F]"/>
               </a>
               <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                <Twitter size={20} />
+                <Twitter size={20} className="text-[#3F321F]"/>
               </a>
             </div>
           </div>
@@ -105,7 +105,7 @@ const Footer = () => {
                 {/* Adjusted flag size */}
                 <img src='https://www.beaninfosys.com/img/usa.png' height={40} width={60} style={{ minWidth: '70px' }}/>
                 {/* Increased text color for better visibility against light gray background */}
-                <span className="text-gray-700 text-xs"> 
+                <span className="text-gray-700 text-xs text-left"> 
                   8751 Collin Mckinney Pkwy #201
                   Mckinney, TX, USA 75070
                 </span>
@@ -119,7 +119,7 @@ const Footer = () => {
                 {/* Adjusted flag size */}
                 <img src="https://www.beaninfosys.com/img/india.png" height={40} width={60} style={{ minWidth: '70px' }} />
                 {/* Increased text color for better visibility against light gray background and formatted text for alignment */}
-                <span className="text-gray-700 text-xs">
+                <span className="text-gray-700 text-xs text-left">
                   Workafella, Western Aqua 5th Floor #Suite 139,5th Floor, Whitefield's,Hitech City,Hyderabad, Telangana India 500081
                 </span>
               </div>

@@ -84,7 +84,7 @@ const CareersSection = ({ invertColors = false }: CareersSectionProps) => {
               </div>
 
               <Link 
-                to={`/careers/${job.id}`} 
+                to={`/careers`} 
                 className="inline-flex items-center text-sm font-medium text-[#3F321F] opacity-50 group-hover:opacity-100 transition-all duration-300"
               >
                 View Position

@@ -14,7 +14,7 @@ const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, imageUrl }) => {
       <div 
         className="absolute inset-0 z-0 overflow-hidden"
         style={{
-          backgroundImage: imageUrl ? `url(${imageUrl})` : 'none',
+          backgroundImage:  'lovable-uploads/hero_section.jpg',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

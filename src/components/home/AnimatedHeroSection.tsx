@@ -1,10 +1,31 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef } from 'react';
 import HeroContent from './hero/HeroContent';
 import BubbleAnimation from './hero/BubbleAnimation';
 
 const AnimatedHeroSection: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+
+    // Ensure muted is set before play attempt
+    v.muted = true;
+
+    const tryPlay = async () => {
+      try {
+        await v.play();
+      } catch (e) {
+        // Autoplay might still be blocked until user interaction
+        // Optional: you can add a "Tap to play" UI if needed
+        console.warn("Video autoplay blocked:", e);
+      }
+    };
+
+    tryPlay();
+  }, []);
 
   useEffect(() => {
     // Trigger animations after component mounts
@@ -12,21 +33,22 @@ const AnimatedHeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black">
-      {/* Background image */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(/lovable-uploads/89a4aefd-919e-431d-ae0d-d8592da0dca3.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      ></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden first-section">
+      <video
+        ref={videoRef}
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src="/lovable-uploads/hero_section.mp4"
+        poster="/lovable-uploads/hero_section.jpg"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+      />
       
       {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-black/60 to-black/80">
-      </div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
+
       
       {/* Bubble Animation as a visual element */}
       <BubbleAnimation />
@@ -39,7 +61,7 @@ const AnimatedHeroSection: React.FC = () => {
       
       {/* Content overlay - positioned to the right */}
       <div className="relative z-20 min-h-screen flex items-center justify-end">
-        <div className="p-8 md:p-12 max-w-2xl w-full">
+        <div className="p-8 md:p-12 max-w-2xl md:max-w-4xl w-full">
           <HeroContent isLoaded={isLoaded} />
         </div>
       </div>

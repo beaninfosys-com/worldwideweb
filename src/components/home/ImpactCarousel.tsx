@@ -1,7 +1,7 @@
 import React from 'react';
-import { 
-  Carousel, 
-  CarouselContent, 
+import {
+  Carousel,
+  CarouselContent,
   CarouselItem,
   CarouselPrevious,
   CarouselNext
@@ -45,9 +45,9 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
         </div>
         {cardImage && (
           <div className="mb-4 flex justify-center">
-            <img 
-              src={cardImage} 
-              alt={businessType} 
+            <img
+              src={cardImage}
+              alt={businessType}
               className="w-16 h-16 object-contain"
             />
           </div>
@@ -58,20 +58,20 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
           <h4 className="font-semibold mb-1 text-gray-900">Challenge:</h4>
           <p className="text-gray-700">{challenge}</p>
         </div>
-        
+
         <div>
           <h4 className="font-semibold mb-1 text-gray-900">Our Solution:</h4>
           <p className="text-gray-700">{solution}</p>
         </div>
-        
+
         <div className="flex items-start gap-2">
           <div>
             <h4 className="font-semibold mb-1 text-gray-900">Impact:</h4>
             <p className="text-gray-700">{impact}</p>
           </div>
         </div>
-        
-        {quote && (
+
+        {/* {quote && (
           <div>
             <Separator className="my-4" />
             <div className="italic text-gray-800 text-sm">"{quote}"</div>
@@ -95,7 +95,7 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
               </div>
             )}
           </div>
-        )}
+        )} */}
       </CardContent>
     </Card>
   );
@@ -105,9 +105,9 @@ const ImpactCarousel = () => {
   const impactCards: ImpactCardProps[] = [
     {
       businessType: "Tech Startup",
-      challenge: "Needed skilled data analysts fast",
-      solution: "Matched 3 certified analysts in 48 hours",
-      impact: "Reduced backlog by 70% in 3 months",
+      challenge: "Needed skilled data analysts with a very quick turnaround",
+      solution: "Matched 3 certified analysts within 48 hours and scheduled interviews",
+      impact: "Reduced backlog by 50% within a span of one month",
       quote: "The quality of talent we received exceeded our expectations and transformed our data operations.",
       author: "Sarah Chen",
       authorRole: "CTO, InnovateTech",
@@ -129,7 +129,7 @@ const ImpactCarousel = () => {
     },
     {
       businessType: "Financial Services Firm",
-      challenge: "Struggling to find qualified project managers",
+      challenge: "Struggling to find qualified project managers with domain knowledge",
       solution: "Connected them with 2 PMP-certified professionals with fintech experience",
       impact: "Completed digital transformation 2 months ahead of schedule",
       quote: "The project managers they provided had exactly the industry knowledge we needed.",
@@ -148,7 +148,8 @@ const ImpactCarousel = () => {
       author: "Alex Thompson",
       authorRole: "Product Director, ShopEase",
       authorImage: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
-      icon: <FaShoppingCart size={24} />
+      icon: <FaShoppingCart size={24} />,
+      cardImage: "/lovable-uploads/shopping-cart.png"
     }
   ];
 
