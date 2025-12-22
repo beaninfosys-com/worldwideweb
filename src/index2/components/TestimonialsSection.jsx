@@ -1,68 +1,54 @@
 import React from 'react';
 import styles from './TestimonialsSection.module.css';
-import sarahImage from '../../assets/index2/testimonial_sarah.png';
-import michaelImage from '../../assets/index2/testimonial_michael.png';
-import michelleImage from '../../assets/index2/testimonial_michelle.png';
-import robImage from '../../assets/index2/testimonial_rob.png';
-import alexImage from '../../assets/index2/testimonial_alex.png';
+// Using industry-relevant HD images instead of person photos
+const voiceAIImage = 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
+const dataAnalyticsImage = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
+const healthcareImage = 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
+const fintechImage = 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
+const ecommerceImage = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
 
 const TestimonialsSection = () => {
-    // Data
+    // Data - Industry-focused testimonials based on ImpactCarousel structure
     const testimonials = [
         {
             id: 1,
-            image: robImage,
-            headline: '"The AI solution delivered was magic—a flawless voice AI engine."',
-            info: { title: "CEO, S7 Systems", name: "Rob Klaren" },
-            details: [
-                { label: "Challenge:", text: "Building an interactive voice AI engine" },
-                { label: "Solution:", text: "Open-source multilingual AI core" },
-                { label: "Impact:", text: "Customer resolution time -60%" }
-            ]
+            businessType: "Voice AI Technology",
+            image: voiceAIImage,
+            challenge: "Building a sophisticated interactive voice AI engine for customer service automation",
+            solution: "Implemented open-source multilingual AI core with advanced natural language processing",
+            impact: "Achieved 60% reduction in customer resolution time and improved user satisfaction scores"
         },
         {
             id: 2,
-            image: sarahImage,
-            headline: '"Their talent transformed our data operations beyond expectations."',
-            info: { title: "CTO, InnovateTech", name: "Sarah Chen" },
-            details: [
-                { label: "Challenge:", text: "Needed data analysts fast" },
-                { label: "Solution:", text: "Matched 3 certified analysts in 48h" },
-                { label: "Impact:", text: "Reduced backlog by 70%" }
-            ]
+            businessType: "Data Analytics Firm",
+            image: dataAnalyticsImage,
+            challenge: "Needed skilled data analysts with expertise in machine learning and quick turnaround time",
+            solution: "Matched 3 certified analysts within 48 hours and facilitated immediate project integration",
+            impact: "Reduced data processing backlog by 70% and improved analytical insights delivery"
         },
         {
             id: 3,
-            image: michaelImage,
-            headline: '"Seamless collaboration during a challenging infrastructure upgrade."',
-            info: { title: "CISO, MediCare Systems", name: "Dr. James Wilson" },
-            details: [
-                { label: "Challenge:", text: "Security specialists for expansion" },
-                { label: "Solution:", text: "Deployed 5 cybersecurity experts" },
-                { label: "Impact:", text: "Zero security incidents" }
-            ]
+            businessType: "Healthcare Network",
+            image: healthcareImage,
+            challenge: "Required specialized IT security experts during critical system expansion phase",
+            solution: "Deployed a team of 5 certified cybersecurity professionals with healthcare compliance experience",
+            impact: "Maintained zero security incidents during critical system transition and expansion"
         },
         {
             id: 4,
-            image: michelleImage,
-            headline: '"The project managers had exactly the industry knowledge we needed."',
-            info: { title: "COO, FinancePlus", name: "Michelle Rodriguez" },
-            details: [
-                { label: "Challenge:", text: "Finding fintech PMs" },
-                { label: "Solution:", text: "2 PMP-certified senior PMs" },
-                { label: "Impact:", text: "Transformation ahead of schedule" }
-            ]
+            businessType: "Financial Services",
+            image: fintechImage,
+            challenge: "Finding qualified project managers with deep fintech domain knowledge and PMP certification",
+            solution: "Connected them with 2 PMP-certified senior project managers experienced in financial services",
+            impact: "Completed comprehensive digital transformation project 2 months ahead of original schedule"
         },
         {
             id: 5,
-            image: alexImage,
-            headline: '"They didn\'t just fill positions – they contributed to our bottom line."',
-            info: { title: "Product Director, ShopEase", name: "Alex Thompson" },
-            details: [
-                { label: "Challenge:", text: "Urgent need for UX designers" },
-                { label: "Solution:", text: "Placed 4 senior specialists" },
-                { label: "Impact:", text: "Conversion rate +32%" }
-            ]
+            businessType: "E-Commerce Platform",
+            image: ecommerceImage,
+            challenge: "Urgent requirement for experienced UX designers during major product redesign initiative",
+            solution: "Placed 4 senior UX specialists with e-commerce expertise within one week of engagement",
+            impact: "New design implementation resulted in 32% increase in user conversion rates"
         }
     ];
 
@@ -71,7 +57,7 @@ const TestimonialsSection = () => {
 
     return (
         <div className={styles.sectionContainer}>
-            <h2 className={styles.sectionTitle}>Testimonials</h2>
+            <h2 className={styles.headline}>Success Stories</h2>
 
             <div className={styles.marqueeViewport}>
                 <div className={styles.marqueeTrack}>
@@ -82,25 +68,30 @@ const TestimonialsSection = () => {
                         >
                             <div className={styles.card}>
                                 <div className={styles.imageContainer}>
-                                    <img src={item.image} alt={item.info.name} className={styles.personImage} />
+                                    <img src={item.image} alt={item.businessType} className={styles.personImage} />
                                 </div>
 
-                                <div className={styles.personInfo}>
-                                    <div className={styles.personName}>{item.info.name}</div>
-                                    <div className={styles.personTitle}>{item.info.title}</div>
+                                {/* Business Type - Prominently displayed */}
+                                <div className={styles.businessType}>
+                                    {item.businessType}
                                 </div>
 
-                                <blockquote className={styles.headline}>
-                                    {item.headline}
-                                </blockquote>
+                                {/* Challenge, Solution, Impact - Clean format */}
+                                <div className={styles.detailsContainer}>
+                                    <div className={styles.detailSection}>
+                                        <h4 className={styles.sectionTitle}>Challenge:</h4>
+                                        <p className={styles.sectionText}>{item.challenge}</p>
+                                    </div>
 
-                                <div className={styles.detailsGrid}>
-                                    {item.details.map((detail, idx) => (
-                                        <div key={idx} className={styles.detailItem}>
-                                            <span className={styles.detailLabel}>{detail.label}</span>
-                                            <span className={styles.detailText}>{detail.text}</span>
-                                        </div>
-                                    ))}
+                                    <div className={styles.detailSection}>
+                                        <h4 className={styles.sectionTitle}>Solution:</h4>
+                                        <p className={styles.sectionText}>{item.solution}</p>
+                                    </div>
+
+                                    <div className={styles.detailSection}>
+                                        <h4 className={styles.sectionTitle}>Impact:</h4>
+                                        <p className={styles.sectionText}>{item.impact}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

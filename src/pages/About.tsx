@@ -80,9 +80,10 @@ const About = () => {
 
   return (
     <>
-      <PageHero 
-        title="About Bean Infosystems" 
+      <PageHero
+        title="About Bean Infosystems"
         subtitle="Driving digital transformation through innovation and expertise"
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Company Overview */}

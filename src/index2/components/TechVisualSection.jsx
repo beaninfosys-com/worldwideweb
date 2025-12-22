@@ -66,10 +66,10 @@ const TechVisualSection = () => {
 
             <div className={styles.statsGrid}>
                 {[
-                    { number: "50+", label: "Industries" },
-                    { number: "225+", label: "Projects" },
-                    { number: "100%", label: "Satisfaction" },
-                    { number: "1200+", label: "Clients" }
+                    { number: "320+", label: "Projects Completed" },
+                    { number: "150+", label: "Happy Clients" },
+                    { number: "110", label: "Team Members" },
+                    { number: "12", label: "Years of Experience" }
                 ].map((stat, index) => (
                     <div key={index} className={styles.statItem} style={{ transitionDelay: `${index * 0.1}s` }}>
                         <span className={styles.statNumber}>{stat.number}</span>

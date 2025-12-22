@@ -11,16 +11,21 @@ const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, imageUrl }) => {
   return (
     <div className="relative pt-24 pb-16 md:pt-32 md:pb-24">
       {/* Background with overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 overflow-hidden"
         style={{
-          backgroundImage:  'lovable-uploads/hero_section.jpg',
+          backgroundImage: imageUrl ? `url(${imageUrl})` : 'url(lovable-uploads/hero_section.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         {/* Dark gradient overlay */}
-        <div className={`absolute inset-0 ${imageUrl ? 'bg-background/80' : 'hero-gradient'}`}></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundColor: imageUrl ? 'rgba(0,0,0,0.6)' : undefined
+          }}
+        ></div>
         
         {/* Extra visual elements - Grid */}
         <div 
@@ -32,7 +37,7 @@ const PageHero: React.FC<PageHeroProps> = ({ title, subtitle, imageUrl }) => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-up text-[#6F4E37]">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in-up" style={{ color: 'rgb(234 176 135)' }}>
             {title}
           </h1>
           {subtitle && (

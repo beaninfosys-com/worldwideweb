@@ -5,27 +5,26 @@ import AIPillSection from '../components/AIPillSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import CareerSection from '../components/CareerSection';
 import CTASection from '../components/CTASection';
+import ClientLogosSection from '@/components/home/ClientLogosSection';
 import '../App.css';
 import '../index.css'; // Import global styles for index2
-const bgImage1 = '/beans_hybrid.png';
 
 function Index2Home() {
   return (
     <div className="index2-home">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <img
-          src={bgImage1}
-          alt="Hero Background"
-          className="hero-bg-image"
-          onError={(e) => console.log('Image failed to load:', bgImage1)}
-          onLoad={() => console.log('Image loaded successfully:', bgImage1)}
-        />
-        <div className="hero-overlay" />
+      {/* Clean Hero Section */}
+      <div className="hero-container">
+        <img src="/beans_hybrid.png" alt="Hero Background" className="hero-bg" />
+        <div className="hero-overlay"></div>
         <div className="hero-content">
-          <HeroCard currentImage={bgImage1} />
+          <HeroCard currentImage="/beans_hybrid.png" />
         </div>
-      </section>
+      </div>
+
+      {/* Client Logos Section */}
+      <div className="bg-[#f9fafb]">
+        <ClientLogosSection />
+      </div>
 
       {/* Other Sections */}
       <TechVisualSection />

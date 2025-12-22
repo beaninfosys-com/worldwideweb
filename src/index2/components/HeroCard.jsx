@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import logo from '../../assets/index2/logo.png';
 const logo = '/logo.png';
 
 export default function HeroCard() {

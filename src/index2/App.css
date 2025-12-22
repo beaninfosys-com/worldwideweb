@@ -41,22 +41,20 @@ body {
 
 /* Index2 Home Page Styles */
 .index2-home {
-  min-height: 100vh;
   background-color: #000;
   color: #fff;
-  position: relative;
+  min-height: 100vh;
 }
 
-.hero-section {
+/* Clean Hero Section */
+.hero-container {
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-.hero-bg-image {
+.hero-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,7 +62,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero-overlay {
@@ -74,8 +72,17 @@ body {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at center, transparent 0%, rgba(26, 18, 11, 0.4) 100%);
-  pointer-events: none;
-  z-index: -1;
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
 
 .hero-content {
