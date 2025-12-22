@@ -6,23 +6,28 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import CareerSection from '../components/CareerSection';
 import CTASection from '../components/CTASection';
 import '../App.css';
-import bgImage1 from '../../assets/index2/beans_hybrid.png';
+import '../index.css'; // Import global styles for index2
+const bgImage1 = '/beans_hybrid.png';
 
 function Index2Home() {
   return (
-    <div className="app-main">
-      <div className="app-container">
-        <div
-          className="background-layer"
-          style={{
-            backgroundImage: `url(${bgImage1})`,
-            opacity: 1
-          }}
+    <div className="index2-home">
+      {/* Hero Section */}
+      <section className="hero-section">
+        <img
+          src={bgImage1}
+          alt="Hero Background"
+          className="hero-bg-image"
+          onError={(e) => console.log('Image failed to load:', bgImage1)}
+          onLoad={() => console.log('Image loaded successfully:', bgImage1)}
         />
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <HeroCard currentImage={bgImage1} />
+        </div>
+      </section>
 
-        <div className="overlay"></div>
-        <HeroCard currentImage={bgImage1} />
-      </div>
+      {/* Other Sections */}
       <TechVisualSection />
       <AIPillSection />
       <TestimonialsSection />

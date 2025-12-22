@@ -28,7 +28,7 @@ import Training from "./pages/Training";
 import SocialImpact from "./pages/SocialImpact";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Index2Routes from "./index2/Index2Routes";
+import Index2Home from "./index2/pages/Index2Home";
 
 // Import styles
 import "./App.css";
@@ -52,7 +52,8 @@ const App = () => {
           <PageLoader />
           <ScrollProgress />
           <Routes>
-            <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+            <Route path="/" element={<MainLayout><Index2Home /></MainLayout>} />
+            <Route path="/home" element={<MainLayout><Home /></MainLayout>} />
             <Route path="/about" element={<MainLayout><About /></MainLayout>} />
             <Route path="/services" element={<MainLayout><Services /></MainLayout>} />
             <Route path="/services/ai-solutions" element={<MainLayout><AiSolutions /></MainLayout>} />
@@ -69,7 +70,6 @@ const App = () => {
             <Route path="/training" element={<MainLayout><Training /></MainLayout>} />
             <Route path="/social-impact" element={<MainLayout><SocialImpact /></MainLayout>} />
             <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} />
-            <Route path="/index2/*" element={<Index2Routes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<MainLayout><NotFound /></MainLayout>} />
           </Routes>
