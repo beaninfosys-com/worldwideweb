@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+    /* User requested white background */
+    /* Espresso Brown */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+}
+
+.contentWrapper {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.headline {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.2;
+    font-weight: 500;
+    /* Textured Text Effect */
+    color: transparent;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.button {
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 160px;
+}
+
+/* Call Button (Outline) - Adapted for White BG */
+.callButton {
+    background: transparent;
+    border: 2px solid #3B2416;
+    /* Espresso border */
+    color: #3B2416;
+    /* Espresso text */
+}
+
+.callButton:hover {
+    background: rgba(59, 36, 22, 0.05);
+    /* Light espresso tint */
+    transform: translateY(-2px);
+}
+
+/* Demo Button (Solid Accent) */
+.demoButton {
+    background: #C19A6B;
+    /* Latte Gold */
+    border: 2px solid #C19A6B;
+    color: #ffffff;
+}
+
+.demoButton:hover {
+    background: #a8855a;
+    border-color: #a8855a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(193, 154, 107, 0.3);
+}
+
+@media (max-width: 600px) {
+    .buttonGroup {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

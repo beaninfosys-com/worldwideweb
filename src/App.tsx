@@ -28,6 +28,7 @@ import Training from "./pages/Training";
 import SocialImpact from "./pages/SocialImpact";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Index2Routes from "./index2/Index2Routes";
 
 // Import styles
 import "./App.css";
@@ -68,6 +69,7 @@ const App = () => {
             <Route path="/training" element={<MainLayout><Training /></MainLayout>} />
             <Route path="/social-impact" element={<MainLayout><SocialImpact /></MainLayout>} />
             <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} />
+            <Route path="/index2/*" element={<Index2Routes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<MainLayout><NotFound /></MainLayout>} />
           </Routes>

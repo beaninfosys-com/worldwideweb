@@ -1,0 +1,299 @@
+.section {
+    padding: 4rem 4rem;
+    background: linear-gradient(to bottom, #ffffff 0%, #C19A6B 50%, #3B2416 100%);
+    color: #fff;
+    overflow: hidden;
+    font-family: 'Outfit', sans-serif;
+}
+
+.textColumn {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.visible .textColumn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.imageColumn {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+
+.visible .imageColumn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Layout Container */
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0;
+    gap: 0;
+    height: 100%;
+}
+
+.imageColumn {
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.textColumn {
+    flex: 0 0 50%;
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+.headline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.description {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.6;
+    color: #f5f5f5;
+    margin: 0;
+    max-width: 90%;
+}
+
+/* Image Styles */
+.imageWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.pillImage {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+    filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.2));
+}
+
+/* Products Section */
+.productsSection {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.productsHeading {
+    font-size: clamp(1.8rem, 3.6vw, 2rem);
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.productsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.productItem {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.productItem:last-child {
+    border-bottom: none;
+}
+
+.productNumber {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #C19A6B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #C19A6B;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.productContent {
+    flex: 1;
+}
+
+.productTitle {
+    font-size: clamp(0.95rem, 1.9vw, 1.05rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 0.25rem 0;
+}
+
+.productDescription {
+    font-size: clamp(0.85rem, 1.7vw, 0.95rem);
+    line-height: 1.6;
+    color: #f5f5f5;
+    margin: 0;
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .section {
+        padding: 6rem 3rem;
+    }
+
+    .textColumn {
+        padding: 0 3rem;
+    }
+
+    .pillImage {
+        max-width: 500px;
+    }
+
+    .productsSection {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .contentContainer {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .textColumn,
+    .imageColumn {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .textColumn {
+        padding: 0 2rem;
+        order: 2;
+    }
+
+    .imageColumn {
+        order: 1;
+        min-height: 300px;
+    }
+
+    .description {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .pillImage {
+        max-width: 400px;
+    }
+
+    .productsSection {
+        padding: 0 2rem;
+    }
+
+    .productNumber {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1.5rem;
+    }
+
+    .textColumn {
+        padding: 0 1rem;
+    }
+
+    .imageColumn {
+        min-height: 250px;
+    }
+
+    .pillImage {
+        max-width: 320px;
+    }
+
+    .productsSection {
+        padding: 0 1.5rem;
+    }
+
+    .productNumber {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .imageColumn {
+        min-height: 200px;
+    }
+
+    .pillImage {
+        max-width: 280px;
+    }
+
+    .productsSection {
+        padding: 0 1rem;
+        margin: 3rem auto 0;
+    }
+
+    .productItem {
+        gap: 1rem;
+    }
+
+    .productNumber {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+    }
+}

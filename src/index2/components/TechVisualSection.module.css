@@ -1,0 +1,242 @@
+.section {
+    padding: 4rem 4rem;
+    background: #fff;
+    color: #1a1a1a;
+    overflow: hidden;
+    font-family: 'Outfit', sans-serif;
+}
+
+.textColumn {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.visible .textColumn {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.visualColumn {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+
+.visible .visualColumn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.statItem {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.visible .statItem {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Layout Container */
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0;
+    gap: 0;
+    height: 100%;
+}
+
+.textColumn {
+    flex: 0 0 50%;
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4rem;
+    box-sizing: border-box;
+}
+
+.visualColumn {
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.headline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+.description {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    max-width: 90%;
+}
+
+/* SVG Shape Styles */
+.visualWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.svgShape {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.svgText {
+    font-size: 1100px;
+    font-weight: 950;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Remove unused classes: .visualBackground */
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    text-align: center;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statNumber {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #000;
+}
+
+.statLabel {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .section {
+        padding: 6rem 3rem;
+    }
+
+    .textColumn {
+        padding: 0 3rem;
+    }
+
+    .svgText {
+        font-size: 900px;
+    }
+}
+
+@media (max-width: 968px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .contentContainer {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .textColumn,
+    .visualColumn {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .textColumn {
+        padding: 0 2rem;
+        order: 2;
+    }
+
+    .visualColumn {
+        order: 1;
+        min-height: 300px;
+    }
+
+    .description {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .svgText {
+        font-size: 700px;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 3rem 1.5rem;
+    }
+
+    .textColumn {
+        padding: 0 1rem;
+    }
+
+    .visualColumn {
+        min-height: 250px;
+    }
+
+    .svgText {
+        font-size: 500px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 3rem auto 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .visualColumn {
+        min-height: 200px;
+    }
+
+    .svgText {
+        font-size: 400px;
+    }
+}

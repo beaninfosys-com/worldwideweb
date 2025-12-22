@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.sectionContainer {
+    width: 100%;
+    padding: 80px 4rem;
+    padding: 80px 4rem;
+    /* Diagonal curved gradient: Top-Left White -> Bottom-Right Brown */
+    background: radial-gradient(ellipse at top left, #ffffff 0%, #ffffff 40%, #C19A6B 75%, #3B2416 100%);
+    /* Light gray background removed in favor of gradient */
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* Stack title and content */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Left Column - Job List */
+.leftColumn {
+    flex: 0 0 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Clear separation */
+    /* Removed fixed height and scroll for full visibility */
+    padding: 10px;
+    /* Basic padding */
+}
+
+/* Right Column - Image */
+.rightColumn {
+    flex: 0 0 65%;
+    /* Fixed 65% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hiringImage {
+    width: 100%;
+    max-width: 800px;
+    /* Increased to fill 65% space */
+    height: auto;
+    object-fit: contain;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    /* Increased margin */
+    text-align: center;
+    width: 100%;
+    /* Match AI Services Headline Style */
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Glassomorphic Job Card */
+.jobCard {
+    background: rgba(255, 255, 255, 0.85);
+    /* High visibility background */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    padding: 24px 28px;
+    /* Generous padding for content */
+    margin-bottom: 5px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        0 10px 15px rgba(0, 0, 0, 0.1);
+    /* Visible but contained shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jobCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    /* Slightly thicker accent */
+    height: 100%;
+    background: #C19A6B;
+    /* Coffee Gold accent */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.jobCard:hover {
+    transform: translateY(-5px);
+    /* Clear lift effect */
+    background: #ffffff;
+    /* Solid white on hover for max contrast */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.jobCard:hover::before {
+    opacity: 1;
+}
+
+.jobInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    /* Tighter lines */
+}
+
+.jobType {
+    font-size: 10px;
+    /* Smaller font */
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #C19A6B;
+    font-weight: 700;
+}
+
+.jobTitle {
+    font-size: 1rem;
+    /* Smaller font */
+    font-weight: 600;
+    color: #3B2416;
+}
+
+.jobMeta {
+    display: flex;
+    gap: 8px;
+    /* Tighter gap */
+    font-size: 0.8rem;
+    /* Smaller font */
+    color: #555;
+    margin-top: 2px;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrowIcon {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: #3B2416;
+    font-weight: bold;
+}
+
+.jobCard:hover .arrowIcon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Right Column - Image */
+.rightColumn {
+    flex: 0 0 65%;
+    /* Fixed 65% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hiringImage {
+    width: 100%;
+    max-width: 800px;
+    /* Increased to fill 65% space */
+    height: auto;
+    object-fit: contain;
+    /* subtle filter to blend slightly better if needed, but keeping mostly raw */
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .contentWrapper {
+        flex-direction: column-reverse;
+        /* Image on top on mobile? or Bottom? User didn't specify, sticking to stack */
+        gap: 3rem;
+    }
+
+    .rightColumn {
+        width: 100%;
+    }
+
+    .leftColumn {
+        width: 100%;
+    }
+}
