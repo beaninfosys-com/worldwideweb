@@ -339,6 +339,56 @@ body {
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
 }
 
+/* Scroll Animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scroll-reverse 40s linear infinite;
+}
+
+.animate-scroll:hover,
+.animate-scroll-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Job Roles Loop Animation */
+@keyframes job-roles-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.job-roles-loop {
+  animation: job-roles-loop 120s linear infinite;
+}
+
+.job-roles-loop:hover {
+  animation-play-state: paused;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .glassPill {

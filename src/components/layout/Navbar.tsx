@@ -81,13 +81,17 @@ const Navbar = () => {
                   link.children ? (
                     <div key={link.name} className="relative group">
                       <div className="flex items-center">
-                        <Link 
+                        <Link
                           to={link.path}
-                          className={`uppercase text-base tracking-wide transition-colors ${
-                            location.pathname === link.path 
-                              ? 'text-[#3F321F] font-medium border-b border-[#3F321F]' 
-                              : 'text-black hover:text-[#3F321F]'
+                          className={`inline-flex items-center px-4 py-2 rounded-full uppercase text-base tracking-wide transition-all duration-300 ${
+                            location.pathname === link.path
+                              ? 'text-white font-medium bg-bean/80 backdrop-blur-md shadow-2xl shadow-bean/30 transform hover:scale-105'
+                              : 'text-bean bg-white/10 backdrop-blur-md border border-transparent hover:bg-white/20 hover:shadow-xl hover:shadow-bean/20 hover:transform hover:scale-105'
                           }`}
+                          style={{
+                            backdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)',
+                            WebkitBackdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)'
+                          }}
                         >
                           {link.name}
                         </Link>
@@ -108,14 +112,18 @@ const Navbar = () => {
                       </div>
                     </div>
                   ) : (
-                    <Link 
+                    <Link
                       key={link.name}
                       to={link.path}
-                      className={`uppercase text-base tracking-wide transition-colors ${
-                        location.pathname === link.path 
-                          ? 'text-[#3F321F] font-medium border-b border-[#3F321F]' 
-                          : 'text-black hover:text-[#3F321F]'
+                      className={`inline-flex items-center px-4 py-2 rounded-full uppercase text-base tracking-wide transition-all duration-300 ${
+                        location.pathname === link.path
+                          ? 'text-white font-medium bg-bean/80 backdrop-blur-md shadow-2xl shadow-bean/30 transform hover:scale-105'
+                          : 'text-bean bg-white/10 backdrop-blur-md border border-transparent hover:bg-white/20 hover:shadow-xl hover:shadow-bean/20 hover:transform hover:scale-105'
                       }`}
+                      style={{
+                        backdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)',
+                        WebkitBackdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)'
+                      }}
                     >
                       {link.name}
                     </Link>
@@ -141,8 +149,12 @@ const Navbar = () => {
               {navLinks.map((link) => 
                 link.children ? (
                   <div key={link.name} className="border-b border-gray-200 pb-2">
-                    <button 
-                      className="flex items-center justify-between w-full py-2 text-gray-900 uppercase text-sm"
+                    <button
+                      className="flex items-center justify-between w-full px-4 py-3 mb-2 uppercase text-sm rounded-full transition-all duration-300 text-bean bg-white/10 backdrop-blur-md border border-transparent hover:bg-white/20 hover:shadow-xl hover:shadow-bean/20 hover:transform hover:scale-105"
+                      style={{
+                        backdropFilter: 'blur(8px)',
+                        WebkitBackdropFilter: 'blur(8px)'
+                      }}
                       onClick={() => toggleDropdown(link.name)}
                     >
                       <span>{link.name}</span>
@@ -168,14 +180,18 @@ const Navbar = () => {
                     )}
                   </div>
                 ) : (
-                  <Link 
+                  <Link
                     key={link.name}
                     to={link.path}
-                    className={`block py-2 uppercase text-sm border-b border-gray-200 ${
-                      location.pathname === link.path 
-                        ? 'text-[#3F321F] font-medium' 
-                        : 'text-gray-700 hover:text-[#3F321F]'
+                    className={`inline-flex items-center px-4 py-3 mb-2 uppercase text-sm rounded-full transition-all duration-300 ${
+                      location.pathname === link.path
+                        ? 'text-white font-medium bg-bean/80 backdrop-blur-md shadow-2xl shadow-bean/30 transform hover:scale-105'
+                        : 'text-bean bg-white/10 backdrop-blur-md border border-transparent hover:bg-white/20 hover:shadow-xl hover:shadow-bean/20 hover:transform hover:scale-105'
                     }`}
+                    style={{
+                      backdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)',
+                      WebkitBackdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)'
+                    }}
                   >
                     {link.name}
                   </Link>

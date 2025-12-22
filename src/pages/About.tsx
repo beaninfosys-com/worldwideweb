@@ -80,50 +80,282 @@ const About = () => {
 
   return (
     <>
-      <PageHero
-        title="About Bean Infosystems"
+      <PageHero 
+        title="About Bean Infosystems" 
         subtitle="Driving digital transformation through innovation and expertise"
         imageUrl="/lovable-uploads/background_about.png"
       />
 
-      {/* Company Overview */}
-      <PageSection>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Our Story</h2>
-            <p className="text-foreground/70 mb-4">
+      {/* Company Overview - Modern Split Design */}
+      <div className="relative overflow-hidden bg-gray-50">
+        <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[600px]">
+            {/* Left Side - Content */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-bean/10 border border-bean/20">
+                  <span className="text-sm font-medium text-bean">Our Journey</span>
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                  Transforming Ideas into
+                  <span className="block text-bean">Digital Reality</span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <div className="relative">
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-bean rounded-full"></div>
+                  <div className="pl-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Foundation</h3>
+                    <p className="text-gray-600 leading-relaxed">
               Founded in 2016, Bean Infosystems has evolved from a small development team into a global technology partner. Our growth is driven by a commitment to innovation, quality and measurable results.
             </p>
-            <p className="text-foreground/70 mb-4">
-              We have built a strong reputation for delivering high-performance software solutions that address complex business challenges. As our capabilities expanded, we incorporated AI-driven technologies, strategic consulting and digital advisory services, enabling organizations to navigate transformation with confidence.
-            </p>
-            <p className="text-foreground/70">
-              Today, we continue to advance our expertise and leverage emerging technologies to help clients stay competitive in a rapidly evolving digital landscape.
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-bean rounded-full"></div>
+                  <div className="pl-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Evolution</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      We have built a strong reputation for delivering high-performance software solutions that address complex business challenges. As our capabilities expanded, we incorporated AI-driven technologies, strategic consulting and digital advisory services.
             </p>
           </div>
+                </div>
+
           <div className="relative">
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <div className="aspect-square bg-gradient-to-br from-bean/20 to-bean/5 flex items-center justify-center">
-                <div className="relative w-3/4 aspect-square">
-                  <div className="absolute top-0 left-0 w-full h-full bg-card rounded-lg transform rotate-6 shadow-lg"></div>
-                  <div className="absolute top-0 left-0 w-full h-full bg-card rounded-lg transform -rotate-3 shadow-lg"></div>
-                  <div className="relative w-full h-full bg-card rounded-lg shadow-lg p-6 flex flex-col justify-center">
-                    <div className="text-bean mb-4">
-                      <Users size={40} color='black'/>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2">Our Mission</h3>
-                    <p className="text-foreground/70">
-                      To empower businesses through innovative digital solutions that drive growth, efficiency and competitive advantage in an increasingly connected world.
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-bean rounded-full"></div>
+                  <div className="pl-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Future</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Today, we continue to advance our expertise and leverage emerging technologies to help clients stay competitive in a rapidly evolving digital landscape.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[120%] max-h-[120%] bg-bean/5 rounded-full blur-3xl"></div>
+
+            {/* Right Side - Pure Visual Elements */}
+            <div className="relative">
+              <div className="relative h-[500px] lg:h-[600px]">
+                {/* Floating Visual Elements */}
+                <div className="absolute top-8 right-8 w-24 h-24 bg-bean/20 rounded-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 ease-out shadow-lg"></div>
+
+                <div className="absolute top-1/4 left-8 w-32 h-32 bg-bean/10 rounded-full transform -rotate-12 hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"></div>
+
+                <div className="absolute bottom-8 right-1/4 w-20 h-20 bg-bean/15 rounded-lg transform rotate-45 hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"></div>
+
+                <div className="absolute bottom-1/4 left-12 w-28 h-28 bg-bean/25 rounded-3xl transform -rotate-6 hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"></div>
+
+                {/* Central Visual Element */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-bean rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 ease-out">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <Rocket className="w-16 h-16 text-white" />
+                  </div>
+                </div>
+
+                {/* Background Pattern */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(193,154,107,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(193,154,107,0.05)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+
+                {/* Animated Background Elements */}
+                <div className="absolute top-1/3 right-1/3 w-16 h-16 bg-bean/20 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-bean/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute top-2/3 right-1/4 w-8 h-8 bg-bean/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+              </div>
+            </div>
           </div>
         </div>
-      </PageSection>
+      </div>
+
+      {/* Powering Talent Across Industries */}
+      <div className="relative overflow-hidden bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Powering Talent Across
+              <span className="block text-bean">Industries</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We connect top talent with leading organizations across diverse industries, delivering exceptional results through our comprehensive staffing solutions.
+            </p>
+          </div>
+
+          {/* Job Roles Images - Top Section */}
+          <div className="mb-16">
+            <div className="relative">
+              <div className="job-roles-container overflow-x-auto scrollbar-hide pb-16">
+                {/* First set of job role images */}
+
+                {/* Duplicate for seamless loop */}
+                <div className="flex space-x-6 min-w-max">
+                  <div className="flex flex-col items-center mt-0">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Full Stack Developer" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Data Scientist" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-0">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="UX/UI Designer" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="DevOps Engineer" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-0">
+                    <div className="w-30 h-[400px] bg-gradient-to-b from-bean/20 to-bean/10 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Project Manager" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="AI/ML Engineer" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-0">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Cyber Security" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Business Analyst" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-0">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="QA Engineer" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Cloud Architect" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Arrow Controls */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4 z-10">
+                <button
+                  className="bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+                  onClick={() => {
+                    const container = document.querySelector('.job-roles-container');
+                    if (container) {
+                      container.scrollLeft -= 300;
+                    }
+                  }}
+                >
+                  <svg className="w-6 h-6 text-bean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  className="bg-white/90 hover:bg-white rounded-full p-3 shadow-lg transition-all duration-200 hover:scale-110"
+                  onClick={() => {
+                    const container = document.querySelector('.job-roles-container');
+                    if (container) {
+                      container.scrollLeft += 300;
+                    }
+                  }}
+                >
+                  <svg className="w-6 h-6 text-bean" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Industries Section - Scrollable Container */}
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Industries We Serve</h3>
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex space-x-6 pb-4" style={{ width: 'max-content' }}>
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
+                      <Building className="w-5 h-5 text-bean" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900">Technology & Software</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    We connect skilled developers, engineers, and IT professionals with cutting-edge tech companies. Our expertise in software development, AI/ML, and cloud technologies ensures seamless integration and accelerated project delivery.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
+                      <Heart className="w-5 h-5 text-bean" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900">Healthcare & Life Sciences</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Supporting healthcare organizations with specialized talent in medical technology, data analytics, and compliance. We ensure regulatory compliance while delivering innovative solutions for patient care and medical research.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
+                      <Globe className="w-5 h-5 text-bean" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900">Financial Services</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Providing fintech expertise including blockchain specialists, regulatory compliance experts, and financial analysts. We help financial institutions navigate digital transformation while maintaining security and compliance standards.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
+                      <Target className="w-5 h-5 text-bean" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900">Manufacturing & Industrial</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Connecting manufacturing companies with IoT specialists, automation engineers, and supply chain experts. We support Industry 4.0 initiatives with talent skilled in smart manufacturing and digital transformation.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
+                      <BookOpen className="w-5 h-5 text-bean" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900">Education & E-Learning</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Supporting educational institutions and e-learning platforms with instructional designers, learning technology specialists, and educational content developers to enhance digital learning experiences.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
+                  <div className="flex items-center mb-4">
+                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
+                      <Zap className="w-5 h-5 text-bean" />
+                    </div>
+                    <h4 className="text-xl font-semibold text-gray-900">Energy & Utilities</h4>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Providing expertise in renewable energy, smart grid technology, and utility management systems. We connect organizations with specialists in sustainable energy solutions and infrastructure modernization.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
       {/* Mission, Vision, Values */}
       <PageSection dark>
