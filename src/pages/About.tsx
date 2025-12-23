@@ -175,52 +175,62 @@ const About = () => {
                 <div className="flex space-x-6 min-w-max">
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Full Stack Developer" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per1.jpg" alt="Full Stack Developer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Data Scientist" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per2.jpg" alt="Data Scientist" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="UX/UI Designer" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per3.jpg" alt="UX/UI Designer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="DevOps Engineer" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per4.jpg" alt="DevOps Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gradient-to-b from-bean/20 to-bean/10 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Project Manager" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per5.webp" alt="Project Manager" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="AI/ML Engineer" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per6.webp" alt="AI/ML Engineer" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="../public/images/about/per7.jpg" alt="AI/ML Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Cyber Security" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per8.webp" alt="Cyber Security" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Business Analyst" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per9.jpg" alt="Business Analyst" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="QA Engineer" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per10.jpg" alt="QA Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="https://via.placeholder.com/120x400/cccccc/666666" alt="Cloud Architect" className="w-full h-full object-cover" />
+                      <img src="../public/images/about/per11.jpg" alt="Cloud Architect" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center mt-8">
+                    <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
+                      <img src="../public/images/about/per12.jpg" alt="Cloud Architect" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
