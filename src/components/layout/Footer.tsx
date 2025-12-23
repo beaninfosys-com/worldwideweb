@@ -43,13 +43,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-900">SERVICES</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/application-development" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Application Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/consulting-services" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Consulting Services
+                <Link to="/services/data-analytics" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  Data & Analytics
                 </Link>
               </li>
               <li>
@@ -58,13 +53,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/services/consulting-services" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  Consulting Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/services/business-intelligence" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
                   Business Intelligence
                 </Link>
               </li>
               <li>
-                <Link to="/services/data-analytics" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Data & Analytics
+                <Link to="/services/application-development" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  Application Development
                 </Link>
               </li>
             </ul>

@@ -76,7 +76,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center justify-end flex-1">
             <nav>
-              <div className="flex items-center space-x-8">
+              <div className="flex items-center space-x-2">
                 {navLinks.map((link) => 
                   link.children ? (
                     <div key={link.name} className="relative group">

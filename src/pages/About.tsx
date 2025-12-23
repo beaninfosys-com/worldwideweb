@@ -135,32 +135,16 @@ const About = () => {
               </div>
             </div>
 
-            {/* Right Side - Pure Visual Elements */}
+            {/* Right Side - Company Image */}
             <div className="relative">
-              <div className="relative h-[500px] lg:h-[600px]">
-                {/* Floating Visual Elements */}
-                <div className="absolute top-8 right-8 w-24 h-24 bg-bean/20 rounded-2xl transform rotate-12 hover:rotate-6 transition-transform duration-300 ease-out shadow-lg"></div>
-
-                <div className="absolute top-1/4 left-8 w-32 h-32 bg-bean/10 rounded-full transform -rotate-12 hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"></div>
-
-                <div className="absolute bottom-8 right-1/4 w-20 h-20 bg-bean/15 rounded-lg transform rotate-45 hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"></div>
-
-                <div className="absolute bottom-1/4 left-12 w-28 h-28 bg-bean/25 rounded-3xl transform -rotate-6 hover:rotate-0 transition-transform duration-300 ease-out shadow-lg"></div>
-
-                {/* Central Visual Element */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-bean rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 ease-out">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <Rocket className="w-16 h-16 text-white" />
-                  </div>
-                </div>
-
-                {/* Background Pattern */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(193,154,107,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(193,154,107,0.05)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
-
-                {/* Animated Background Elements */}
-                <div className="absolute top-1/3 right-1/3 w-16 h-16 bg-bean/20 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-bean/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute top-2/3 right-1/4 w-8 h-8 bg-bean/25 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+              <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/lovable-uploads/About_Image.png"
+                  alt="Bean Infosystems Team and Workspace"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                />
+                {/* Overlay gradient for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
               </div>
             </div>
           </div>

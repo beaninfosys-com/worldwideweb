@@ -30,8 +30,8 @@ const ClientLogosSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-0">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Trusted by Leading Organizations
@@ -64,7 +64,7 @@ const ClientLogosSection: React.FC = () => {
         .logo-section {
           overflow: hidden;
           padding: 20px 0;
-          background-color: #f9fafb;
+          background-color: white;
         }
 
         .logo-strip {
