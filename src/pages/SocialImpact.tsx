@@ -4,14 +4,22 @@ import PageSection from '@/components/layout/PageSection';
 import { Card } from '@/components/ui/card';
 import { HeartHandshake, Users, HandCoins, Building2, CheckCircle2 } from 'lucide-react';
 import styles from '@/index2/components/TechVisualSection.module.css';
+import CTASection from '@/index2/components/CTASection';
 
 const FlowStep = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string; }) => (
-  <Card className="p-6 md:p-8 text-center border-2 hover:border-[#D4A76A]/40 transition-all duration-300">
-    <div className="w-14 h-14 mx-auto rounded-full bg-[#D4A76A]/10 text-[#D4A76A] flex items-center justify-center mb-4">
-      {icon}
+  <Card className="p-6 md:p-8 text-center bg-white/70 backdrop-blur-md border border-white/30 hover:bg-white/80 hover:border-white/40 transition-all duration-500 shadow-xl hover:shadow-2xl hover:scale-105">
+    {/* Glassmorphic gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-white/10 rounded-lg"></div>
+
+    <div className="relative z-10">
+      <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-[#3B2416]/20 to-[#D4A76A]/20 backdrop-blur-sm border border-white/30 flex items-center justify-center mb-6 shadow-lg">
+        <div className="text-[#3B2416] drop-shadow-sm">
+          {icon}
+        </div>
+      </div>
+      <h4 className="text-xl font-bold text-gray-900 mb-3 drop-shadow-sm">{title}</h4>
+      <p className="text-gray-700 text-sm leading-relaxed drop-shadow-sm">{description}</p>
     </div>
-    <h4 className="text-xl font-semibold text-gray-900 mb-2">{title}</h4>
-    <p className="text-gray-700 text-sm leading-relaxed">{description}</p>
   </Card>
 );
 
@@ -25,7 +33,7 @@ const SocialImpact = () => {
       />
 
       {/* Social Impact Hero Section */}
-      <div className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <div className="py-20 lg:py-32 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Visual Element */}
@@ -103,44 +111,40 @@ const SocialImpact = () => {
         <div className="max-w-6xl mx-auto">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">How Our Social Impact Flow Works</h3>
 
-            {/* Connected steps */}
+            {/* SocialBirds logo card - moved to top center */}
+            <div className="mb-12 flex justify-center">
+              <Card className="p-8 text-center border-2 border-[#D4A76A]/50 bg-white/95 max-w-md">
+                <img src="https://www.beaninfosys.com/img/social-bird.png" className="w-40 mx-auto mb-4" alt="SocialBirds" />
+                <p className="text-gray-800">Create beautifully branded fundraising pages in minutes.</p>
+              </Card>
+            </div>
+
+            {/* Connected steps - 2 cards */}
             <div className="relative">
               {/* horizontal connector line on md+ */}
               <div className="hidden md:block absolute left-0 right-0 top-1/2 h-0.5 bg-white/30"></div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-                  <FlowStep
-                    icon={<Building2 size={22} color='black'/>}
-                    title="Nonprofits"
-                    description="Organizations on the frontlines seeking sustainable support and tools."
-                  />
-                  <FlowStep
-                    icon={<HeartHandshake size={22} color='black'/>}
-                    title="Bean Infosystems"
-                    description="Subsidized development + strategic guidance to maximize impact."
-                  />
-                  <FlowStep
-                    icon={<Users size={22} color='black'/>}
-                    title="SocialBirds Community"
-                    description="Brings donors, volunteers, and supporters together to act."
-                  />
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10 max-w-4xl mx-auto">
+                <FlowStep
+                  icon={<Building2 size={22} color='black'/>}
+                  title="Nonprofits"
+                  description="Organizations on the frontlines seeking sustainable support and tools."
+                />
+                <FlowStep
+                  icon={<HeartHandshake size={22} color='black'/>}
+                  title="Bean Infosystems"
+                  description="Subsidized development + strategic guidance to maximize impact."
+                />
               </div>
-
-              {/* Second row with SocialBirds logo card center */}
-              <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-                <div className="hidden md:block"></div>
-                <Card className="p-8 text-center border-2 border-[#D4A76A]/50 bg-white/95">
-                  <img src="https://www.beaninfosys.com/img/social-bird.png" className="w-40 mx-auto mb-4" alt="SocialBirds" />
-                  <p className="text-gray-800">Create beautifully branded fundraising pages in minutes.</p>
-                </Card>
-                <div className="hidden md:block"></div>
-              </div>
+            </div>
 
               {/* Outcomes */}
 
             </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 };
