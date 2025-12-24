@@ -32,6 +32,7 @@ const TestimonialsSection = () => {
             id: 1,
             businessType: "Voice AI Technology",
             image: voiceAIImage,
+            backgroundImage: "/images/voice_ai_bg.png",
             challenge: "Building a sophisticated interactive voice AI engine for customer service automation",
             solution: "Implemented open-source multilingual AI core with advanced natural language processing",
             impact: "Achieved 60% reduction in customer resolution time and improved user satisfaction scores"
@@ -40,6 +41,7 @@ const TestimonialsSection = () => {
             id: 2,
             businessType: "Data Analytics Firm",
             image: dataAnalyticsImage,
+            backgroundImage: "/images/data_analytics_bg.png",
             challenge: "Needed skilled data analysts with expertise in machine learning and quick turnaround time",
             solution: "Matched 3 certified analysts within 48 hours and facilitated immediate project integration",
             impact: "Reduced data processing backlog by 70% and improved analytical insights delivery"
@@ -48,6 +50,7 @@ const TestimonialsSection = () => {
             id: 3,
             businessType: "Healthcare Network",
             image: healthcareImage,
+            backgroundImage: "/images/healthcare_bg.png",
             challenge: "Required specialized IT security experts during critical system expansion phase",
             solution: "Deployed a team of 5 certified cybersecurity professionals with healthcare compliance experience",
             impact: "Maintained zero security incidents during critical system transition and expansion"
@@ -64,6 +67,7 @@ const TestimonialsSection = () => {
             id: 5,
             businessType: "E-Commerce Platform",
             image: ecommerceImage,
+            backgroundImage: "/images/ecommerce_bg.png",
             challenge: "Urgent requirement for experienced UX designers during major product redesign initiative",
             solution: "Placed 4 senior UX specialists with e-commerce expertise within one week of engagement",
             impact: "New design implementation resulted in 32% increase in user conversion rates"
@@ -96,7 +100,15 @@ const TestimonialsSection = () => {
                                 key={`${item.id}-${index}`}
                                 className={styles.slideItem}
                             >
-                                <div className={styles.card}>
+                                <div
+                                    className={styles.card}
+                                    style={item.backgroundImage ? {
+                                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url(${item.backgroundImage})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat'
+                                    } : {}}
+                                >
                                     <div className={styles.imageContainer}>
                                         <img src={item.image} alt={item.businessType} className={styles.personImage} />
                                     </div>
