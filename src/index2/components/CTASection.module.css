@@ -50,36 +50,48 @@
     transition: all 0.3s ease;
     text-decoration: none;
     min-width: 160px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Call Button (Outline) - Adapted for White BG */
+.phoneIcon {
+    color: #C19A6B;
+    /* Bean color for theme consistency */
+}
+
+/* Call Button (Glassmorphic Outline) */
 .callButton {
-    background: transparent;
-    border: 2px solid #3B2416;
-    /* Espresso border */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: #3B2416;
-    /* Espresso text */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .callButton:hover {
-    background: rgba(59, 36, 22, 0.05);
-    /* Light espresso tint */
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Demo Button (Solid Accent) */
+/* Demo Button (Glassmorphic Solid) */
 .demoButton {
-    background: #C19A6B;
-    /* Latte Gold */
-    border: 2px solid #C19A6B;
+    background: rgba(193, 154, 107, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(193, 154, 107, 0.3);
     color: #ffffff;
+    box-shadow: 0 8px 32px rgba(193, 154, 107, 0.2);
 }
 
 .demoButton:hover {
-    background: #a8855a;
-    border-color: #a8855a;
+    background: rgba(193, 154, 107, 0.9);
+    border-color: rgba(193, 154, 107, 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(193, 154, 107, 0.3);
+    box-shadow: 0 12px 40px rgba(193, 154, 107, 0.3);
 }
 
 @media (max-width: 600px) {

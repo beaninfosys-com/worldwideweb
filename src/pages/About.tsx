@@ -3,14 +3,15 @@ import React from 'react';
 import PageHero from '@/components/layout/PageHero';
 import PageSection from '@/components/layout/PageSection';
 import { Card } from '@/components/ui/card';
-import { 
-  Lightbulb, 
-  Target, 
-  Heart, 
-  Users, 
-  Wrench, 
-  Edit, 
-  Share2, 
+import CTASection from '@/index2/components/CTASection';
+import {
+  Lightbulb,
+  Target,
+  Heart,
+  Users,
+  Wrench,
+  Edit,
+  Share2,
   Map,
   Calendar,
   Building,
@@ -465,47 +466,301 @@ const About = () => {
         </div>
       </PageSection>
 
-      {/* Our Approach */}
-      <PageSection dark title="Our Approach" subtitle="How we deliver exceptional results for our clients">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Edit size={32} color='black'/>
-            </div>
-            <h3 className="text-lg font-bold mb-2">Discovery</h3>
-            <p className="text-foreground/70">
-              We begin with a thorough discovery process to understand your business objectives, challenges, and requirements.
+      {/* Our Approach - Workflow Design */}
+      <div className="py-20 lg:py-32" style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #C19A6B 50%, #3B2416 100%)' }}>
+        <div className="container mx-auto px-4">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Our Approach
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              How we deliver exceptional results for our clients through our proven methodology
             </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Map size={32} color='black'/>
+          </div>
+
+          {/* Workflow Steps */}
+          <div className="relative">
+            {/* Desktop Workflow - Horizontal */}
+            <div className="hidden lg:flex items-center justify-center">
+              {/* Step 1 - Discovery */}
+              <div className="flex flex-col items-center max-w-xs mx-4">
+                <div className="relative">
+                  {/* Step number circle - Glassmorphic */}
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-bean/20">
+                    <span className="text-gray-900 font-bold text-xl">1</span>
+                  </div>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Edit size={40} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Discovery</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We begin with a thorough discovery process to understand your business objectives, challenges, and requirements.
+                  </p>
+                </Card>
+              </div>
+
+              {/* Arrow between steps */}
+              <div className="mx-4 hover:translate-x-2 transition-all duration-300 cursor-pointer">
+                <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+                  <defs>
+                    <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
+                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
+                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                    </linearGradient>
+                    <filter id="arrowShadow1" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)"/>
+                    </filter>
+                  </defs>
+                  {/* Arrow body with 3D effect */}
+                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
+                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+                  {/* Arrow head with 3D effect */}
+                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
+                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)"/>
+                  {/* Highlight line */}
+                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+                </svg>
+              </div>
+
+              {/* Step 2 - Strategy */}
+              <div className="flex flex-col items-center max-w-xs mx-4">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-bean/20">
+                    <span className="text-gray-900 font-bold text-xl">2</span>
+                  </div>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Map size={40} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Strategy</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We develop a comprehensive strategy tailored to your unique needs and aligned with your business goals.
+                  </p>
+                </Card>
+              </div>
+
+              {/* Arrow between steps */}
+              <div className="mx-4 hover:translate-x-2 transition-all duration-300 cursor-pointer">
+                <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+                  <defs>
+                    <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
+                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
+                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                    </linearGradient>
+                    <filter id="arrowShadow1" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)"/>
+                    </filter>
+                  </defs>
+                  {/* Arrow body with 3D effect */}
+                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
+                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+                  {/* Arrow head with 3D effect */}
+                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
+                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)"/>
+                  {/* Highlight line */}
+                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+                </svg>
+              </div>
+
+              {/* Step 3 - Implementation */}
+              <div className="flex flex-col items-center max-w-xs mx-4">
+                <div className="relative">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-bean/20">
+                    <span className="text-gray-900 font-bold text-xl">3</span>
+                  </div>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Wrench size={40} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Implementation</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Our expert team executes the strategy with precision, leveraging the latest technologies and best practices.
+                  </p>
+                </Card>
+              </div>
+
+              {/* Arrow between steps */}
+              <div className="mx-4 hover:translate-x-2 transition-all duration-300 cursor-pointer">
+                <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+                  <defs>
+                    <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
+                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
+                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                    </linearGradient>
+                    <filter id="arrowShadow1" x="-20%" y="-20%" width="140%" height="140%">
+                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)"/>
+                    </filter>
+                  </defs>
+                  {/* Arrow body with 3D effect */}
+                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
+                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+                  {/* Arrow head with 3D effect */}
+                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
+                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)"/>
+                  {/* Highlight line */}
+                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+                </svg>
+              </div>
+
+              {/* Step 4 - Optimization */}
+              <div className="flex flex-col items-center max-w-xs mx-4">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-md border border-white/30 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-bean/20">
+                  <span className="text-gray-900 font-bold text-xl">4</span>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Share2 size={40} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Optimization</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We continuously monitor, analyze, and optimize to ensure sustainable results and ongoing improvement.
+                  </p>
+                </Card>
+              </div>
             </div>
-            <h3 className="text-lg font-bold mb-2">Strategy</h3>
-            <p className="text-foreground/70">
-              We develop a comprehensive strategy tailored to your unique needs and aligned with your business goals.
-            </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Wrench size={32} color='black' />
+
+            {/* Mobile Workflow - Vertical */}
+            <div className="lg:hidden space-y-8">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-bean rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-white font-bold text-xl">1</span>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Edit size={32} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Discovery</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We begin with a thorough discovery process to understand your business objectives, challenges, and requirements.
+                  </p>
+                </Card>
+                <div className="my-4 hover:translate-y-1 transition-all duration-300 cursor-pointer mx-auto">
+                  <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+                    <defs>
+                      <linearGradient id="arrowGradientDown" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
+                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
+                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                      </linearGradient>
+                      <filter id="arrowShadowDown" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)"/>
+                      </filter>
+                    </defs>
+                    {/* Arrow body with 3D effect */}
+                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
+                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)"/>
+                    {/* Arrow head with 3D effect */}
+                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
+                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)"/>
+                    {/* Highlight line */}
+                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-bean rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-white font-bold text-xl">2</span>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Map size={32} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Strategy</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We develop a comprehensive strategy tailored to your unique needs and aligned with your business goals.
+                  </p>
+                </Card>
+                <div className="my-4 hover:translate-y-1 transition-all duration-300 cursor-pointer mx-auto">
+                  <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+                    <defs>
+                      <linearGradient id="arrowGradientDown" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
+                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
+                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                      </linearGradient>
+                      <filter id="arrowShadowDown" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)"/>
+                      </filter>
+                    </defs>
+                    {/* Arrow body with 3D effect */}
+                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
+                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)"/>
+                    {/* Arrow head with 3D effect */}
+                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
+                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)"/>
+                    {/* Highlight line */}
+                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-bean rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-white font-bold text-xl">3</span>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Wrench size={32} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Implementation</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Our expert team executes the strategy with precision, leveraging the latest technologies and best practices.
+                  </p>
+                </Card>
+                <div className="my-4 hover:translate-y-1 transition-all duration-300 cursor-pointer mx-auto">
+                  <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
+                    <defs>
+                      <linearGradient id="arrowGradientDown" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
+                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
+                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                      </linearGradient>
+                      <filter id="arrowShadowDown" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)"/>
+                      </filter>
+                    </defs>
+                    {/* Arrow body with 3D effect */}
+                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
+                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)"/>
+                    {/* Arrow head with 3D effect */}
+                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
+                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)"/>
+                    {/* Highlight line */}
+                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 bg-bean rounded-full flex items-center justify-center mb-6 shadow-lg">
+                  <span className="text-white font-bold text-xl">4</span>
+                </div>
+                <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
+                  <div className="text-bean mb-4 flex justify-center">
+                    <Share2 size={32} color='rgb(193, 154, 107)'/>
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">Optimization</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We continuously monitor, analyze, and optimize to ensure sustainable results and ongoing improvement.
+                  </p>
+                </Card>
+              </div>
             </div>
-            <h3 className="text-lg font-bold mb-2">Implementation</h3>
-            <p className="text-foreground/70">
-              Our expert team executes the strategy with precision, leveraging the latest technologies and best practices.
-            </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Share2 size={32} color='black'/>
-            </div>
-            <h3 className="text-lg font-bold mb-2">Optimization</h3>
-            <p className="text-foreground/70">
-              We continuously monitor, analyze, and optimize to ensure sustainable results and ongoing improvement.
-            </p>
-          </Card>
+          </div>
         </div>
-      </PageSection>
+      </div>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 };
