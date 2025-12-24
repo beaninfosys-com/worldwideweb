@@ -56,17 +56,73 @@
     letter-spacing: 0.5px;
 }
 
+/* Carousel Wrapper with Buttons */
+.carouselWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Scroll Buttons */
+.scrollButton {
+    position: relative;
+    z-index: 10;
+    background: white;
+    border: 2px solid #C19A6B;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    color: #C19A6B;
+    box-shadow: 0 4px 12px rgba(193, 154, 107, 0.2);
+}
+
+.scrollButton:hover {
+    background: #C19A6B;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(193, 154, 107, 0.3);
+}
+
+.scrollButton:active {
+    transform: scale(0.95);
+}
+
+.scrollButtonLeft {
+    /* Additional styles if needed */
+}
+
+.scrollButtonRight {
+    /* Additional styles if needed */
+}
+
 /* Marquee Area */
 .marqueeViewport {
     width: 100%;
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
     position: relative;
     z-index: 2;
     /* Mask edges for fade effect */
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     padding-bottom: 40px;
     /* Add space for shadow/bottom to not be cut off */
+    scroll-behavior: smooth;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.marqueeViewport::-webkit-scrollbar {
+    display: none;
 }
 
 .marqueeTrack {
@@ -257,7 +313,6 @@
 /* Details Container - Clean structure */
 .detailsContainer {
     padding: 16px 0;
-    space-y: 0;
 }
 
 .detailSection {
@@ -272,9 +327,11 @@
     font-size: 13px;
     font-weight: 600;
     color: #374151;
-    margin-bottom: 4px;
+    margin-bottom: 0;
+    margin-right: 6px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: inline;
 }
 
 .sectionText {
@@ -282,6 +339,7 @@
     color: #6b7280;
     line-height: 1.5;
     margin: 0;
+    display: inline;
 }
 
 /* Responsive */

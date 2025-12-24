@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './TestimonialsSection.module.css';
 import techVisualBg from '../../assets/index2/tech_visual_bg_3.jpg';
 // Using industry-relevant HD images instead of person photos
@@ -9,6 +9,23 @@ const fintechImage = 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236
 const ecommerceImage = 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
 
 const TestimonialsSection = () => {
+    const scrollContainerRef = useRef(null);
+
+    const scroll = (direction) => {
+        if (scrollContainerRef.current) {
+            const scrollAmount = 390; // Card width + padding
+            const currentScroll = scrollContainerRef.current.scrollLeft;
+            const targetScroll = direction === 'left'
+                ? currentScroll - scrollAmount
+                : currentScroll + scrollAmount;
+
+            scrollContainerRef.current.scrollTo({
+                left: targetScroll,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     // Data - Industry-focused testimonials based on ImpactCarousel structure
     const testimonials = [
         {
@@ -60,44 +77,68 @@ const TestimonialsSection = () => {
         <div className={styles.sectionContainer}>
             <h2 className={styles.headline} style={{ backgroundImage: `url(${techVisualBg})` }}>Success Stories</h2>
 
-            <div className={styles.marqueeViewport}>
-                <div className={styles.marqueeTrack}>
-                    {marqueeList.map((item, index) => (
-                        <div
-                            key={`${item.id}-${index}`}
-                            className={styles.slideItem}
-                        >
-                            <div className={styles.card}>
-                                <div className={styles.imageContainer}>
-                                    <img src={item.image} alt={item.businessType} className={styles.personImage} />
-                                </div>
+            <div className={styles.carouselWrapper}>
+                {/* Left Arrow */}
+                <button
+                    className={styles.scrollButton + ' ' + styles.scrollButtonLeft}
+                    onClick={() => scroll('left')}
+                    aria-label="Scroll left"
+                >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
 
-                                {/* Business Type - Prominently displayed */}
-                                <div className={styles.businessType}>
-                                    {item.businessType}
-                                </div>
-
-                                {/* Challenge, Solution, Impact - Clean format */}
-                                <div className={styles.detailsContainer}>
-                                    <div className={styles.detailSection}>
-                                        <h4 className={styles.sectionTitle}>Challenge:</h4>
-                                        <p className={styles.sectionText}>{item.challenge}</p>
+                <div className={styles.marqueeViewport} ref={scrollContainerRef}>
+                    <div className={styles.marqueeTrack}>
+                        {marqueeList.map((item, index) => (
+                            <div
+                                key={`${item.id}-${index}`}
+                                className={styles.slideItem}
+                            >
+                                <div className={styles.card}>
+                                    <div className={styles.imageContainer}>
+                                        <img src={item.image} alt={item.businessType} className={styles.personImage} />
                                     </div>
 
-                                    <div className={styles.detailSection}>
-                                        <h4 className={styles.sectionTitle}>Solution:</h4>
-                                        <p className={styles.sectionText}>{item.solution}</p>
+                                    {/* Business Type - Prominently displayed */}
+                                    <div className={styles.businessType}>
+                                        {item.businessType}
                                     </div>
 
-                                    <div className={styles.detailSection}>
-                                        <h4 className={styles.sectionTitle}>Impact:</h4>
-                                        <p className={styles.sectionText}>{item.impact}</p>
+                                    {/* Challenge, Solution, Impact - Clean format */}
+                                    <div className={styles.detailsContainer}>
+                                        <div className={styles.detailSection}>
+                                            <h4 className={styles.sectionTitle}>Challenge:</h4>
+                                            <p className={styles.sectionText}>{item.challenge}</p>
+                                        </div>
+
+                                        <div className={styles.detailSection}>
+                                            <h4 className={styles.sectionTitle}>Solution:</h4>
+                                            <p className={styles.sectionText}>{item.solution}</p>
+                                        </div>
+
+                                        <div className={styles.detailSection}>
+                                            <h4 className={styles.sectionTitle}>Impact:</h4>
+                                            <p className={styles.sectionText}>{item.impact}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
+
+                {/* Right Arrow */}
+                <button
+                    className={styles.scrollButton + ' ' + styles.scrollButtonRight}
+                    onClick={() => scroll('right')}
+                    aria-label="Scroll right"
+                >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
 
             {/* Background decorative circle lines */}
