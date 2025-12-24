@@ -8,8 +8,12 @@ import {
 
 const Footer = () => {
   return (
-    // Changed bg-gray-100 to bg-gray-200 for a more visible light gray background.
-    <footer className="bg-gray-200 border-t border-gray-300">
+    <footer
+      className="border-t border-gray-300"
+      style={{
+        background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #6B7280 100%)'
+      }}
+    >
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
           {/* Company Info */}
