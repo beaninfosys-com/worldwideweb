@@ -61,38 +61,35 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <MapPin size={24} color='black'/>,
-      title: "Our Location",
+      title: "US Office",
       details: [
-        "123 Tech Drive, Innovation Valley",
-        "San Francisco, CA 94105",
-        "United States"
+        "8751 Collin Mckinney Pkwy #201",
+        "Mckinney, TX, USA 75070"
       ]
     },
     {
-      icon: <Phone size={24} color='black'/>,
-      title: "Phone Numbers",
+      icon: <MapPin size={24} color='black'/>,
+      title: "India Office",
       details: [
-        "Main: +1 (555) 123-4567",
-        "Support: +1 (555) 987-6543",
-        "Fax: +1 (555) 456-7890"
+        "Workafella, Western Aqua 5th Floor",
+        "#Suite 139, 5th Floor",
+        "Whitefield's, Hitech City",
+        "Hyderabad, Telangana India 500081"
       ]
     },
     {
       icon: <Mail size={24} color='black' />,
       title: "Email Addresses",
       details: [
-        "info@beaninfosystem.com",
-        "support@beaninfosystem.com",
-        "careers@beaninfosystem.com"
+        "info@beaninfosys.com",
+        "careers@beaninfosys.com"
       ]
     },
     {
-      icon: <Clock size={24} color='black'/>,
-      title: "Business Hours",
+      icon: <Phone size={24} color='black'/>,
+      title: "Contact No",
       details: [
-        "Monday - Friday: 9:00 AM - 6:00 PM",
-        "Saturday: 10:00 AM - 2:00 PM",
-        "Sunday: Closed"
+        "+1 469-919-5225"
       ]
     }
   ];
