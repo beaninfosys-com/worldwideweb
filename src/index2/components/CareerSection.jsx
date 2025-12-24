@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CareerSection.module.css';
 import hiringImage from '../../assets/index2/career_hiring.png';
-import techVisualBg from '../../assets/index2/tech_visual_bg_3.jpg';
+import careerTitleBg from '../../assets/index2/career_title_bg_new.jpg';
 
 const CareerSection = () => {
     const jobs = [
@@ -38,7 +38,7 @@ const CareerSection = () => {
 
     return (
         <div className={styles.sectionContainer}>
-            <h2 className={styles.sectionTitle} style={{ backgroundImage: `url(${techVisualBg})` }}>Career</h2>
+            <h2 className={styles.sectionTitle} style={{ backgroundImage: `url(${careerTitleBg})` }}>Career</h2>
             <div className={styles.contentWrapper}>
                 {/* Left Column: Job List */}
                 <div className={styles.leftColumn}>

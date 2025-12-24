@@ -57,14 +57,7 @@
     {
       "Sid": "Route53Management",
       "Effect": "Allow",
-      "Action": [
-        "route53:GetHostedZone",
-        "route53:ListHostedZones",
-        "route53:ListHostedZonesByName",
-        "route53:GetChange",
-        "route53:ChangeResourceRecordSets",
-        "route53:ListResourceRecordSets"
-      ],
+      "Action": "route53:*",
       "Resource": "*"
     },
     {
