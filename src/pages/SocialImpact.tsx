@@ -63,10 +63,27 @@ const SocialImpact = () => {
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#3B2416]/10 border border-[#3B2416]/20">
                   <span className="text-sm font-medium text-[#3B2416]">Our Mission</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#3B2416] leading-tight">
-                  Social Impact Through Technology:
-                  <span className="block text-gray-900">Empowering Social Enterprises and NGOs</span>
-                </h2>
+                <div className="relative">
+                  <svg viewBox="0 0 800 200" className="w-full h-auto">
+                    <defs>
+                      <clipPath id="social-impact-text-clip">
+                        <text x="50%" y="40%" textAnchor="middle" dy=".35em" className="font-bold text-4xl lg:text-5xl" style={{fontFamily: 'Outfit, sans-serif'}}>Social Impact</text>
+                        <text x="50%" y="80%" textAnchor="middle" dy=".35em" className="font-bold text-2xl lg:text-3xl" style={{fontFamily: 'Outfit, sans-serif'}}>Through Technology</text>
+                      </clipPath>
+                    </defs>
+                    <image
+                      href={bgImage}
+                      width="100%"
+                      height="100%"
+                      preserveAspectRatio="xMidYMid slice"
+                      clipPath="url(#social-impact-text-clip)"
+                    />
+                  </svg>
+                  <h2 className="absolute inset-0 flex flex-col justify-center items-center text-transparent">
+                    <span className="text-4xl lg:text-5xl font-bold leading-tight">Social Impact</span>
+                    <span className="text-2xl lg:text-3xl font-bold leading-tight">Through Technology</span>
+                  </h2>
+                </div>
               </div>
 
               <div className="space-y-6">

@@ -165,15 +165,15 @@ run_terraform() {
         exit 1
     fi
 
-    # echo "===== Starting Terraform Apply ====="
-    # if ! terraform apply -lock=false $plan_path; then
-    #     echo "Terraform apply failed. Please check the errors above."
-    #     exit 1
-    # fi
+    echo "===== Starting Terraform Apply ====="
+    if ! terraform apply -lock=false $plan_path; then
+        echo "Terraform apply failed. Please check the errors above."
+        exit 1
+    fi
 
-    # echo "===== Fetching Outputs ====="
-    # terraform refresh -var-file=$tfvars_path
-    # terraform output > "../terraform_outputs_${environment}.txt"
+    echo "===== Fetching Outputs ====="
+    terraform refresh -var-file=$tfvars_path
+    terraform output > "../terraform_outputs_${environment}.txt"
 
     echo "Deployment Complete!"
 
