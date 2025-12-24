@@ -38,22 +38,13 @@ const SocialImpact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Visual Element */}
-            <div className={styles.visualColumn}>
-                <div className={styles.visualWrapper}>
-                    <svg viewBox="0 0 1000 600" className={styles.svgShape}>
-                        <defs>
-                            <clipPath id="ai-text-clip">
-                                <text x="50%" y="50%" textAnchor="middle" dy=".35em" className={styles.svgText}>AI</text>
-                            </clipPath>
-                        </defs>
-                        <image
-                            href={bgImage}
-                            width="100%"
-                            height="100%"
-                            preserveAspectRatio="xMidYMid slice"
-                            clipPath="url(#ai-text-clip)"
-                        />
-                    </svg>
+            <div className="flex justify-center items-center">
+                <div className="w-full max-w-md lg:max-w-lg">
+                    <img
+                        src="../public/images/socialimpact_1.png"
+                        alt="Social Impact"
+                        className="w-full h-auto"
+                    />
                 </div>
             </div>
 
@@ -67,8 +58,8 @@ const SocialImpact = () => {
                   <svg viewBox="0 0 800 200" className="w-full h-auto">
                     <defs>
                       <clipPath id="social-impact-text-clip">
-                        <text x="50%" y="40%" textAnchor="middle" dy=".35em" className="font-bold text-4xl lg:text-5xl" style={{fontFamily: 'Outfit, sans-serif'}}>Social Impact</text>
-                        <text x="50%" y="80%" textAnchor="middle" dy=".35em" className="font-bold text-2xl lg:text-3xl" style={{fontFamily: 'Outfit, sans-serif'}}>Through Technology</text>
+                        <text x="50%" y="40%" textAnchor="middle" dy=".35em" className="font-bold text-4xl lg:text-8xl" style={{fontFamily: 'Outfit, sans-serif'}}>Social Impact</text>
+                        <text x="50%" y="80%" textAnchor="middle" dy=".35em" className="font-bold text-2xl lg:text-5xl" style={{fontFamily: 'Outfit, sans-serif'}}>Through Technology</text>
                       </clipPath>
                     </defs>
                     <image
@@ -79,10 +70,10 @@ const SocialImpact = () => {
                       clipPath="url(#social-impact-text-clip)"
                     />
                   </svg>
-                  <h2 className="absolute inset-0 flex flex-col justify-center items-center text-transparent">
+                  {/* <h2 className="absolute inset-0 flex flex-col justify-center items-center text-transparent">
                     <span className="text-4xl lg:text-5xl font-bold leading-tight">Social Impact</span>
                     <span className="text-2xl lg:text-3xl font-bold leading-tight">Through Technology</span>
-                  </h2>
+                  </h2> */}
                 </div>
               </div>
 

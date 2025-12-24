@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 
 const About = () => {
+
   const timeline = [
     {
       year: "2016",
