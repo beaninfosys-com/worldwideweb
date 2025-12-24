@@ -268,81 +268,163 @@ const About = () => {
             </div>
           </div>
 
-          {/* Industries Section - Scrollable Container */}
+          {/* Industries Section - Image Gallery with Hover Effects */}
           <div className="bg-gray-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Industries We Serve</h3>
-            <div className="overflow-x-auto scrollbar-hide">
-              <div className="flex space-x-6 pb-4" style={{ width: 'max-content' }}>
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
-                      <Building className="w-5 h-5 text-bean" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Technology & Software */}
+              <div className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=800&auto=format&fit=crop"
+                    alt="Technology & Software"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Default overlay - only bottom 20% dark */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/60 to-transparent flex items-end opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold" style={{ color: 'rgb(234, 176, 135)' }}>Technology & Software</h4>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Technology & Software</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    We connect skilled developers, engineers, and IT professionals with cutting-edge tech companies. Our expertise in software development, AI/ML, and cloud technologies ensures seamless integration and accelerated project delivery.
-                  </p>
+                  {/* Hover overlay with full content */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="p-6 text-center max-w-xs">
+                      <h4 className="text-xl font-bold mb-3" style={{ color: 'rgb(234, 176, 135)' }}>Technology & Software</h4>
+                      <p className="text-sm leading-relaxed text-white">
+                        We connect skilled developers, engineers, and IT professionals with cutting-edge tech companies. Our expertise ensures seamless integration and accelerated project delivery.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
-                      <Heart className="w-5 h-5 text-bean" />
+              {/* Healthcare & Life Sciences */}
+              <div className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=800&auto=format&fit=crop"
+                    alt="Healthcare & Life Sciences"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Default overlay - only bottom 20% dark */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/60 to-transparent flex items-end opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold" style={{ color: 'rgb(234, 176, 135)' }}>Healthcare & Life Sciences</h4>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Healthcare & Life Sciences</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Supporting healthcare organizations with specialized talent in medical technology, data analytics, and compliance. We ensure regulatory compliance while delivering innovative solutions for patient care and medical research.
-                  </p>
+                  {/* Hover overlay with full content */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="p-6 text-center max-w-xs">
+                      <h4 className="text-xl font-bold mb-3" style={{ color: 'rgb(234, 176, 135)' }}>Healthcare & Life Sciences</h4>
+                      <p className="text-sm leading-relaxed text-white">
+                        Supporting healthcare organizations with specialized talent in medical technology, data analytics, and compliance. We ensure regulatory compliance while delivering innovative solutions.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
-                      <Globe className="w-5 h-5 text-bean" />
+              {/* Financial Services */}
+              <div className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop"
+                    alt="Financial Services"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Default overlay - only bottom 20% dark */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/60 to-transparent flex items-end opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold" style={{ color: 'rgb(234, 176, 135)' }}>Financial Services</h4>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Financial Services</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Providing fintech expertise including blockchain specialists, regulatory compliance experts, and financial analysts. We help financial institutions navigate digital transformation while maintaining security and compliance standards.
-                  </p>
+                  {/* Hover overlay with full content */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="p-6 text-center max-w-xs">
+                      <h4 className="text-xl font-bold mb-3" style={{ color: 'rgb(234, 176, 135)' }}>Financial Services</h4>
+                      <p className="text-sm leading-relaxed text-white">
+                        Providing fintech expertise including blockchain specialists, regulatory compliance experts, and financial analysts. We help financial institutions navigate digital transformation.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
-                      <Target className="w-5 h-5 text-bean" />
+              {/* Manufacturing & Industrial */}
+              <div className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+                    alt="Manufacturing & Industrial"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Default overlay - only bottom 20% dark */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/60 to-transparent flex items-end opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold" style={{ color: 'rgb(234, 176, 135)' }}>Manufacturing & Industrial</h4>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Manufacturing & Industrial</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Connecting manufacturing companies with IoT specialists, automation engineers, and supply chain experts. We support Industry 4.0 initiatives with talent skilled in smart manufacturing and digital transformation.
-                  </p>
+                  {/* Hover overlay with full content */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="p-6 text-center max-w-xs">
+                      <h4 className="text-xl font-bold mb-3" style={{ color: 'rgb(234, 176, 135)' }}>Manufacturing & Industrial</h4>
+                      <p className="text-sm leading-relaxed text-white">
+                        Connecting manufacturing companies with IoT specialists, automation engineers, and supply chain experts. We support Industry 4.0 initiatives with talent skilled in smart manufacturing.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
-                      <BookOpen className="w-5 h-5 text-bean" />
+              {/* Education & E-Learning */}
+              <div className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
+                    alt="Education & E-Learning"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Default overlay - only bottom 20% dark */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/60 to-transparent flex items-end opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold" style={{ color: 'rgb(234, 176, 135)' }}>Education & E-Learning</h4>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Education & E-Learning</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Supporting educational institutions and e-learning platforms with instructional designers, learning technology specialists, and educational content developers to enhance digital learning experiences.
-                  </p>
+                  {/* Hover overlay with full content */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="p-6 text-center max-w-xs">
+                      <h4 className="text-xl font-bold mb-3" style={{ color: 'rgb(234, 176, 135)' }}>Education & E-Learning</h4>
+                      <p className="text-sm leading-relaxed text-white">
+                        Supporting educational institutions and e-learning platforms with instructional designers, learning technology specialists, and educational content developers.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
-                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 min-w-[300px] max-w-[320px]">
-                  <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-bean/10 rounded-lg flex items-center justify-center mr-3">
-                      <Zap className="w-5 h-5 text-bean" />
+              {/* Energy & Utilities */}
+              <div className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800&auto=format&fit=crop"
+                    alt="Energy & Utilities"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  {/* Default overlay - only bottom 20% dark */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/60 to-transparent flex items-end opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                    <div className="p-4">
+                      <h4 className="text-lg font-bold" style={{ color: 'rgb(234, 176, 135)' }}>Energy & Utilities</h4>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Energy & Utilities</h4>
                   </div>
-                  <p className="text-gray-600 leading-relaxed">
-                    Providing expertise in renewable energy, smart grid technology, and utility management systems. We connect organizations with specialists in sustainable energy solutions and infrastructure modernization.
-                  </p>
+                  {/* Hover overlay with full content */}
+                  <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <div className="p-6 text-center max-w-xs">
+                      <h4 className="text-xl font-bold mb-3" style={{ color: 'rgb(234, 176, 135)' }}>Energy & Utilities</h4>
+                      <p className="text-sm leading-relaxed text-white">
+                        Providing expertise in renewable energy, smart grid technology, and utility management systems. We connect organizations with specialists in sustainable energy solutions.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -350,79 +432,6 @@ const About = () => {
         </div>
 
       </div>
-
-      {/* Mission, Vision, Values */}
-      <PageSection dark>
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Lightbulb size={36} color='black' />
-            </div>
-            <h3 className="text-xl font-bold mb-3">Our Mission</h3>
-            <p className="text-foreground/70">
-              To empower businesses through innovative digital solutions that drive growth, efficiency, and 
-              competitive advantage in an increasingly connected world.
-            </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Target size={36} color='black' />
-            </div>
-            <h3 className="text-xl font-bold mb-3">Our Vision</h3>
-            <p className="text-foreground/70">
-              To be the leading catalyst for digital transformation, helping businesses harness the power 
-              of technology to achieve their fullest potential.
-            </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Heart size={36} color='black' />
-            </div>
-            <h3 className="text-xl font-bold mb-3">Our Values</h3>
-            <ul className="text-foreground/70 space-y-2">
-              <li className="flex items-start">
-                <span className="text-bean mr-2">•</span>
-                <span>Innovation First</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-bean mr-2">•</span>
-                <span>Integrity Always</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-bean mr-2">•</span>
-                <span>Excellence Delivered</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-bean mr-2">•</span>
-                <span>Your Success, Our Success</span>
-              </li>
-            </ul>
-          </Card>
-        </div>
-      </PageSection>
-
-      {/* New Image Gallery Section */}
-      <PageSection title="Our Workspaces" subtitle="Where innovation happens every day">
-        <div className="grid md:grid-cols-3 gap-8">
-          {officeImages.map((office, index) => (
-            <Card key={index} className="overflow-hidden">
-              <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={office.image} 
-                  alt={office.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-4 text-white">
-                    <h3 className="text-xl font-bold mb-1">{office.title}</h3>
-                    <p className="text-sm text-white/80">{office.description}</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </PageSection>
 
       {/* Company Timeline */}
       <PageSection title="Our Journey" subtitle="A timeline of Bean Infosystem's growth and evolution">
