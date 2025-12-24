@@ -5,6 +5,7 @@ import PageSection from '@/components/layout/PageSection';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import CTASection from '@/index2/components/CTASection';
 
 interface FormData {
   name: string;
@@ -98,22 +99,24 @@ const Contact = () => {
 
   return (
     <>
-      <PageHero 
-        title="Contact Us" 
+      <PageHero
+        title="Contact Us"
         subtitle="We'd love to hear from you. Reach out to us with any questions or inquiries."
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Contact Form and Info */}
-      <PageSection>
-        <div className="grid md:grid-cols-2 gap-10">
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #C19A6B 100%)' }}>
+        <PageSection>
+          <div className="grid md:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div>
-            <Card className="p-6 md:p-8">
+            <Card className="p-6 md:p-8 bg-white/20 backdrop-blur-md border border-white/20 shadow-xl hover:bg-white/40 transition-all duration-300">
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label htmlFor="name" className="block text-foreground/70 mb-1">Name *</label>
+                    <label htmlFor="name" className="block text-left text-foreground/70 mb-1">Name *</label>
                     <input
                       type="text"
                       id="name"
@@ -125,7 +128,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-foreground/70 mb-1">Email *</label>
+                    <label htmlFor="email" className="block text-left text-foreground/70 mb-1">Email *</label>
                     <input
                       type="email"
                       id="email"
@@ -139,7 +142,7 @@ const Contact = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label htmlFor="company" className="block text-foreground/70 mb-1">Company</label>
+                    <label htmlFor="company" className="block text-left text-foreground/70 mb-1">Company</label>
                     <input
                       type="text"
                       id="company"
@@ -150,7 +153,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-foreground/70 mb-1">Phone</label>
+                    <label htmlFor="phone" className="block text-left text-foreground/70 mb-1">Phone</label>
                     <input
                       type="tel"
                       id="phone"
@@ -162,7 +165,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label htmlFor="subject" className="block text-foreground/70 mb-1">Subject *</label>
+                  <label htmlFor="subject" className="block text-left text-foreground/70 mb-1">Subject *</label>
                   <select
                     id="subject"
                     name="subject"
@@ -180,7 +183,7 @@ const Contact = () => {
                   </select>
                 </div>
                 <div className="mb-6">
-                  <label htmlFor="message" className="block text-foreground/70 mb-1">Message *</label>
+                  <label htmlFor="message" className="block text-left text-foreground/70 mb-1">Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -220,7 +223,7 @@ const Contact = () => {
             <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
             <div className="grid grid-cols-1 gap-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="p-6">
+                <Card key={index} className="p-6 bg-white/20 backdrop-blur-md border border-white/20 shadow-xl hover:bg-white/40 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center justify-center">
                     <div className="text-bean mr-4 mt-1">
                       {info.icon}
@@ -239,24 +242,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </PageSection>
+        </PageSection>
+      </div>
 
-      {/* Map Section */}
-      <PageSection dark>
-        <Card className="p-0 overflow-hidden h-96">
-          <div className="h-full w-full bg-muted flex items-center justify-center">
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold mb-2">Interactive Map</h3>
-              <p className="text-foreground/70">
-                Map integration would be displayed here. For implementation, consider using Google Maps API, Mapbox, or LeafletJS.
-              </p>
-            </div>
-          </div>
-        </Card>
-      </PageSection>
-
-      {/* FAQ Section */}
-      
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 };

@@ -14,28 +14,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Link to='/'>
-            <img 
-              src="/lovable-uploads/f3e399f8-7966-46c6-9a9b-c467e8887e83.png" 
-              alt="Bean Logo" 
-              style={{width:100, height:60, marginLeft:80}}
+            <img
+              src="/images/footer_img.png"
+              alt="Footer Image"
+              className="w-full h-auto"
             />
-            </Link>
-            
-            <p className="text-gray-700 mb-4">
-              Bean Infosystems is leading Technology Company delivering an array of cutting-edge technology solutions and services. Our mission is to deliver superior software and services to empower the people to make the right decisions.
-            </p>
-            <div className="flex space-x-7 ml-12">
-              <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                <Github size={20} className="text-[#3F321F]"/>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                <Linkedin size={20} className="text-[#3F321F]"/>
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                <Twitter size={20} className="text-[#3F321F]"/>
-              </a>
-            </div>
           </div>
 
           {/* Services */}
@@ -75,22 +58,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-900">LINKS</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/product" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Products</Link>
-              </li>
-              <li>
                 <Link to="/clients" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Clients</Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Trainings</a>
               </li>
               <li>
                 <Link to="/careers" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Careers</Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Social Impact</a>
+                <Link to="/product" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Products</Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Contact-Us</Link>
+                <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Trainings</a>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Contact Us</Link>
+              </li>
+              <li>
+                <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Social Impact</a>
               </li>
             </ul>
           </div>

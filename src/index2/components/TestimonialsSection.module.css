@@ -30,13 +30,20 @@
 }
 
 .headline {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: 48px;
     line-height: 1.1;
     font-weight: 500;
-    margin-bottom: 4rem;
-    color: #000;
-    z-index: 2;
+    margin-bottom: 3rem;
     text-align: center;
+    width: 100%;
+    /* Match CareerSection Headline Style */
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    z-index: 2;
     padding: 0 20px;
 }
 
@@ -108,7 +115,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: left;
     position: relative;
     margin-top: 50px;
     /* Space for the top image */
@@ -169,11 +176,11 @@
 
 /* Content */
 .headline {
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.5;
     color: #3B2416;
     font-weight: 500;
-    font-style: italic;
+    /* font-style: italic; */
     margin-bottom: 10px;
     /* Reduced from 25px */
     /* Removed flex-grow to stop pushing content down */

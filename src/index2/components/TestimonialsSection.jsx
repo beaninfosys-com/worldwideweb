@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './TestimonialsSection.module.css';
+import techVisualBg from '../../assets/index2/tech_visual_bg_3.jpg';
 // Using industry-relevant HD images instead of person photos
 const voiceAIImage = 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
 const dataAnalyticsImage = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80';
@@ -57,7 +58,7 @@ const TestimonialsSection = () => {
 
     return (
         <div className={styles.sectionContainer}>
-            <h2 className={styles.headline}>Success Stories</h2>
+            <h2 className={styles.headline} style={{ backgroundImage: `url(${techVisualBg})` }}>Success Stories</h2>
 
             <div className={styles.marqueeViewport}>
                 <div className={styles.marqueeTrack}>

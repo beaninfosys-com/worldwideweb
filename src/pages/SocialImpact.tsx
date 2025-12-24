@@ -4,6 +4,7 @@ import PageSection from '@/components/layout/PageSection';
 import { Card } from '@/components/ui/card';
 import { HeartHandshake, Users, HandCoins, Building2, CheckCircle2 } from 'lucide-react';
 import styles from '@/index2/components/TechVisualSection.module.css';
+import bgImage from '../assets/index2/tech_visual_bg_3.jpg';
 import CTASection from '@/index2/components/CTASection';
 
 const FlowStep = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string; }) => (
@@ -37,24 +38,23 @@ const SocialImpact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Visual Element */}
-            <div className="visualColumn">
-              <div className="visualWrapper">
-                <svg viewBox="0 0 1000 600" className="svgShape">
-                  <defs>
-                    <clipPath id="join-hands-text-clip">
-                      <text x="50%" y="50%" textAnchor="middle" dy="-0.3em" className="svgText">JOIN</text>
-                      <text x="50%" y="50%" textAnchor="middle" dy="0.7em" className="svgText">HANDS</text>
-                    </clipPath>
-                  </defs>
-                  <image
-                    href="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800&auto=format&fit=crop"
-                    width="100%"
-                    height="100%"
-                    preserveAspectRatio="xMidYMid slice"
-                    clipPath="url(#join-hands-text-clip)"
-                  />
-                </svg>
-              </div>
+            <div className={styles.visualColumn}>
+                <div className={styles.visualWrapper}>
+                    <svg viewBox="0 0 1000 600" className={styles.svgShape}>
+                        <defs>
+                            <clipPath id="ai-text-clip">
+                                <text x="50%" y="50%" textAnchor="middle" dy=".35em" className={styles.svgText}>AI</text>
+                            </clipPath>
+                        </defs>
+                        <image
+                            href={bgImage}
+                            width="100%"
+                            height="100%"
+                            preserveAspectRatio="xMidYMid slice"
+                            clipPath="url(#ai-text-clip)"
+                        />
+                    </svg>
+                </div>
             </div>
 
             {/* Right Side - Content */}
