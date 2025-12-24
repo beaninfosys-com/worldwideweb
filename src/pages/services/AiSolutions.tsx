@@ -3,6 +3,7 @@ import React from 'react';
 import PageHero from '@/components/layout/PageHero';
 import PageSection from '@/components/layout/PageSection';
 import { Link } from 'react-router-dom';
+import CTASection from '@/index2/components/CTASection';
 import { Brain, Zap, Cog, Shield, ArrowRight, Bot, Database, TrendingUp } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 
@@ -145,19 +146,7 @@ const AiSolutions = () => {
       </PageSection>
 
       {/* CTA Section */}
-      <PageSection dark>
-        <div className="bg-gradient-to-br from-bean/10 to-transparent rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Embrace AI Innovation?</h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto mb-6">
-            Let's discuss how artificial intelligence can transform your business operations and drive unprecedented growth. 
-            Our team is ready to help you unlock the potential of AI.
-          </p>
-          <Link to="/contact" className="btn-primary inline-flex">
-            Get Started with AI
-            <ArrowRight size={18} className="ml-2" />
-          </Link>
-        </div>
-      </PageSection>
+      <CTASection headline="Ready to supercharge<br />your AI Solutions journey?" />
     </>
   );
 };

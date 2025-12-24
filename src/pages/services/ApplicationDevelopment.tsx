@@ -2,6 +2,7 @@ import React from 'react';
 import PageHero from '@/components/layout/PageHero';
 import PageSection from '@/components/layout/PageSection';
 import { Link } from 'react-router-dom';
+import CTASection from '@/index2/components/CTASection';
 import { Code, Layers, Database, Shield, Globe, ArrowRight, Monitor, Smartphone, Laptop } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { 
@@ -231,19 +232,7 @@ const ApplicationDevelopment = () => {
       </PageSection>
 
       {/* CTA Section */}
-      <PageSection>
-        <div className="bg-gradient-to-br from-bean/10 to-transparent rounded-2xl p-8 md:p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Discuss Your Application Needs?</h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto mb-6">
-            Contact us today to schedule a consultation with our development team. We'll help you explore 
-            the possibilities and develop a solution tailored to your specific requirements.
-          </p>
-          <Link to="/contact" className="btn-primary inline-flex">
-            Start a Conversation
-            <ArrowRight size={18} className="ml-2" />
-          </Link>
-        </div>
-      </PageSection>
+      <CTASection headline="Ready to supercharge<br />your Application Development?" />
     </>
   );
 };
