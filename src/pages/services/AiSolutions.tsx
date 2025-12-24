@@ -60,9 +60,10 @@ const AiSolutions = () => {
 
   return (
     <>
-      <PageHero 
-        title="AI Solutions & Integration" 
+      <PageHero
+        title="AI Solutions & Integration"
         subtitle="Harness the power of artificial intelligence to transform your business operations"
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Overview Section */}

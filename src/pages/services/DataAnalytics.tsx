@@ -60,9 +60,10 @@ const DataAnalytics = () => {
 
   return (
     <>
-      <PageHero 
-        title="Data & Analytics Services" 
+      <PageHero
+        title="Data & Analytics Services"
         subtitle="Comprehensive data analytics solutions to unlock insights and drive innovation"
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Overview Section */}

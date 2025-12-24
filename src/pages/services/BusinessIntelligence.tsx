@@ -60,9 +60,10 @@ const BusinessIntelligence = () => {
 
   return (
     <>
-      <PageHero 
-        title="Business Intelligence Solutions" 
+      <PageHero
+        title="Business Intelligence Solutions"
         subtitle="Transform your data into actionable insights for smarter business decisions"
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Overview Section */}

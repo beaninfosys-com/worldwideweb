@@ -60,9 +60,10 @@ const AdvisoryConsulting = () => {
 
   return (
     <>
-      <PageHero 
-        title="Advisory & Consulting Services" 
+      <PageHero
+        title="Advisory & Consulting Services"
         subtitle="Strategic guidance to optimize your technology investments and business processes"
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Overview Section */}

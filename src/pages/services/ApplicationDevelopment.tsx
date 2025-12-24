@@ -81,9 +81,10 @@ const ApplicationDevelopment = () => {
 
   return (
     <>
-      <PageHero 
-        title="Application Development" 
+      <PageHero
+        title="Application Development"
         subtitle="Custom software solutions designed to drive your business forward"
+        imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Overview Section */}
