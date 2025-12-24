@@ -94,7 +94,7 @@ const Navbar = () => {
                             WebkitBackdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)'
                           }}
                         >
-                          {link.icon && <link.icon size={16} className="mr-1.5" />}
+                          {link.icon && <link.icon size={16} className="mr-1.5" style={{ color: location.pathname === link.path ? 'inherit' : '#3F321F' }} />}
                           {link.name}
                         </Link>
 
@@ -126,7 +126,7 @@ const Navbar = () => {
                         WebkitBackdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)'
                       }}
                     >
-                      {link.icon && <link.icon size={16} className="mr-1.5" />}
+                      {link.icon && <link.icon size={16} className="mr-1.5" style={{ color: location.pathname === link.path ? 'inherit' : '#3F321F' }} />}
                       {link.name}
                     </Link>
                   )
@@ -160,7 +160,7 @@ const Navbar = () => {
                       onClick={() => toggleDropdown(link.name)}
                     >
                       <span className="flex items-center">
-                        {link.icon && <link.icon size={16} className="mr-1.5" />}
+                        {link.icon && <link.icon size={16} className="mr-1.5" style={{ color: '#3F321F' }} />}
                         {link.name}
                       </span>
                       <ChevronDown
@@ -196,7 +196,7 @@ const Navbar = () => {
                       WebkitBackdropFilter: location.pathname === link.path ? 'blur(12px)' : 'blur(8px)'
                     }}
                   >
-                    {link.icon && <link.icon size={16} className="mr-1.5" />}
+                    {link.icon && <link.icon size={16} className="mr-1.5" style={{ color: location.pathname === link.path ? 'inherit' : '#3F321F' }} />}
                     {link.name}
                   </Link>
                 )

@@ -55,19 +55,19 @@ const ImpactCard: React.FC<ImpactCardProps> = ({
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
-          <h4 className="font-semibold mb-1 text-gray-900">Challenge:</h4>
-          <p className="text-gray-700">{challenge}</p>
+          <h4 className="font-semibold mb-1 text-gray-900 inline mr-2">Challenge:</h4>
+          <p className="text-gray-700 inline">{challenge}</p>
         </div>
 
         <div>
-          <h4 className="font-semibold mb-1 text-gray-900">Our Solution:</h4>
-          <p className="text-gray-700">{solution}</p>
+          <h4 className="font-semibold mb-1 text-gray-900 inline mr-2">Our Solution:</h4>
+          <p className="text-gray-700 inline">{solution}</p>
         </div>
 
         <div className="flex items-start gap-2">
           <div>
-            <h4 className="font-semibold mb-1 text-gray-900">Impact:</h4>
-            <p className="text-gray-700">{impact}</p>
+            <h4 className="font-semibold mb-1 text-gray-900 inline mr-2">Impact:</h4>
+            <p className="text-gray-700 inline">{impact}</p>
           </div>
         </div>
 

@@ -100,8 +100,8 @@ body {
 }
 
 .glassPill {
-  width: min(320px, 90vw);
-  max-width: 320px;
+  width: min(280px, 85vw);
+  max-width: 280px;
   max-height: min(600px, 80vh);
   height: auto;
   background: linear-gradient(180deg,
@@ -117,7 +117,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -182,8 +182,9 @@ body {
 }
 
 .labelContainer {
-  height: 6rem;
-  /* fixed height for 2 lines */
+  min-height: 5rem;
+  max-height: 6rem;
+  /* flexible height for 2 lines */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,18 +192,23 @@ body {
   margin-bottom: 2rem;
   margin-top: 1rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .labelLine {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2.2rem;
+  font-size: clamp(1.4rem, 5vw, 2rem);
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: clamp(1px, 0.5vw, 3px);
   font-weight: 900;
   color: #FFFFFF;
   line-height: 1.2;
   display: block;
   animation: fadeIn 0.5s ease-out;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @keyframes fadeIn {
@@ -275,8 +281,12 @@ body {
 
 .footerText {
   margin-top: 1.5rem;
-  font-size: 0.7rem;
+  font-size: clamp(0.55rem, 1.5vw, 0.65rem);
+  font-weight: 300;
   opacity: 0.5;
+  max-width: 180px;
+  text-align: center;
+  line-height: 1.3;
 }
 
 /* Sound Wave Visual */
@@ -402,9 +412,10 @@ body {
   }
 
   .glassPill {
-    width: min(300px, 90vw);
-    max-width: 300px;
+    width: min(260px, 85vw);
+    max-width: 260px;
     max-height: min(560px, 75vh);
+    padding: 1.25rem;
   }
 
   .circleWindow {
@@ -413,8 +424,8 @@ body {
   }
 
   .labelLine {
-    font-size: 2rem;
-    letter-spacing: 3px;
+    font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+    letter-spacing: clamp(1px, 0.4vw, 2.5px);
   }
 }
 
@@ -424,10 +435,10 @@ body {
   }
 
   .glassPill {
-    width: min(280px, 90vw);
-    max-width: 280px;
+    width: min(240px, 85vw);
+    max-width: 240px;
     max-height: min(520px, 70vh);
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .circleWindow {
@@ -437,8 +448,8 @@ body {
   }
 
   .labelLine {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    letter-spacing: clamp(1px, 0.3vw, 2px);
   }
 
   .labelContainer {
@@ -462,10 +473,10 @@ body {
   }
 
   .glassPill {
-    width: min(260px, 90vw);
-    max-width: 260px;
+    width: min(220px, 85vw);
+    max-width: 220px;
     max-height: min(480px, 65vh);
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .circleWindow {
@@ -475,8 +486,8 @@ body {
   }
 
   .labelLine {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
+    font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+    letter-spacing: clamp(0.5px, 0.25vw, 1.5px);
   }
 
   .labelContainer {
@@ -504,8 +515,10 @@ body {
   }
 
   .footerText {
-    font-size: 0.65rem;
+    font-size: clamp(0.5rem, 1.2vw, 0.6rem);
+    font-weight: 300;
     margin-top: 1rem;
+    max-width: 160px;
   }
 
   .soundWaveVisual {
