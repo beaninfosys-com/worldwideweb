@@ -36,10 +36,7 @@ style.textContent = `
     max-height: 80px !important;
   }
   
-  /* Set all SVG icons to white color by default */
-  svg {
-    color: white;
-  }
+  /* Removed global SVG color to prevent hidden icons in light sections */
 `;
 document.head.appendChild(style);
 

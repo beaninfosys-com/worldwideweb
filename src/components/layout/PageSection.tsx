@@ -13,42 +13,42 @@ interface PageSectionProps {
   invertColors?: boolean;
 }
 
-const PageSection: React.FC<PageSectionProps> = ({ 
-  id, 
-  title, 
-  subtitle, 
-  className, 
+const PageSection: React.FC<PageSectionProps> = ({
+  id,
+  title,
+  subtitle,
+  className,
   children,
   dark = false,
   gradient,
   invertColors = false
 }) => {
   const gradientClass = gradient ? `bg-gradient-${gradient}` : '';
-  
+
   // Use white/grey backgrounds with dark text
   const bgColorClass = ""; // Let parent control background
   const textColorClass = "text-gray-900";
-  
+
   return (
-    <section 
-      id={id} 
+    <section
+      id={id}
       className={cn(
         bgColorClass,
         textColorClass,
         className || ''
       )}
     >
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         {(title || subtitle) && (
-          <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-10 md:mb-12">
             {title && (
-              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-[#3F321F]">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-[#3F321F]">
                 {title}
               </h2>
             )}
             {subtitle && (
               <p className={cn(
-                "text-lg",
+                "text-base sm:text-lg px-4",
                 "text-gray-600"
               )}>
                 {subtitle}

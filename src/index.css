@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -8,40 +7,56 @@
 @layer base {
   :root {
     /* Updated for light theme */
-    --background: 0 0% 100%; /* White background */
-    --foreground: 0 0% 13%; /* Dark text for white background */
-    
-    --card: 0 0% 95%; /* Light gray for cards */
-    --card-foreground: 0 0% 13%; /* Dark text */
-    
+    --background: 0 0% 100%;
+    /* White background */
+    --foreground: 0 0% 13%;
+    /* Dark text for white background */
+
+    --card: 0 0% 95%;
+    /* Light gray for cards */
+    --card-foreground: 0 0% 13%;
+    /* Dark text */
+
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 13%;
-    
+
     /* Bean colors - updated to new darker color */
-    --bean: 33 25% 20%; /* New darker color #3F321F */
-    --bean-light: 33 25% 30%; /* Lighter version */
-    --bean-dark: 33 25% 15%; /* Darker version */
-    --bean-foreground: 0 0% 100%; /* White */
-    
-    --primary: 33 25% 20%; /* Bean color for primary */
-    --primary-foreground: 0 0% 100%; /* White */
-    
-    --secondary: 0 0% 96%; /* Very light gray */
-    --secondary-foreground: 0 0% 13%; /* Dark text */
-    
+    --bean: 33 25% 20%;
+    /* New darker color #3F321F */
+    --bean-light: 33 25% 30%;
+    /* Lighter version */
+    --bean-dark: 33 25% 15%;
+    /* Darker version */
+    --bean-foreground: 0 0% 100%;
+    /* White */
+
+    --primary: 33 25% 20%;
+    /* Bean color for primary */
+    --primary-foreground: 0 0% 100%;
+    /* White */
+
+    --secondary: 0 0% 96%;
+    /* Very light gray */
+    --secondary-foreground: 0 0% 13%;
+    /* Dark text */
+
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%; /* Medium gray for muted text */
-    
-    --accent: 33 25% 20%; /* New darker accent - #3F321F */
+    --muted-foreground: 0 0% 45%;
+    /* Medium gray for muted text */
+
+    --accent: 33 25% 20%;
+    /* New darker accent - #3F321F */
     --accent-foreground: 0 0% 100%;
-    
+
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 89%; /* Light gray border */
+
+    --border: 0 0% 89%;
+    /* Light gray border */
     --input: 0 0% 89%;
-    --ring: 33 25% 20%; /* New darker ring - #3F321F */
-    
+    --ring: 33 25% 20%;
+    /* New darker ring - #3F321F */
+
     --radius: 0.75rem;
   }
 }
@@ -50,26 +65,40 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-gray-900; /* Dark headings */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading text-gray-900;
+    /* Dark headings */
   }
-  
+
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   /* Ensure all text elements are dark by default */
-  p, span, div {
+  p,
+  span,
+  div {
     @apply text-gray-900;
   }
-  
+
   /* Specific overrides for lighter text where needed */
   .text-muted {
     @apply text-gray-600;
   }
-  
+
   .text-light {
     @apply text-gray-500;
   }
@@ -79,45 +108,45 @@
   .elegant-link {
     @apply text-bean-light hover:text-bean relative inline-block;
   }
-  
+
   .elegant-link::after {
     content: '';
     @apply absolute bottom-0 left-0 w-full h-0.5 bg-bean-light scale-x-0 transition-transform duration-300 origin-bottom-right;
   }
-  
+
   .elegant-link:hover::after {
     @apply scale-x-100 origin-bottom-left;
   }
-  
+
   .elegant-card {
     @apply bg-gray-200 rounded-lg shadow-elegant hover:shadow-elegant-hover transition-shadow duration-300;
   }
-  
+
   .gradient-section {
     @apply bg-white;
   }
-  
+
   .gradient-section-alt {
     @apply bg-gray-100;
   }
-  
+
   .floating-element {
     @apply transition-transform duration-300 hover:-translate-y-1;
   }
-  
+
   .button-primary {
     @apply bg-bean text-white px-6 py-2.5 rounded-lg hover:bg-bean-dark transition-colors duration-300;
   }
-  
+
   .button-secondary {
     @apply border-2 border-bean-light bg-transparent text-gray-900 px-6 py-2.5 rounded-lg hover:bg-bean/10 transition-colors duration-300;
   }
-  
+
   /* Nav link styling */
   .nav-link {
     @apply px-4 py-2 relative transition-colors duration-200;
   }
-  
+
   /* Mobile nav styling */
   .mobile-nav-menu {
     @apply bg-white backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg;
@@ -127,7 +156,7 @@
   .btn-primary {
     @apply px-6 py-3 bg-bean text-white font-medium rounded-md hover:bg-bean-light transition-colors;
   }
-  
+
   /* Hero section gradient */
   .hero-gradient {
     @apply bg-white;
@@ -157,9 +186,11 @@
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-15px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -170,10 +201,12 @@
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 0.8;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -185,6 +218,7 @@
     transform: rotate(-5deg) scale(0.9);
     opacity: 0;
   }
+
   100% {
     transform: rotate(0) scale(1);
     opacity: 1;
@@ -195,18 +229,17 @@
   0% {
     background-position: -100% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
 }
 
 .shimmer-effect {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(155, 135, 245, 0.2) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(155, 135, 245, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
   position: absolute;
@@ -288,15 +321,15 @@
   gap: 1.5rem;
 }
 
-.asymmetric-grid > div:nth-child(odd) {
+.asymmetric-grid>div:nth-child(odd) {
   grid-row-end: span 1;
 }
 
-.asymmetric-grid > div:nth-child(even) {
+.asymmetric-grid>div:nth-child(even) {
   grid-row-end: span 2;
 }
 
-.asymmetric-grid > div:nth-child(3n) {
+.asymmetric-grid>div:nth-child(3n) {
   grid-column-end: span 2;
 }
 
@@ -305,11 +338,13 @@
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .horizontal-scroll-section::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
+  /* Chrome, Safari, Edge */
 }
 
 .horizontal-scroll-item {
@@ -457,19 +492,21 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .embla {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @media (max-width: 768px) {
   .asymmetric-grid {
     grid-template-columns: 1fr;
   }
-  
-  .asymmetric-grid > div {
+
+  .asymmetric-grid>div {
     grid-column-end: span 1 !important;
   }
-  
+
   .diagonal-section {
     clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
   }

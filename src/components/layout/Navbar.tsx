@@ -137,10 +137,11 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden transition-colors text-black"
+            className="lg:hidden transition-colors"
+            style={{ color: '#3F321F' }}
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} style={{ color: '#3F321F' }} /> : <Menu size={24} style={{ color: '#3F321F' }} />}
           </button>
         </div>
 

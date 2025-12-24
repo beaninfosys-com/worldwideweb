@@ -61,7 +61,7 @@ const About = () => {
       icon: <Calendar size={24} />
     }
   ];
-  
+
   const officeImages = [
     {
       image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=800&auto=format&fit=crop",
@@ -82,16 +82,16 @@ const About = () => {
 
   return (
     <>
-      <PageHero 
-        title="About Bean Infosystems" 
+      <PageHero
+        title="About Bean Infosystems"
         subtitle="Driving digital transformation through innovation and expertise"
         imageUrl="/lovable-uploads/background_about.png"
       />
 
       {/* Company Overview - Modern Split Design */}
       <div className="relative overflow-hidden bg-gray-50">
-        <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[600px]">
+        <div className="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left Side - Content */}
             <div className="space-y-8">
               <div className="space-y-4">
@@ -110,8 +110,8 @@ const About = () => {
                   <div className="pl-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Foundation</h3>
                     <p className="text-gray-600 leading-relaxed">
-              Founded in 2016, Bean Infosystems has evolved from a small development team into a global technology partner. Our growth is driven by a commitment to innovation, quality and measurable results.
-            </p>
+                      Founded in 2016, Bean Infosystems has evolved from a small development team into a global technology partner. Our growth is driven by a commitment to innovation, quality and measurable results.
+                    </p>
                   </div>
                 </div>
 
@@ -121,11 +121,11 @@ const About = () => {
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Evolution</h3>
                     <p className="text-gray-600 leading-relaxed">
                       We have built a strong reputation for delivering high-performance software solutions that address complex business challenges. As our capabilities expanded, we incorporated AI-driven technologies, strategic consulting and digital advisory services.
-            </p>
-          </div>
+                    </p>
+                  </div>
                 </div>
 
-          <div className="relative">
+                <div className="relative">
                   <div className="absolute -left-4 top-0 w-1 h-full bg-bean rounded-full"></div>
                   <div className="pl-6">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Our Future</h3>
@@ -139,7 +139,7 @@ const About = () => {
 
             {/* Right Side - Company Image */}
             <div className="relative">
-              <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src="/lovable-uploads/About_Image.png"
                   alt="Bean Infosystems Team and Workspace"
@@ -154,15 +154,15 @@ const About = () => {
       </div>
 
       {/* Powering Talent Across Industries */}
-      <div className="relative overflow-hidden bg-white py-20">
+      <div className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Powering Talent Across
               <span className="block text-bean">Industries</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               We connect top talent with leading organizations across diverse industries, delivering exceptional results through our comprehensive staffing solutions.
             </p>
           </div>
@@ -177,62 +177,62 @@ const About = () => {
                 <div className="flex space-x-6 min-w-max">
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per1.jpg" alt="Full Stack Developer" className="w-full h-full object-cover" />
+                      <img src="/images/about/per1.jpg" alt="Full Stack Developer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per2.jpg" alt="Data Scientist" className="w-full h-full object-cover" />
+                      <img src="/images/about/per2.jpg" alt="Data Scientist" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per3.jpg" alt="UX/UI Designer" className="w-full h-full object-cover" />
+                      <img src="/images/about/per3.jpg" alt="UX/UI Designer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per4.jpg" alt="DevOps Engineer" className="w-full h-full object-cover" />
+                      <img src="/images/about/per4.jpg" alt="DevOps Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gradient-to-b from-bean/20 to-bean/10 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per5.webp" alt="Project Manager" className="w-full h-full object-cover" />
+                      <img src="/images/about/per5.webp" alt="Project Manager" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per6.webp" alt="AI/ML Engineer" className="w-full h-full object-cover" />
+                      <img src="/images/about/per6.webp" alt="AI/ML Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per7.jpg" alt="AI/ML Engineer" className="w-full h-full object-cover" />
+                      <img src="/images/about/per7.jpg" alt="AI/ML Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per8.webp" alt="Cyber Security" className="w-full h-full object-cover" />
+                      <img src="/images/about/per8.webp" alt="Cyber Security" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per9.jpg" alt="Business Analyst" className="w-full h-full object-cover" />
+                      <img src="/images/about/per9.jpg" alt="Business Analyst" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-0">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per10.jpg" alt="QA Engineer" className="w-full h-full object-cover" />
+                      <img src="/images/about/per10.jpg" alt="QA Engineer" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per11.jpg" alt="Cloud Architect" className="w-full h-full object-cover" />
+                      <img src="/images/about/per11.jpg" alt="Cloud Architect" className="w-full h-full object-cover" />
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-8">
                     <div className="w-30 h-[400px] bg-gray-200 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
-                      <img src="../public/images/about/per12.jpg" alt="Cloud Architect" className="w-full h-full object-cover" />
+                      <img src="/images/about/per12.jpg" alt="Cloud Architect" className="w-full h-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -438,28 +438,30 @@ const About = () => {
       {/* Company Timeline */}
       <PageSection title="Our Journey" subtitle="A timeline of Bean Infosystem's growth and evolution">
         <div className="relative">
-          {/* Timeline center line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border"></div>
-          
-          <div className="space-y-12">
+          {/* Timeline center line - hidden on mobile, shown on md+ */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-border"></div>
+          {/* Timeline left line - shown on mobile only */}
+          <div className="md:hidden absolute left-6 top-0 h-full w-0.5 bg-border"></div>
+
+          <div className="space-y-8 md:space-y-12">
             {timeline.map((item, index) => (
-              <div key={index} className={`relative grid md:grid-cols-2 gap-6 items-center`}>
-                {/* Icon marker instead of number */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full bg-bean flex items-center justify-center text-white z-10">
+              <div key={index} className={`relative md:grid md:grid-cols-2 gap-6 items-center`}>
+                {/* Icon marker - positioned differently on mobile vs desktop */}
+                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 rounded-full bg-bean flex items-center justify-center text-white z-10">
                   {item.icon}
                 </div>
-                
-                {/* Content */}
-                <div className={`md:text-right ${index % 2 === 0 ? 'md:pr-16' : 'md:order-2 md:pl-16 md:text-left'}`}>
-                  <div className="bg-card border border-border rounded-lg p-6 hover:border-bean/30 transition-all duration-300">
+
+                {/* Content - full width on mobile, half width alternating on desktop */}
+                <div className={`ml-16 md:ml-0 md:text-right ${index % 2 === 0 ? 'md:pr-16' : 'md:order-2 md:pl-16 md:text-left'}`}>
+                  <div className="bg-card border border-border rounded-lg p-4 sm:p-6 hover:border-bean/30 transition-all duration-300">
                     <div className="text-bean text-sm font-semibold mb-2">{item.year}</div>
-                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                    <p className="text-foreground/70">{item.description}</p>
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-sm sm:text-base text-foreground/70">{item.description}</p>
                   </div>
                 </div>
-                
-                <div className={`${index % 2 === 0 ? 'md:order-2 md:pl-16' : 'md:pr-16'}`}>
-                  {/* Empty space to maintain grid alignment */}
+
+                <div className={`hidden md:block ${index % 2 === 0 ? 'md:order-2 md:pl-16' : 'md:pr-16'}`}>
+                  {/* Empty space to maintain grid alignment on desktop */}
                 </div>
               </div>
             ))}
@@ -468,14 +470,14 @@ const About = () => {
       </PageSection>
 
       {/* Our Approach - Workflow Design */}
-      <div className="py-20 lg:py-32" style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #C19A6B 50%, #3B2416 100%)' }}>
+      <div className="py-12 sm:py-16 md:py-20 lg:py-32" style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #C19A6B 50%, #3B2416 100%)' }}>
         <div className="container mx-auto px-4">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               Our Approach
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto px-4">
               How we deliver exceptional results for our clients through our proven methodology
             </p>
           </div>
@@ -494,7 +496,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Edit size={40} color='rgb(193, 154, 107)'/>
+                    <Edit size={40} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Discovery</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -508,22 +510,22 @@ const About = () => {
                 <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
                   <defs>
                     <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
-                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8" />
+                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1" />
                     </linearGradient>
                     <filter id="arrowShadow1" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)"/>
+                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)" />
                     </filter>
                   </defs>
                   {/* Arrow body with 3D effect */}
-                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
-                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)" />
+                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)" />
                   {/* Arrow head with 3D effect */}
-                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
-                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)"/>
+                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)" />
+                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)" />
                   {/* Highlight line */}
-                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)" />
                 </svg>
               </div>
 
@@ -536,7 +538,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Map size={40} color='rgb(193, 154, 107)'/>
+                    <Map size={40} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Strategy</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -550,22 +552,22 @@ const About = () => {
                 <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
                   <defs>
                     <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
-                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8" />
+                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1" />
                     </linearGradient>
                     <filter id="arrowShadow1" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)"/>
+                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)" />
                     </filter>
                   </defs>
                   {/* Arrow body with 3D effect */}
-                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
-                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)" />
+                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)" />
                   {/* Arrow head with 3D effect */}
-                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
-                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)"/>
+                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)" />
+                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)" />
                   {/* Highlight line */}
-                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)" />
                 </svg>
               </div>
 
@@ -578,7 +580,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Wrench size={40} color='rgb(193, 154, 107)'/>
+                    <Wrench size={40} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Implementation</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -592,22 +594,22 @@ const About = () => {
                 <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
                   <defs>
                     <linearGradient id="arrowGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
-                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
-                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                      <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8" />
+                      <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9" />
+                      <stop offset="100%" stopColor="#0F0804" stopOpacity="1" />
                     </linearGradient>
                     <filter id="arrowShadow1" x="-20%" y="-20%" width="140%" height="140%">
-                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)"/>
+                      <feDropShadow dx="2" dy="2" stdDeviation="2" floodColor="rgba(31, 17, 8, 0.5)" />
                     </filter>
                   </defs>
                   {/* Arrow body with 3D effect */}
-                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
-                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
+                  <rect x="8" y="12" width="24" height="8" rx="4" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)" />
+                  <rect x="10" y="14" width="20" height="4" rx="2" fill="rgba(255,255,255,0.3)" />
                   {/* Arrow head with 3D effect */}
-                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)"/>
-                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)"/>
+                  <polygon points="32,8 40,16 32,24 28,20 28,12" fill="url(#arrowGradient1)" filter="url(#arrowShadow1)" />
+                  <polygon points="30,12 38,16 30,20 32,18 32,14" fill="rgba(255,255,255,0.4)" />
                   {/* Highlight line */}
-                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)"/>
+                  <rect x="12" y="15" width="16" height="2" rx="1" fill="rgba(255,255,255,0.6)" />
                 </svg>
               </div>
 
@@ -618,7 +620,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 hover:bg-white/95 transition-all duration-300 text-center shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Share2 size={40} color='rgb(193, 154, 107)'/>
+                    <Share2 size={40} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Optimization</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -636,7 +638,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Edit size={32} color='rgb(193, 154, 107)'/>
+                    <Edit size={32} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Discovery</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -647,22 +649,22 @@ const About = () => {
                   <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
                     <defs>
                       <linearGradient id="arrowGradientDown" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
-                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
-                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8" />
+                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9" />
+                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1" />
                       </linearGradient>
                       <filter id="arrowShadowDown" x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)"/>
+                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)" />
                       </filter>
                     </defs>
                     {/* Arrow body with 3D effect */}
-                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
-                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)"/>
+                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)" />
+                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)" />
                     {/* Arrow head with 3D effect */}
-                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
-                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)"/>
+                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)" />
+                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)" />
                     {/* Highlight line */}
-                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)"/>
+                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)" />
                   </svg>
                 </div>
               </div>
@@ -673,7 +675,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Map size={32} color='rgb(193, 154, 107)'/>
+                    <Map size={32} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Strategy</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -684,22 +686,22 @@ const About = () => {
                   <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
                     <defs>
                       <linearGradient id="arrowGradientDown" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
-                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
-                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8" />
+                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9" />
+                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1" />
                       </linearGradient>
                       <filter id="arrowShadowDown" x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)"/>
+                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)" />
                       </filter>
                     </defs>
                     {/* Arrow body with 3D effect */}
-                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
-                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)"/>
+                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)" />
+                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)" />
                     {/* Arrow head with 3D effect */}
-                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
-                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)"/>
+                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)" />
+                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)" />
                     {/* Highlight line */}
-                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)"/>
+                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)" />
                   </svg>
                 </div>
               </div>
@@ -710,7 +712,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Wrench size={32} color='rgb(193, 154, 107)'/>
+                    <Wrench size={32} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Implementation</h3>
                   <p className="text-gray-700 leading-relaxed">
@@ -721,22 +723,22 @@ const About = () => {
                   <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-lg">
                     <defs>
                       <linearGradient id="arrowGradientDown" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8"/>
-                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9"/>
-                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1"/>
+                        <stop offset="0%" stopColor="#2D1810" stopOpacity="0.8" />
+                        <stop offset="50%" stopColor="#1F1108" stopOpacity="0.9" />
+                        <stop offset="100%" stopColor="#0F0804" stopOpacity="1" />
                       </linearGradient>
                       <filter id="arrowShadowDown" x="-20%" y="-20%" width="140%" height="140%">
-                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)"/>
+                        <feDropShadow dx="1" dy="2" stdDeviation="1.5" floodColor="rgba(31, 17, 8, 0.5)" />
                       </filter>
                     </defs>
                     {/* Arrow body with 3D effect */}
-                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
-                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)"/>
+                    <rect x="8" y="4" width="8" height="20" rx="4" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)" />
+                    <rect x="10" y="6" width="4" height="16" rx="2" fill="rgba(255,255,255,0.3)" />
                     {/* Arrow head with 3D effect */}
-                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)"/>
-                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)"/>
+                    <polygon points="4,24 12,32 20,24 16,28 16,26 8,26 8,28" fill="url(#arrowGradientDown)" filter="url(#arrowShadowDown)" />
+                    <polygon points="8,26 12,30 16,26 14,28 14,27 10,27 10,28" fill="rgba(255,255,255,0.4)" />
                     {/* Highlight line */}
-                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)"/>
+                    <rect x="11" y="8" width="2" height="14" rx="1" fill="rgba(255,255,255,0.6)" />
                   </svg>
                 </div>
               </div>
@@ -747,7 +749,7 @@ const About = () => {
                 </div>
                 <Card className="p-6 bg-white/90 backdrop-blur-sm border border-white/20 text-center max-w-sm shadow-lg">
                   <div className="text-bean mb-4 flex justify-center">
-                    <Share2 size={32} color='rgb(193, 154, 107)'/>
+                    <Share2 size={32} color='rgb(193, 154, 107)' />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900">Optimization</h3>
                   <p className="text-gray-700 leading-relaxed">
