@@ -1,21 +1,25 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Github, 
-  Linkedin, 
+import {
+  Github,
+  Linkedin,
   Twitter
 } from 'lucide-react';
 
 const Footer = () => {
   return (
-    // Changed bg-gray-100 to bg-gray-200 for a more visible light gray background.
-    <footer className="bg-gray-200 border-t border-gray-300"> 
+    <footer
+      className="border-t border-gray-300"
+      style={{
+        background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #6B7280 100%)'
+      }}
+    >
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
           {/* Company Info */}
           <div>
             <img
-              src="/images/footer_img.png"
+              src="/images/footer_new_tree.png"
               alt="Footer Image"
               className="w-full h-auto"
             />
@@ -80,15 +84,15 @@ const Footer = () => {
 
           {/* Addresses */}
           {/* Aligned addresses and flags using flexbox */}
-          <div className="space-y-8"> 
+          <div className="space-y-8">
             {/* United States */}
             <div>
               <h3 className="text-lg font-semibold mb-3 text-gray-900 flex items-start space-x-3">UNITED STATES</h3>
               <div className="flex items-start space-x-3">
                 {/* Adjusted flag size */}
-                <img src='https://www.beaninfosys.com/img/usa.png' height={40} width={60} style={{ minWidth: '70px' }}/>
+                <img src='https://www.beaninfosys.com/img/usa.png' height={40} width={60} style={{ minWidth: '70px' }} />
                 {/* Increased text color for better visibility against light gray background */}
-                <span className="text-gray-700 text-xs text-left"> 
+                <span className="text-gray-700 text-xs text-left">
                   8751 Collin Mckinney Pkwy #201
                   Mckinney, TX, USA 75070
                 </span>
@@ -111,7 +115,7 @@ const Footer = () => {
         </div>
 
         {/* Adjusted border-t color to match the new background */}
-        <div className="border-t border-gray-300 mt-10 pt-6 text-center text-gray-500 text-sm"> 
+        <div className="border-t border-gray-300 mt-10 pt-6 text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Bean Infosystems. All rights reserved.</p>
         </div>
       </div>

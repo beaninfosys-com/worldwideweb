@@ -30,26 +30,26 @@ const ClientLogosSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 clients-section-container">
       <div className="container mx-auto px-0">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Trusted by Leading Organizations
+          <h2 className="client-headline">
+            Trusted by Leading <span className="client-highlight">Organizations</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="client-description">
             We're proud to partner with innovative companies across industries
           </p>
         </div>
-        
+
         <div className="logo-section">
           {logoRows.map((row, rowIndex) => (
             <div key={rowIndex} className="logo-strip">
               <div className="logo-track">
                 {/* Duplicate the logos for seamless infinite loop */}
                 {row.concat(row).map((client, index) => (
-                  <img 
+                  <img
                     key={`${rowIndex}-${index}`}
-                    src={client.logo} 
+                    src={client.logo}
                     alt={client.name}
                     className="logo-img"
                   />
@@ -59,12 +59,38 @@ const ClientLogosSection: React.FC = () => {
           ))}
         </div>
       </div>
-      
+
       <style>{`
+        .clients-section-container {
+          background: radial-gradient(circle at 0% 0%, #e6d7c3 0%, #ffffff 40%);
+        }
+
         .logo-section {
           overflow: hidden;
           padding: 20px 0;
-          background-color: white;
+          background-color: transparent;
+        }
+
+        .client-headline {
+          font-family: 'Outfit', sans-serif;
+          font-size: clamp(2rem, 5vw, 3.5rem);
+          line-height: 1.1;
+          font-weight: 500;
+          margin-bottom: 1.5rem;
+          color: #000;
+        }
+
+        .client-highlight {
+          font-weight: 700;
+        }
+
+        .client-description {
+          font-family: 'Outfit', sans-serif;
+          font-size: clamp(1rem, 2vw, 1.1rem);
+          line-height: 1.6;
+          color: #555;
+          margin: 0 auto;
+          max-width: 90%;
         }
 
         .logo-strip {
