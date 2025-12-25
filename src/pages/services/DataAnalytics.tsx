@@ -69,77 +69,122 @@ const DataAnalytics = () => {
 
       {/* Overview Section */}
       <PageSection>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Advanced Analytics for Data-Driven Success</h2>
-            <p className="text-foreground/70 mb-4">
-              Data is the new oil, but raw data alone isn't valuable—it's the insights you extract that drive 
-              business value. Our comprehensive data and analytics services help you unlock the full potential 
-              of your data assets through advanced analytical techniques and technologies.
-            </p>
-            <p className="text-foreground/70 mb-4">
-              From statistical analysis to machine learning, we provide end-to-end analytics solutions that 
-              transform complex data into clear, actionable insights. Our team of data scientists and analysts 
-              work with you to understand your business challenges and develop custom analytical approaches.
-            </p>
-            <p className="text-foreground/70">
-              Whether you're looking to optimize operations, understand customer behavior, or predict market 
-              trends, our analytics solutions provide the insights you need to make informed decisions.
-            </p>
-          </div>
-          <div className="relative">
-            <div className="aspect-video bg-bean/5 rounded-xl p-8 flex items-center justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute top-0 left-0 w-full h-full bg-card border border-border rounded-lg transform rotate-3 shadow-md"></div>
-                <div className="absolute top-0 left-0 w-full h-full bg-card border border-border rounded-lg transform -rotate-2 shadow-md"></div>
-                <div className="relative w-full h-full bg-card border border-border rounded-lg shadow-md p-6">
-                  <div className="text-bean mb-4">
-                    <Database size={32} />
-                  </div>
-                  <div className="h-4 w-3/4 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-1/2 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-2/3 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-1/2 bg-bean/20 rounded"></div>
-                </div>
-              </div>
+        <div className="grid lg:grid-cols-5 gap-12 items-center max-w-6xl mx-auto">
+          <div className="lg:col-span-2 text-left space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#3F321F]">
+              Advanced Analytics for Data-Driven Success
+            </h2>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Data is the new oil, but raw data alone isn't valuable—it's the insights you extract that drive
+                business value. Our comprehensive data and analytics services help you unlock the full potential
+                of your data assets through advanced analytical techniques and technologies.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                From statistical analysis to machine learning, we provide end-to-end analytics solutions that
+                transform complex data into clear, actionable insights. Our team of data scientists and analysts
+                work with you to understand your business challenges and develop custom analytical approaches.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Whether you're looking to optimize operations, understand customer behavior, or predict market
+                trends, our analytics solutions provide the insights you need to make informed decisions.
+              </p>
             </div>
           </div>
+          <div className="lg:col-span-3 relative">
+            <img
+              src="/images/data_analytics/tablet_charts.png"
+              alt="Data Analytics - Business Success"
+              className="w-full h-auto rounded-2xl"
+            />
+          </div>
         </div>
       </PageSection>
 
-      {/* Services */}
-      <PageSection dark title="Our Analytics Services" subtitle="Comprehensive data analysis and insights generation">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <Card key={index} className="p-6 hover:border-bean/30 transition-all duration-300">
-              <div className="text-bean mb-4">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-foreground/70">
-                {service.description}
+      {/* Services - Clean Grid Style */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #C19A6B 100%)' }}>
+        <PageSection>
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#3F321F] text-left">
+                Our Analytics Services
+              </h2>
+              <p className="text-lg text-gray-600 text-left">
+                Comprehensive data analysis and insights generation powered by advanced technologies
               </p>
-            </Card>
-          ))}
-        </div>
-      </PageSection>
+            </div>
 
-      {/* Advantages */}
-      <PageSection title="Why Choose Our Data Analytics Services" subtitle="The Bean Infosystem analytics advantage">
-        <div className="grid md:grid-cols-3 gap-6">
-          {advantages.map((advantage, index) => (
-            <Card key={index} className="p-6">
-              <div className="text-bean mb-4">
-                {advantage.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{advantage.title}</h3>
-              <p className="text-foreground/70">
-                {advantage.description}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+              {services.map((service, index) => (
+                <div key={index} className="flex flex-col items-start space-y-4">
+                  <div className="text-bean">
+                    {React.cloneElement(service.icon as React.ReactElement, {
+                      color: '#ea580c',
+                      strokeWidth: 1.5
+                    })}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-left">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </PageSection>
+      </div>
+
+      {/* Why Choose Us - Polaroid Style */}
+      <div style={{ background: 'linear-gradient(to bottom, #C19A6B 0%, #ffffff 30%, #ffffff 100%)' }}>
+        <PageSection>
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-left">
+                Why Choose Our Data Analytics Services
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 max-w-3xl text-left">
+                The Bean Infosystem analytics advantage for your business growth
               </p>
-            </Card>
-          ))}
-        </div>
-      </PageSection>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  ...advantages[0],
+                  image: "/images/data_analytics/idea.png"
+                },
+                {
+                  ...advantages[1],
+                  image: "/images/data_analytics/folder.png"
+                },
+                {
+                  ...advantages[2],
+                  image: "/images/data_analytics/big_data.png"
+                }
+              ].map((advantage, index) => (
+                <div key={index} className="group">
+                  <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div className="aspect-square relative">
+                      <img
+                        src={advantage.image}
+                        alt={advantage.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 text-left">{advantage.title}</h3>
+                      <p className="text-gray-700 leading-relaxed text-left">
+                        {advantage.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </PageSection>
+      </div>
 
       {/* CTA Section */}
       <CTASection headline="Ready to supercharge<br />your Data Analytics journey?" />

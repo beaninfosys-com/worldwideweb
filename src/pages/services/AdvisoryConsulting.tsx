@@ -45,17 +45,17 @@ const AdvisoryConsulting = () => {
     {
       title: "Proven Track Record",
       description: "Years of experience helping businesses across industries achieve their technology and strategic goals.",
-      icon: <CheckCircle size={32} />
+      image: "/images/advisory/track_record.png"
     },
     {
       title: "Industry Expertise",
       description: "Deep knowledge across multiple industries and technology domains to provide relevant, actionable advice.",
-      icon: <Award size={32} />
+      image: "/images/advisory/expertise.png"
     },
     {
       title: "Collaborative Approach",
       description: "We work as an extension of your team, ensuring knowledge transfer and sustainable long-term success.",
-      icon: <Users size={32} />
+      image: "/images/advisory/collaboration.png"
     }
   ];
 
@@ -69,77 +69,110 @@ const AdvisoryConsulting = () => {
 
       {/* Overview Section */}
       <PageSection>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Strategic Guidance for Technology Excellence</h2>
-            <p className="text-foreground/70 mb-4">
-              In today's rapidly evolving technology landscape, making the right strategic decisions can be the 
-              difference between success and stagnation. Our advisory and consulting services provide you with 
-              the expertise and insights needed to navigate complex technology challenges.
-            </p>
-            <p className="text-foreground/70 mb-4">
-              Our seasoned consultants bring decades of combined experience across industries, helping organizations 
-              optimize their technology investments, streamline operations, and achieve sustainable growth through 
-              strategic technology initiatives.
-            </p>
-            <p className="text-foreground/70">
-              Whether you're planning a digital transformation, evaluating new technologies, or optimizing existing 
-              systems, we provide actionable recommendations tailored to your unique business context.
-            </p>
-          </div>
-          <div className="relative">
-            <div className="aspect-video bg-bean/5 rounded-xl p-8 flex items-center justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute top-0 left-0 w-full h-full bg-card border border-border rounded-lg transform rotate-3 shadow-md"></div>
-                <div className="absolute top-0 left-0 w-full h-full bg-card border border-border rounded-lg transform -rotate-2 shadow-md"></div>
-                <div className="relative w-full h-full bg-card border border-border rounded-lg shadow-md p-6">
-                  <div className="text-bean mb-4">
-                    <Users size={32} />
-                  </div>
-                  <div className="h-4 w-3/4 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-1/2 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-2/3 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-1/2 bg-bean/20 rounded"></div>
-                </div>
-              </div>
+        <div className="grid lg:grid-cols-5 gap-12 items-center max-w-6xl mx-auto">
+          <div className="lg:col-span-2 text-left space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#3F321F]">
+              Strategic Guidance for Technology Excellence
+            </h2>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                In today's rapidly evolving technology landscape, making the right strategic decisions can be the
+                difference between success and stagnation. Our advisory and consulting services provide you with
+                the expertise and insights needed to navigate complex technology challenges.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our seasoned consultants bring decades of combined experience across industries, helping organizations
+                optimize their technology investments, streamline operations, and achieve sustainable growth through
+                strategic technology initiatives.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Whether you're planning a digital transformation, evaluating new technologies, or optimizing existing
+                systems, we provide actionable recommendations tailored to your unique business context.
+              </p>
             </div>
           </div>
+          <div className="lg:col-span-3 relative flex justify-center">
+            <img
+              src="/images/services_tower.png"
+              alt="Strategic Advisory - Technology Excellence"
+              className="w-full max-w-2xl h-auto"
+            />
+          </div>
         </div>
       </PageSection>
 
-      {/* Services */}
-      <PageSection dark title="Our Consulting Services" subtitle="Comprehensive advisory solutions for your business">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <Card key={index} className="p-6 hover:border-bean/30 transition-all duration-300">
-              <div className="text-bean mb-4">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-foreground/70">
-                {service.description}
+      {/* Services - Clean Grid */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #C19A6B 100%)' }}>
+        <PageSection>
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#3F321F] text-left">
+                Our Consulting Services
+              </h2>
+              <p className="text-lg text-gray-600 text-left">
+                Comprehensive advisory solutions for your business
               </p>
-            </Card>
-          ))}
-        </div>
-      </PageSection>
+            </div>
 
-      {/* Why Choose Us */}
-      <PageSection title="Why Choose Our Advisory Services" subtitle="The Bean Infosystem advantage in consulting">
-        <div className="grid md:grid-cols-3 gap-6">
-          {advantages.map((advantage, index) => (
-            <Card key={index} className="p-6">
-              <div className="text-bean mb-4">
-                {advantage.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{advantage.title}</h3>
-              <p className="text-foreground/70">
-                {advantage.description}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+              {services.map((service, index) => (
+                <div key={index} className="flex flex-col items-start space-y-4">
+                  <div className="text-bean">
+                    {React.cloneElement(service.icon as React.ReactElement, {
+                      color: '#ea580c',
+                      strokeWidth: 1.5,
+                      size: 32
+                    })}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-left">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </PageSection>
+      </div>
+
+      {/* Why Choose Us - Polaroid Style */}
+      <div style={{ background: 'linear-gradient(to bottom, #C19A6B 0%, #ffffff 30%, #ffffff 100%)' }}>
+        <PageSection>
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-left">
+                Why Choose Our Consulting and Advisory Services
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 max-w-3xl text-left">
+                Empower your business with strategic insights and proven expertise from Bean Infosystem
               </p>
-            </Card>
-          ))}
-        </div>
-      </PageSection>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {advantages.map((advantage, index) => (
+                <div key={index} className="group">
+                  <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div className="aspect-square relative">
+                      <img
+                        src={advantage.image}
+                        alt={advantage.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 text-left">{advantage.title}</h3>
+                      <p className="text-gray-700 leading-relaxed text-left">
+                        {advantage.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </PageSection>
+      </div>
 
       {/* CTA Section */}
       <CTASection headline="Ready to supercharge<br />your Advisory & Consulting journey?" />
