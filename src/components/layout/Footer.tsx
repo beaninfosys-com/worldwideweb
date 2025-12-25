@@ -30,18 +30,18 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-900">SERVICES</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/data-analytics" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Data & Analytics
+                <Link to="/services/ai-solutions" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  AI Solutions & Integration
                 </Link>
               </li>
               <li>
-                <Link to="/services/advisory-services" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Advisory Services
+                <Link to="/services/application-development" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  Application Development
                 </Link>
               </li>
               <li>
-                <Link to="/services/consulting-services" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Consulting Services
+                <Link to="/services/advisory-consulting" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  Advisory & Consulting
                 </Link>
               </li>
               <li>
@@ -50,34 +50,34 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services/application-development" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
-                  Application Development
+                <Link to="/services/data-analytics" className="text-gray-600 hover:text-[#D4A76A] transition-colors">
+                  Data & Analytics
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* About Us */}
+          {/* Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900">LINKS</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/clients" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Clients</Link>
+                <Link to="/about" className="text-gray-600 hover:text-[#D4A76A] transition-colors">About</Link>
+              </li>
+              <li>
+                <Link to="/products" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Products</Link>
+              </li>
+              <li>
+                <Link to="/training" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Trainings</Link>
               </li>
               <li>
                 <Link to="/careers" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Careers</Link>
               </li>
               <li>
-                <Link to="/product" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Products</Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Trainings</a>
+                <Link to="/social-impact" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Social Impact</Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Contact Us</Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-[#D4A76A] transition-colors">Social Impact</a>
               </li>
             </ul>
           </div>
