@@ -53,8 +53,8 @@ const Product = () => {
               {/* Left Side - Image (50%) */}
               <div>
                 <img
-                  src="/images/products_person_tech.png"
-                  alt="AI Innovation"
+                  src="/images/products/innovation_hand.png"
+                  alt="Innovation Hand"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -89,7 +89,7 @@ const Product = () => {
               <h2
                 className="text-6xl lg:text-7xl font-bold mb-6"
                 style={{
-                  backgroundImage: 'url(/images/socialbirds_logo_bg.png)',
+                  backgroundImage: 'url(/images/products/socialbirds_pen_bg.png)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   backgroundClip: 'text',
