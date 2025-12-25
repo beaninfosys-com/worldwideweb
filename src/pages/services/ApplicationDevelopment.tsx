@@ -3,15 +3,8 @@ import PageHero from '@/components/layout/PageHero';
 import PageSection from '@/components/layout/PageSection';
 import { Link } from 'react-router-dom';
 import CTASection from '@/index2/components/CTASection';
-import { Code, Layers, Database, Shield, Globe, ArrowRight, Monitor, Smartphone, Laptop } from 'lucide-react';
+import { Code, Layers, Database, Shield, Globe, Monitor, Smartphone, Laptop } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from '@/components/ui/carousel';
 
 const ApplicationDevelopment = () => {
   const capabilities = [
@@ -47,38 +40,6 @@ const ApplicationDevelopment = () => {
     }
   ];
 
-  const process = [
-    {
-      title: "Discovery & Planning",
-      description: "We begin by understanding your business objectives, user needs, and technical requirements to establish a solid foundation for the project.",
-      color: "bg-bean/10",
-      borderColor: "border-bean/30"
-    },
-    {
-      title: "Design & Architecture",
-      description: "Our team creates detailed designs and technical architectures that align with your requirements and industry best practices.",
-      color: "bg-bean/15",
-      borderColor: "border-bean/40"
-    },
-    {
-      title: "Development & Testing",
-      description: "We employ agile development methodologies, coupled with rigorous testing, to deliver high-quality applications efficiently.",
-      color: "bg-bean/20",
-      borderColor: "border-bean/50"
-    },
-    {
-      title: "Deployment & Integration",
-      description: "We ensure smooth deployment and integration with your existing systems and processes.",
-      color: "bg-bean/25",
-      borderColor: "border-bean/60"
-    },
-    {
-      title: "Maintenance & Support",
-      description: "Our team provides ongoing maintenance and support to ensure your application continues to perform optimally.",
-      color: "bg-bean/30",
-      borderColor: "border-bean/70"
-    }
-  ];
 
   return (
     <>
@@ -90,146 +51,152 @@ const ApplicationDevelopment = () => {
 
       {/* Overview Section */}
       <PageSection>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Transform Your Business with Custom Applications</h2>
-            <p className="text-foreground/70 mb-4">
-              In today's digital-first world, custom applications can be a significant competitive advantage. 
-              At Bean Infosystem, we specialize in developing tailored software solutions that address your 
-              unique business challenges and opportunities.
-            </p>
-            <p className="text-foreground/70 mb-4">
-              Our team of experienced developers combines technical expertise with deep industry knowledge 
-              to create applications that not only meet your functional requirements but also deliver 
-              exceptional user experiences.
-            </p>
-            <p className="text-foreground/70">
-              Whether you need a web application, mobile app, or enterprise software, we have the skills and 
-              experience to bring your vision to life.
-            </p>
+        <div className="grid lg:grid-cols-5 gap-12 items-center max-w-6xl mx-auto">
+          <div className="lg:col-span-2 text-left space-y-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#3F321F]">
+              Transform Your Business with Custom Applications
+            </h2>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-600 leading-relaxed">
+                In today's digital-first world, custom applications can be a significant competitive advantage.
+                At Bean Infosystem, we specialize in developing tailored software solutions that address your
+                unique business challenges and opportunities.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Our team of experienced developers combines technical expertise with deep industry knowledge
+                to create applications that not only meet your functional requirements but also deliver
+                exceptional user experiences.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Whether you need a web application, mobile app, or enterprise software, we have the skills and
+                experience to bring your vision to life.
+              </p>
+            </div>
           </div>
-          <div className="relative">
-            <div className="aspect-video bg-bean/5 rounded-xl p-8 flex items-center justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute top-0 left-0 w-full h-full bg-card border border-border rounded-lg transform rotate-3 shadow-md"></div>
-                <div className="absolute top-0 left-0 w-full h-full bg-card border border-border rounded-lg transform -rotate-2 shadow-md"></div>
-                <div className="relative w-full h-full bg-card border border-border rounded-lg shadow-md p-6">
-                  <div className="text-bean mb-4">
-                    <Code size={32} />
+          <div className="lg:col-span-3 relative">
+            <img
+              src="/images/app_dev/app_dev_hero.png"
+              alt="Application Development - Custom Software Solutions"
+              className="w-full h-auto rounded-2xl"
+            />
+          </div>
+        </div>
+      </PageSection>
+
+      {/* Key Features - Clean Grid style */}
+      <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #ffffff 70%, #C19A6B 100%)' }}>
+        <PageSection>
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#3F321F] text-left">
+                Our Development Capabilities
+              </h2>
+              <p className="text-lg text-gray-600 text-left">
+                Comprehensive solutions tailored to your unique business needs
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+              {capabilities.map((capability, index) => (
+                <div key={index} className="flex flex-col items-start space-y-4">
+                  <div className="text-bean">
+                    {React.cloneElement(capability.icon as React.ReactElement, {
+                      color: '#ea580c',
+                      strokeWidth: 1.5
+                    })}
                   </div>
-                  <div className="h-4 w-3/4 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-1/2 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-2/3 bg-bean/20 rounded mb-3"></div>
-                  <div className="h-4 w-1/2 bg-bean/20 rounded"></div>
+                  <h3 className="text-xl font-bold text-gray-900">{capability.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-left">
+                    {capability.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </PageSection>
+      </div>
+
+
+      {/* Benefits Section - Polaroid Style */}
+      <div style={{ background: 'linear-gradient(to bottom, #C19A6B 0%, #ffffff 30%, #ffffff 100%)' }}>
+        <PageSection>
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-left">
+                Why Choose Our Application Development Services
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 max-w-3xl text-left">
+                Experience the Bean Infosystem advantage with modern, scalable, and future-ready solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Card 1: Quality Assurance */}
+              <div className="group">
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                  <div className="aspect-square relative">
+                    <img
+                      src="/images/app_dev/r.png"
+                      alt="Quality Assurance"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 text-left">Quality Assurance</h3>
+                    <p className="text-gray-700 leading-relaxed text-left">
+                      Our rigorous quality assurance processes ensure that your application meets the highest standards
+                      of reliability, performance, and security.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Scalable Architecture */}
+              <div className="group">
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                  <div className="aspect-square relative">
+                    <img
+                      src="/images/app_dev/every.png"
+                      alt="Scalable Architecture"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 text-left">Scalable Architecture</h3>
+                    <p className="text-gray-700 leading-relaxed text-left">
+                      We design applications with scalability in mind, allowing them to grow seamlessly as your business
+                      expands and evolves.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Future-Ready */}
+              <div className="group">
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all duration-500">
+                  <div className="aspect-square relative">
+                    <img
+                      src="/images/app_dev/phone.png"
+                      alt="Future-Ready"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 text-left">Future-Ready</h3>
+                    <p className="text-gray-700 leading-relaxed text-left">
+                      Our applications are built using modern technologies and best practices, ensuring they remain
+                      relevant and effective well into the future.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[120%] max-h-[120%] bg-bean/5 rounded-full blur-3xl"></div>
           </div>
-        </div>
-      </PageSection>
-
-      {/* Key Features */}
-      <PageSection dark title="Our Development Capabilities" subtitle="Comprehensive solutions tailored to your needs">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {capabilities.map((capability, index) => (
-            <Card key={index} className="p-6 hover:border-bean/30 transition-all duration-300">
-              <div className="text-bean mb-4">
-                {capability.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{capability.title}</h3>
-              <p className="text-foreground/70">
-                {capability.description}
-              </p>
-            </Card>
-          ))}
-        </div>
-      </PageSection>
-
-      {/* Development Process - New Design */}
-      <PageSection title="Our Development Process" subtitle="A structured approach to delivering exceptional applications">
-        <div className="space-y-6">
-          {/* Process steps as connected cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
-            {process.map((step, index) => (
-              <div key={index} className="flex flex-col">
-                <Card className={`p-6 h-full relative ${step.color} border ${step.borderColor} transition-all hover:shadow-md`}>
-                  <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-bean flex items-center justify-center text-white font-bold">
-                    {index + 1}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold mb-3 mt-2">{step.title}</h3>
-                  <p className="text-foreground/70">{step.description}</p>
-                  
-                  {index < process.length - 1 && (
-                    <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
-                      <ArrowRight className="text-bean" size={20} />
-                    </div>
-                  )}
-                </Card>
-              </div>
-            ))}
-          </div>
-          
-          {/* Mobile view carousel */}
-          <div className="lg:hidden mt-8">
-            <Carousel>
-              <CarouselPrevious />
-              <CarouselContent>
-                {process.map((step, index) => (
-                  <CarouselItem key={index}>
-                    <Card className={`p-6 relative ${step.color} border ${step.borderColor}`}>
-                      <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-bean flex items-center justify-center text-white font-bold">
-                        {index + 1}
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 mt-2">{step.title}</h3>
-                      <p className="text-foreground/70">{step.description}</p>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </div>
-      </PageSection>
-
-      {/* Benefits Section */}
-      <PageSection dark title="Why Choose Our Application Development Services" subtitle="Experience the Bean Infosystem advantage">
-        <div className="grid md:grid-cols-3 gap-6">
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Shield size={32} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Quality Assurance</h3>
-            <p className="text-foreground/70">
-              Our rigorous quality assurance processes ensure that your application meets the highest standards 
-              of reliability, performance, and security.
-            </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Layers size={32} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Scalable Architecture</h3>
-            <p className="text-foreground/70">
-              We design applications with scalability in mind, allowing them to grow seamlessly as your business 
-              expands and evolves.
-            </p>
-          </Card>
-          <Card className="p-6">
-            <div className="text-bean mb-4">
-              <Globe size={32} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Future-Ready</h3>
-            <p className="text-foreground/70">
-              Our applications are built using modern technologies and best practices, ensuring they remain 
-              relevant and effective well into the future.
-            </p>
-          </Card>
-        </div>
-      </PageSection>
+        </PageSection>
+      </div>
 
       {/* CTA Section */}
       <CTASection headline="Ready to supercharge<br />your Application Development?" />
