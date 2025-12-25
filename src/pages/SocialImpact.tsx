@@ -41,7 +41,7 @@ const SocialImpact = () => {
             <div className="flex justify-center items-center">
               <div className="w-full max-w-md lg:max-w-lg">
                 <img
-                  src="../public/images/socialimpact_1.png"
+                  src="/images/socialimpact_1.png"
                   alt="Social Impact"
                   className="w-full h-auto"
                 />
