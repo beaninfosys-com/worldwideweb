@@ -4,6 +4,7 @@ import TechVisualSection from '../components/TechVisualSection';
 import AIPillSection from '../components/AIPillSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import CareerSection from '../components/CareerSection';
+import PoweringTalentSection from '../components/PoweringTalentSection';
 import CTASection from '../components/CTASection';
 import ClientLogosSection from '@/components/home/ClientLogosSection';
 import '../App.css';
@@ -31,6 +32,7 @@ function Index2Home() {
       <AIPillSection />
       <TestimonialsSection />
       <CareerSection />
+      <PoweringTalentSection />
       <CTASection />
     </div>
   );

@@ -6,6 +6,7 @@ import {
     BarChart2, Target, ThumbsUp, Star, CheckCircle, Zap
 } from 'lucide-react';
 import CTASection from '@/index2/components/CTASection';
+import IndustriesWeServe from '@/components/IndustriesWeServe';
 
 const Services = () => {
     const coreServices = [
@@ -258,6 +259,9 @@ const Services = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Industries We Serve Section */}
+            <IndustriesWeServe />
 
             {/* CTA Section */}
             <CTASection />

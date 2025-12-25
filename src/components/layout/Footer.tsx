@@ -116,7 +116,7 @@ const Footer = () => {
 
         {/* Adjusted border-t color to match the new background */}
         <div className="border-t border-gray-300 mt-10 pt-6 text-center text-gray-500 text-sm">
-          <p>&copy; 2016-{new Date().getFullYear()} Bean Infosystems. All rights reserved.</p>
+          <p>&copy; 2016-{new Date().getFullYear() + 1} Bean Infosystems. All rights reserved.</p>
         </div>
       </div>
     </footer>
