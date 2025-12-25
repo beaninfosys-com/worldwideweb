@@ -38,6 +38,13 @@
     /* Basic padding */
 }
 
+.jobLink {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+}
+
 /* Right Column - Image */
 .rightColumn {
     flex: 0 0 65%;

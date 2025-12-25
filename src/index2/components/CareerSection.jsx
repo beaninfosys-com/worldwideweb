@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './CareerSection.module.css';
 import hiringImage from '../../assets/index2/career_pencil_stairs.png';
 import careerTitleBg from '../../assets/index2/career_title_bg_new.jpg';
@@ -44,18 +45,20 @@ const CareerSection = () => {
                 <div className={styles.leftColumn}>
 
                     {jobs.map((job) => (
-                        <div key={job.id} className={styles.jobCard}>
-                            <div className={styles.jobInfo}>
-                                <span className={styles.jobType}>{job.type}</span>
-                                <h3 className={styles.jobTitle}>{job.title}</h3>
-                                <div className={styles.jobMeta}>
-                                    <span className={styles.metaItem}>{job.department}</span>
-                                    <span>•</span>
-                                    <span className={styles.metaItem}>{job.location}</span>
+                        <Link to="/application" key={job.id} className={styles.jobLink}>
+                            <div className={styles.jobCard}>
+                                <div className={styles.jobInfo}>
+                                    <span className={styles.jobType}>{job.type}</span>
+                                    <h3 className={styles.jobTitle}>{job.title}</h3>
+                                    <div className={styles.jobMeta}>
+                                        <span className={styles.metaItem}>{job.department}</span>
+                                        <span>•</span>
+                                        <span className={styles.metaItem}>{job.location}</span>
+                                    </div>
                                 </div>
+                                <div className={styles.arrowIcon}>→</div>
                             </div>
-                            <div className={styles.arrowIcon}>→</div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
 

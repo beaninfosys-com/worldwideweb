@@ -92,7 +92,7 @@ const Careers = () => {
   const locations = ['All', ...new Set(jobListings.map(job => job.location))];
 
   // Filter jobs based on selected filters
-  const filteredJobs = jobListings.filter(job => 
+  const filteredJobs = jobListings.filter(job =>
     (departmentFilter === 'All' || job.department === departmentFilter) &&
     (locationFilter === 'All' || job.location === locationFilter)
   );
@@ -102,29 +102,29 @@ const Careers = () => {
     {
       title: "Competitive Compensation",
       description: "Attractive salary packages, performance bonuses, and equity options.",
-      icon: <Award size={32} color='black'/>
+      icon: <Award size={32} color='black' />
     },
     {
       title: "Health & Wellness",
       description: "Comprehensive health insurance, wellness programs, and mental health support.",
-      icon: <Heart size={32} color='black'/>
+      icon: <Heart size={32} color='black' />
     },
     {
       title: "Growth & Development",
       description: "Continuous learning opportunities, mentorship, and career advancement pathways.",
-      icon: <Zap size={32} color='black'/>
+      icon: <Zap size={32} color='black' />
     },
     {
       title: "Work-Life Balance",
       description: "Flexible work arrangements, generous PTO, and respect for personal time.",
-      icon: <Lightbulb size={32} color='black'/>
+      icon: <Lightbulb size={32} color='black' />
     }
   ];
 
   return (
     <>
-      <PageHero 
-        title="Careers at Bean Infosystems" 
+      <PageHero
+        title="Careers at Bean Infosystems"
         subtitle="Join our team and help shape the future of technology"
       />
 
@@ -134,17 +134,17 @@ const Careers = () => {
           <div>
             <h2 className="text-3xl font-bold mb-4">Build Your Career With Us</h2>
             <p className="text-foreground/70 mb-4">
-              At Bean Infosystems, we're more than just a technology company—we're a community of 
-              innovators, problem-solvers, and creative thinkers passionate about making an impact 
+              At Bean Infosystems, we're more than just a technology company—we're a community of
+              innovators, problem-solvers, and creative thinkers passionate about making an impact
               through technology.
             </p>
             <p className="text-foreground/70 mb-4">
-              We believe in fostering an inclusive, collaborative environment where diverse perspectives 
+              We believe in fostering an inclusive, collaborative environment where diverse perspectives
               are valued and where every team member has the opportunity to grow, contribute, and thrive.
             </p>
             <p className="text-foreground/70">
-              Whether you're just starting your career or are a seasoned professional, we offer 
-              exciting opportunities to work on meaningful projects, learn from industry experts, 
+              Whether you're just starting your career or are a seasoned professional, we offer
+              exciting opportunities to work on meaningful projects, learn from industry experts,
               and make your mark in the digital landscape.
             </p>
           </div>
@@ -153,7 +153,7 @@ const Careers = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="text-bean mb-4">
-                    <Users size={48} color='black'/>
+                    <Users size={48} color='black' />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Our Team</h3>
                   <p className="text-foreground/70 max-w-xs mx-auto">
@@ -171,31 +171,31 @@ const Careers = () => {
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="p-6">
             <div className="text-bean mb-4">
-              <Users size={32} color='black'/>
+              <Users size={32} color='black' />
             </div>
             <h3 className="text-xl font-semibold mb-2">Collaborative Environment</h3>
             <p className="text-foreground/70">
-              We believe in the power of teamwork and foster an environment where collaboration, 
+              We believe in the power of teamwork and foster an environment where collaboration,
               knowledge-sharing, and mutual support are encouraged.
             </p>
           </Card>
           <Card className="p-6">
             <div className="text-bean mb-4">
-              <Zap size={32} color='black'/>
+              <Zap size={32} color='black' />
             </div>
             <h3 className="text-xl font-semibold mb-2">Innovation-Driven</h3>
             <p className="text-foreground/70">
-              We're passionate about innovation and provide the resources, support, and freedom 
+              We're passionate about innovation and provide the resources, support, and freedom
               for our team members to explore new ideas and approaches.
             </p>
           </Card>
           <Card className="p-6">
             <div className="text-bean mb-4">
-              <Lightbulb size={32} color='black'/>
+              <Lightbulb size={32} color='black' />
             </div>
             <h3 className="text-xl font-semibold mb-2">Continuous Learning</h3>
             <p className="text-foreground/70">
-              We're committed to ongoing learning and professional development, offering various 
+              We're committed to ongoing learning and professional development, offering various
               opportunities for growth and skill enhancement.
             </p>
           </Card>
@@ -225,7 +225,7 @@ const Careers = () => {
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           <div>
             <label className="block mb-2 text-foreground/70">Department</label>
-            <select 
+            <select
               className="w-full p-2 rounded-md bg-card border border-border"
               value={departmentFilter}
               onChange={(e) => setDepartmentFilter(e.target.value)}
@@ -237,7 +237,7 @@ const Careers = () => {
           </div>
           <div>
             <label className="block mb-2 text-foreground/70">Location</label>
-            <select 
+            <select
               className="w-full p-2 rounded-md bg-card border border-border"
               value={locationFilter}
               onChange={(e) => setLocationFilter(e.target.value)}
@@ -261,8 +261,8 @@ const Careers = () => {
         ) : (
           <div className="space-y-4">
             {filteredJobs.map((job) => (
-              <Card 
-                key={job.id} 
+              <Card
+                key={job.id}
                 className="p-6 hover:border-bean/30 transition-all duration-300"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -281,14 +281,14 @@ const Careers = () => {
                     <p className="text-foreground/70">{job.description}</p>
                   </div>
                   <div className="flex space-x-3">
-                    <Link 
-                      to={`/careers/${job.id}`} 
+                    <Link
+                      to={`/careers/${job.id}`}
                       className="btn-primary whitespace-nowrap"
                     >
                       View Details
                     </Link>
-                    <Link 
-                      to={`/careers/${job.id}/apply`} 
+                    <Link
+                      to="/application"
                       className="px-6 py-2 border border-border hover:border-bean rounded-md transition-all duration-300 flex items-center justify-center whitespace-nowrap"
                     >
                       Apply Now
@@ -307,9 +307,9 @@ const Careers = () => {
           <Card className="p-6">
             <div className="mb-4 flex items-center">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
-                <img 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" 
-                  alt="Employee" 
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
+                  alt="Employee"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -319,17 +319,17 @@ const Careers = () => {
               </div>
             </div>
             <p className="text-foreground/70 italic">
-              "Working at Bean Infosystems has been an incredible journey. The collaborative culture, 
-              challenging projects, and opportunities for growth have made it the perfect place to 
+              "Working at Bean Infosystems has been an incredible journey. The collaborative culture,
+              challenging projects, and opportunities for growth have made it the perfect place to
               advance my career."
             </p>
           </Card>
           <Card className="p-6">
             <div className="mb-4 flex items-center">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" 
-                  alt="Employee" 
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop"
+                  alt="Employee"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -339,17 +339,17 @@ const Careers = () => {
               </div>
             </div>
             <p className="text-foreground/70 italic">
-              "The supportive environment and focus on continuous learning at Bean Infosystems have 
-              allowed me to grow both professionally and personally. I'm proud to be part of a team 
+              "The supportive environment and focus on continuous learning at Bean Infosystems have
+              allowed me to grow both professionally and personally. I'm proud to be part of a team
               that truly values innovation and quality."
             </p>
           </Card>
           <Card className="p-6">
             <div className="mb-4 flex items-center">
               <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
-                <img 
-                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop" 
-                  alt="Employee" 
+                <img
+                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&auto=format&fit=crop"
+                  alt="Employee"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -359,8 +359,8 @@ const Careers = () => {
               </div>
             </div>
             <p className="text-foreground/70 italic">
-              "What sets Bean Infosystems apart is the genuine care for employees and commitment to 
-              work-life balance. The challenging projects and collaborative team make it a rewarding 
+              "What sets Bean Infosystems apart is the genuine care for employees and commitment to
+              work-life balance. The challenging projects and collaborative team make it a rewarding
               place to build a career."
             </p>
           </Card>
@@ -372,7 +372,7 @@ const Careers = () => {
         <div className="bg-gradient-to-br from-bean/10 to-transparent rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Team</h2>
           <p className="text-foreground/70 max-w-2xl mx-auto mb-6">
-            Don't see a position that matches your skills? We're always looking for talented individuals 
+            Don't see a position that matches your skills? We're always looking for talented individuals
             to join our team. Send us your resume, and we'll keep you in mind for future opportunities.
           </p>
           <Link to="/contact" className="btn-primary inline-flex">

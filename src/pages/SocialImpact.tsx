@@ -39,13 +39,13 @@ const SocialImpact = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Side - Visual Element */}
             <div className="flex justify-center items-center">
-                <div className="w-full max-w-md lg:max-w-lg">
-                    <img
-                        src="../public/images/socialimpact_1.png"
-                        alt="Social Impact"
-                        className="w-full h-auto"
-                    />
-                </div>
+              <div className="w-full max-w-md lg:max-w-lg">
+                <img
+                  src="../public/images/socialimpact_1.png"
+                  alt="Social Impact"
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
 
             {/* Right Side - Content */}
@@ -58,8 +58,8 @@ const SocialImpact = () => {
                   <svg viewBox="0 0 800 200" className="w-full h-auto">
                     <defs>
                       <clipPath id="social-impact-text-clip">
-                        <text x="50%" y="40%" textAnchor="middle" dy=".35em" className="font-bold text-4xl lg:text-8xl" style={{fontFamily: 'Outfit, sans-serif'}}>Social Impact</text>
-                        <text x="50%" y="80%" textAnchor="middle" dy=".35em" className="font-bold text-2xl lg:text-5xl" style={{fontFamily: 'Outfit, sans-serif'}}>Through Technology</text>
+                        <text x="50%" y="40%" textAnchor="middle" dy=".35em" className="font-bold text-4xl lg:text-8xl" style={{ fontFamily: 'Outfit, sans-serif' }}>Social Impact</text>
+                        <text x="50%" y="80%" textAnchor="middle" dy=".35em" className="font-bold text-2xl lg:text-5xl" style={{ fontFamily: 'Outfit, sans-serif' }}>Through Technology</text>
                       </clipPath>
                     </defs>
                     <image
@@ -116,7 +116,7 @@ const SocialImpact = () => {
       {/* Flow Diagram Section */}
       <div className="py-20 lg:py-32" style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #C19A6B 100%)' }}>
         <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">How Our Social Impact Flow Works</h3>
 
             {/* SocialBirds logo card - moved to top center */}
@@ -133,21 +133,21 @@ const SocialImpact = () => {
               <div className="hidden md:block absolute left-0 right-0 top-1/2 h-0.5 bg-white/30"></div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10 max-w-4xl mx-auto">
                 <FlowStep
-                  icon={<Building2 size={22} color='black'/>}
+                  icon={<Building2 size={22} color='#FF8C00' />}
                   title="Nonprofits"
                   description="Organizations on the frontlines seeking sustainable support and tools."
                 />
                 <FlowStep
-                  icon={<HeartHandshake size={22} color='black'/>}
+                  icon={<HeartHandshake size={22} color='#22C55E' />}
                   title="Bean Infosystems"
                   description="Subsidized development + strategic guidance to maximize impact."
                 />
               </div>
             </div>
 
-              {/* Outcomes */}
+            {/* Outcomes */}
 
-            </div>
+          </div>
         </div>
       </div>
 

@@ -15,9 +15,14 @@ const CTASection = ({ headline = "Ready to supercharge <br/> your AI Transformat
                         <Phone size={18} className={styles.phoneIcon} />
                         +1 469-919-5225
                     </button>
-                    <button className={`${styles.button} ${styles.demoButton}`}>
+                    <a
+                        href="https://calendar.app.google/PBJTk69JKzBp8Pzw5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${styles.button} ${styles.demoButton}`}
+                    >
                         Book a demo
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

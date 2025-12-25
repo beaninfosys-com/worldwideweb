@@ -33,19 +33,42 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      // Create URL-encoded form data for Google Forms submission
+      const formParams = new URLSearchParams();
+      formParams.append('entry.1862709128', formData.name);
+      formParams.append('entry.1980361047', formData.email);
+      formParams.append('entry.1881233203', formData.company);
+      formParams.append('entry.516782821', formData.phone);
+      formParams.append('entry.1677707170', formData.message);
+      formParams.append('entry.663286101', window.location.href); // Topic (page URL)
+      formParams.append('emailAddress', formData.email); // Email address field
+
+      // Submit to Google Form
+      const googleFormUrl = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSflWyQjXqUjQJ7lW56U8wIsz92nvgXkr-CF7pnVq-M4Paeinw/formResponse';
+
+      // Use fetch with proper headers
+      await fetch(googleFormUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formParams.toString(),
+        mode: 'no-cors',
+        credentials: 'include'
+      });
+
       setIsSubmitting(false);
       toast({
         title: "Message Sent",
         description: "Thank you for contacting us. We'll respond shortly.",
         variant: "default",
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -55,12 +78,29 @@ const Contact = () => {
         message: '',
         subject: ''
       });
-    }, 1500);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Message Sent",
+        description: "Thank you for contacting us. We'll respond shortly.",
+        variant: "default",
+      });
+
+      // Reset form even on error (because no-cors mode doesn't return errors)
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: '',
+        subject: ''
+      });
+    }
   };
 
   const contactInfo = [
     {
-      icon: <MapPin size={24} color='black'/>,
+      icon: <MapPin size={24} color='black' />,
       title: "US Office",
       details: [
         "8751 Collin Mckinney Pkwy #201",
@@ -68,7 +108,7 @@ const Contact = () => {
       ]
     },
     {
-      icon: <MapPin size={24} color='black'/>,
+      icon: <MapPin size={24} color='black' />,
       title: "India Office",
       details: [
         "Workafella, Western Aqua 5th Floor",
@@ -86,7 +126,7 @@ const Contact = () => {
       ]
     },
     {
-      icon: <Phone size={24} color='black'/>,
+      icon: <Phone size={24} color='black' />,
       title: "Contact No",
       details: [
         "+1 469-919-5225"
@@ -106,139 +146,139 @@ const Contact = () => {
       <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #C19A6B 100%)' }}>
         <PageSection>
           <div className="grid md:grid-cols-2 gap-10">
-          {/* Contact Form */}
-          <div>
-            <Card className="p-6 md:p-8 bg-white/20 backdrop-blur-md border border-white/20 shadow-xl hover:bg-white/40 transition-all duration-300">
-              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label htmlFor="name" className="block text-left text-foreground/70 mb-1">Name *</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full p-3 rounded-md bg-card border border-border"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-left text-foreground/70 mb-1">Email *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full p-3 rounded-md bg-card border border-border"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label htmlFor="company" className="block text-left text-foreground/70 mb-1">Company</label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full p-3 rounded-md bg-card border border-border"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-left text-foreground/70 mb-1">Phone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full p-3 rounded-md bg-card border border-border"
-                    />
-                  </div>
-                </div>
-                <div className="mb-4">
-                  <label htmlFor="subject" className="block text-left text-foreground/70 mb-1">Subject *</label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full p-3 rounded-md bg-card border border-border"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Service Information">Service Information</option>
-                    <option value="Partnership Opportunity">Partnership Opportunity</option>
-                    <option value="Career Information">Career Information</option>
-                    <option value="Support Request">Support Request</option>
-                  </select>
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="message" className="block text-left text-foreground/70 mb-1">Message *</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full p-3 rounded-md bg-card border border-border"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary w-full"
-                >
-                  {isSubmitting ? (
-                    <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Sending...
-                    </span>
-                  ) : (
-                    <span className="flex items-center justify-center text-white">
-                      <Send size={18} className="mr-2" />
-                      Send Message
-                    </span>
-                  )}
-                </button>
-              </form>
-            </Card>
-          </div>
-
-          {/* Contact Information */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-            <div className="grid grid-cols-1 gap-6">
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="p-6 bg-white/20 backdrop-blur-md border border-white/20 shadow-xl hover:bg-white/40 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center justify-center">
-                    <div className="text-bean mr-4 mt-1">
-                      {info.icon}
+            {/* Contact Form */}
+            <div>
+              <Card className="p-6 md:p-8 bg-white/20 backdrop-blur-md border border-white/20 shadow-xl hover:bg-white/40 transition-all duration-300">
+                <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label htmlFor="name" className="block text-left text-foreground/70 mb-1">Name *</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full p-3 rounded-md bg-card border border-border"
+                      />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2 text-center">{info.title}</h3>
-                      <ul className="space-y-1 text-foreground/70">
-                        {info.details.map((detail, i) => (
-                          <li key={i} className='flex justify-center'>{detail}</li>
-                        ))}
-                      </ul>
+                      <label htmlFor="email" className="block text-left text-foreground/70 mb-1">Email *</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full p-3 rounded-md bg-card border border-border"
+                      />
                     </div>
                   </div>
-                </Card>
-              ))}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label htmlFor="company" className="block text-left text-foreground/70 mb-1">Company</label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full p-3 rounded-md bg-card border border-border"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-left text-foreground/70 mb-1">Phone</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full p-3 rounded-md bg-card border border-border"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="subject" className="block text-left text-foreground/70 mb-1">Subject *</label>
+                    <select
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                      className="w-full p-3 rounded-md bg-card border border-border"
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Service Information">Service Information</option>
+                      <option value="Partnership Opportunity">Partnership Opportunity</option>
+                      <option value="Career Information">Career Information</option>
+                      <option value="Support Request">Support Request</option>
+                    </select>
+                  </div>
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-left text-foreground/70 mb-1">Message *</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={5}
+                      className="w-full p-3 rounded-md bg-card border border-border"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="btn-primary w-full"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      <span className="flex items-center justify-center text-white">
+                        <Send size={18} className="mr-2" />
+                        Send Message
+                      </span>
+                    )}
+                  </button>
+                </form>
+              </Card>
+            </div>
+
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+              <div className="grid grid-cols-1 gap-6">
+                {contactInfo.map((info, index) => (
+                  <Card key={index} className="p-6 bg-white/20 backdrop-blur-md border border-white/20 shadow-xl hover:bg-white/40 hover:scale-105 transition-all duration-300">
+                    <div className="flex items-center justify-center">
+                      <div className="text-bean mr-4 mt-1">
+                        {info.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2 text-center">{info.title}</h3>
+                        <ul className="space-y-1 text-foreground/70">
+                          {info.details.map((detail, i) => (
+                            <li key={i} className='flex justify-center'>{detail}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
         </PageSection>
       </div>
 
