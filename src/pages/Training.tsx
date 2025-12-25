@@ -90,7 +90,7 @@ const Training = () => {
               {/* Left Side - Image (60%) */}
               <div className="lg:col-span-3 order-2 lg:order-1">
                 <img
-                  src="/images/training_coffee.png"
+                  src="/images/training_benefits.png"
                   alt="Innovation and Learning"
                   className="w-full h-auto object-cover"
                 />

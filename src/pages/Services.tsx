@@ -1,23 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PageHero from '@/components/layout/PageHero';
-import PageSection from '@/components/layout/PageSection';
-import { 
-  Code, Users, BarChart, ArrowRight, Lightbulb, 
-  Database, Activity, BarChart2, 
-  Target, ThumbsUp, Star 
-} from 'lucide-react'; 
 import { Card } from '@/components/ui/card';
-import AiServicesSection from '@/components/home/AiServicesSection';
+import {
+    Code, Users, BarChart, Lightbulb, Database, Activity,
+    BarChart2, Target, ThumbsUp, Star, CheckCircle, Zap
+} from 'lucide-react';
+import CTASection from '@/index2/components/CTASection';
 
 const Services = () => {
-    const iconCircleClasses = "w-16 h-16 mx-auto rounded-full bg-orange-600 flex items-center justify-center mb-4";
-    const services = [
+    const coreServices = [
         {
             title: "Application Development",
             description: "Custom software applications designed to meet your unique business requirements and drive digital transformation.",
-            icon: <Code size={40} color='black'/>,
-            link: "/services/application-development",
+            icon: <Code size={32} className="text-[#FF8C00]" />,
+            image: "/images/services_apple.png",
             benefits: [
                 "Tailored solutions that perfectly match your needs",
                 "Scalable architecture to grow with your business",
@@ -28,8 +24,8 @@ const Services = () => {
         {
             title: "Consulting Services",
             description: "Strategic guidance from industry experts to optimize your technology investments and improve business processes.",
-            icon: <Users size={40} color='black'/>,
-            link: "/services/consulting-services",
+            icon: <Users size={32} className="text-[#3B82F6]" />,
+            image: "/images/services_ctrl.png",
             benefits: [
                 "Expert analysis of your current technology landscape",
                 "Strategic roadmaps for digital transformation",
@@ -40,8 +36,8 @@ const Services = () => {
         {
             title: "Advisory Services",
             description: "Insights and recommendations to help you navigate digital trends and make informed business decisions.",
-            icon: <BarChart size={40} color='black'/>,
-            link: "/services/advisory-services",
+            icon: <BarChart size={32} className="text-[#22C55E]" />,
+            image: "/images/services_tower.png",
             benefits: [
                 "Industry trend analysis and insights",
                 "Competitive landscape evaluation",
@@ -51,265 +47,220 @@ const Services = () => {
         }
     ];
 
-    const caseStudies = [
+    const aiServices = [
         {
-            image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=800&auto=format&fit=crop",
-            title: "Enterprise Digital Transformation",
-            description: "Helping a Fortune 500 company modernize their legacy systems and adopt cloud technologies",
-            category: "Application Development"
+            title: "Data Engineering",
+            description: "Build robust, scalable data pipelines and infrastructure to ensure your data is accessible, reliable, and ready for analysis.",
+            icon: <Database size={32} className="text-[#C19A6B]" />
         },
         {
-            image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=800&auto=format&fit=crop",
-            title: "Data-Driven Decision Making",
-            description: "Implementing analytics solutions to help businesses leverage their data for strategic insights",
-            category: "Advisory Services"
+            title: "Machine Learning & AI",
+            description: "Develop and deploy machine learning models and AI solutions that automate processes, generate insights, and create new business opportunities.",
+            icon: <Activity size={32} className="text-[#FF8C00]" />
         },
         {
-            image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?q=80&w=800&auto=format&fit=crop",
-            title: "Process Optimization",
-            description: "Streamlining operations for a healthcare provider to improve patient care and reduce costs",
-            category: "Consulting Services"
+            title: "Data Analytics & Visualization",
+            description: "Transform complex datasets into clear, actionable insights through advanced analytics and intuitive visual representations.",
+            icon: <BarChart2 size={32} className="text-[#3B82F6]" />
         }
     ];
 
-    const aiCaseStudies = [
+    const valuePillars = [
         {
-            image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=800&auto=format&fit=crop",
-            title: "Predictive Maintenance System",
-            description: "Implementing machine learning models to predict equipment failures before they occur, reducing downtime by 67%",
-            category: "Machine Learning"
+            title: "Obsessive Customer Focus",
+            description: "Intuitively designed to align effortlessly within your existing workflows & environment",
+            icon: <Target size={32} className="text-white" />
         },
         {
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
-            title: "Real-time Data Analytics Platform",
-            description: "Building a scalable analytics platform that processes over 10TB of data daily for actionable business insights",
-            category: "Data Engineering"
+            title: "Proven Value Delivery",
+            description: "Proven track record of delivering Mn$ value to our enterprise customers",
+            icon: <ThumbsUp size={32} className="text-white" />
         },
         {
-            image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=800&auto=format&fit=crop",
-            title: "Intelligent Customer Service Bot",
-            description: "Developing an AI-powered chatbot that reduced customer service response times by 85% while maintaining high satisfaction",
-            category: "Artificial Intelligence"
+            title: "Industry Leading Expertise",
+            description: "Extensive experience with AI/ML technologies, long before AI became mainstream",
+            icon: <Star size={32} className="text-white" />
         }
     ];
 
     return (
         <>
-            <PageHero 
-                title="Our Services" 
+            <PageHero
+                title="Our Services"
                 subtitle="Comprehensive solutions to drive your digital success"
+                imageUrl="/lovable-uploads/background_about.png"
             />
 
-            {/* Services Philosophy */}
-            <PageSection>
-                <div className="grid md:grid-cols-2 gap-10 items-center">
-                    <div>
-                        <h2 className="text-3xl font-bold mb-4">Our Service Philosophy</h2>
-                        <p className="text-foreground/70 mb-4">
-                            At Bean InfoSystems, we believe that technology should serve as an enabler for 
-                            business success. Our services are designed with this philosophy at the core, 
-                            focusing on delivering solutions that drive tangible business outcomes.
-                        </p>
-                        <p className="text-foreground/70 mb-4">
-                            We take a collaborative approach, working closely with our clients to understand 
-                            their unique challenges and objectives. This enables us to develop tailored 
-                            solutions that address specific needs rather than offering one-size-fits-all options.
-                        </p>
-                        <p className="text-foreground/70">
-                            Whether you're looking to develop a custom application, optimize your technology 
-                            investments, or gain strategic insights, our team of experts is ready to help you 
-                            navigate the complex digital landscape and achieve your goals.
-                        </p>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="space-y-4 pt-4">
-                            <Card className="p-4 flex items-center glass-card">
-                                <div className="text-bean mr-3">
-                                    <Lightbulb size={24} color='black'/>
-                                </div>
-                                <span className="font-medium">Innovative</span>
-                            </Card>
-                            <Card className="p-4 flex items-center glass-card translate-y-6">
-                                <div className="text-bean mr-3">
-                                    <Lightbulb size={24} color='black'/>
-                                </div>
-                                <span className="font-medium">Strategic</span>
-                            </Card>
-                        </div>
-                        <div className="space-y-4 pt-4">
-                            <Card className="p-4 flex items-center glass-card">
-                                <div className="text-bean mr-3">
-                                    <Lightbulb size={24} color='black'/>
-                                </div>
-                                <span className="font-medium">Collaborative</span>
-                            </Card>
-                            <Card className="p-4 flex items-center glass-card translate-y-6">
-                                <div className="text-bean mr-3">
-                                    <Lightbulb size={24} color='black'/>
-                                </div>
-                                <span className="font-medium">Results-Driven</span>
-                            </Card>
-                        </div>
-                    </div>
-                </div>
-            </PageSection>
-
-            {/* Services Cards */}
-            <PageSection dark title="Our Core Services" subtitle="Explore how we can help your business thrive">
-                <div className="space-y-12">
-                    {services.map((service, index) => (
-                        <Card key={index} className={`p-8 ${index % 2 === 0 ? '' : ''}`}>
-                            <div className="grid md:grid-cols-2 gap-8 items-center">
-                                <div className={`${index % 2 !== 0 ? 'md:order-2' : ''}`}>
-                                    <div className="text-bean mb-4">
-                                        {service.icon}
-                                    </div>
-                                    <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
-                                    <p className="text-foreground/70 mb-6">
-                                        {service.description}
-                                    </p>
-                                    <ul className="space-y-2 mb-6">
-                                        {service.benefits.map((benefit, i) => (
-                                            <li key={i} className="flex items-start">
-                                                <div className="bg-bean/20 p-1 rounded text-bean mr-3 mt-1">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                                    </svg>
-                                                </div>
-                                                <span>{benefit}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <Link 
-                                        to={service.link} 
-                                        className="btn-primary inline-flex"
-                                    >
-                                        Learn More
-                                        <ArrowRight size={18} className="ml-2" />
-                                    </Link>
-                                </div>
-                                <div className={`${index % 2 !== 0 ? 'md:order-1' : ''}`}>
-                                    <div className="aspect-square bg-gradient-to-br from-bean/20 to-transparent rounded-xl p-8 flex items-center justify-center">
-                                        <div className="w-full max-w-xs aspect-square relative">
-                                            <div className="absolute inset-0 flex items-center justify-center">
-                                                <div className="text-bean opacity-10">
-                                                    {React.cloneElement(service.icon, { size: 180 })}
-                                                </div>
-                                            </div>
-                                            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-transparent to-background/80 rounded-xl">
-                                                <div className="text-center p-6">
-                                                    <h4 className="text-xl font-bold mb-2">{service.title}</h4>
-                                                    <p className="text-foreground/70 text-sm">
-                                                        Tailored solutions for your unique business needs
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* Hero Section with Coffee Image */}
+            <div style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #f9fafb 100%)' }} className="py-20">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center">
+                            {/* Left Side - Image (50%) */}
+                            <div>
+                                <img
+                                    src="/images/services_coffee.png"
+                                    alt="Our Service Philosophy"
+                                    className="w-full h-auto object-cover"
+                                />
                             </div>
-                        </Card>
-                    ))}
+
+                            {/* Right Side - Text (50%) */}
+                            <div>
+                                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                                    Our Service Philosophy
+                                </h2>
+                                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-left">
+                                    At Bean Infosystems, we believe that technology should serve as an enabler for
+                                    business success. Our services are designed with this philosophy at the core,
+                                    focusing on delivering solutions that drive tangible business outcomes.
+                                </p>
+                                <p className="text-lg text-gray-600 leading-relaxed text-left">
+                                    We take a collaborative approach, working closely with our clients to understand
+                                    their unique challenges and objectives. This enables us to develop tailored
+                                    solutions that address specific needs rather than offering one-size-fits-all options.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </PageSection>
+            </div>
+
+            {/* Core Services Section */}
+            <div style={{ background: 'linear-gradient(to bottom, #f9fafb 0%, #ffffff 30%, #ffffff 50%, #C19A6B 100%)' }} className="py-20">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                                Our Core Services
+                            </h2>
+                            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+                                Explore how we can help your business thrive with our comprehensive service offerings
+                            </p>
+                        </div>
+
+                        {/* Services Grid */}
+                        <div className="space-y-16">
+                            {coreServices.map((service, index) => (
+                                <div key={index} className="grid lg:grid-cols-5 gap-12 items-center">
+                                    {/* Image Side */}
+                                    <div className={`lg:col-span-2 ${index % 2 === 0 ? 'order-2 lg:order-1' : 'order-2'}`}>
+                                        <img
+                                            src={service.image}
+                                            alt={service.title}
+                                            className="w-full h-auto object-cover"
+                                        />
+                                    </div>
+
+                                    {/* Text Side */}
+                                    <div className={`lg:col-span-3 ${index % 2 === 0 ? 'order-1 lg:order-2' : 'order-1'}`}>
+                                        <Card className="p-8 bg-white/70 backdrop-blur-md border border-white/30 hover:bg-white/90 hover:shadow-xl transition-all duration-300">
+                                            <div className="mb-4">
+                                                {service.icon}
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                                            <p className="text-gray-700 leading-relaxed mb-6">
+                                                {service.description}
+                                            </p>
+                                            <div className="space-y-3">
+                                                <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
+                                                {service.benefits.map((benefit, i) => (
+                                                    <div key={i} className="flex items-start">
+                                                        <CheckCircle size={16} className="text-[#C19A6B] mr-3 mt-1 flex-shrink-0" />
+                                                        <span className="text-gray-700 text-sm">{benefit}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </Card>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* AI & Data Services Section */}
-            <PageSection title="AI & Data Services" subtitle="Unlock the potential of your data with our advanced AI solutions">
-                <div className="mb-8">
-                    <p className="text-foreground/70 max-w-4xl mx-auto text-center mb-12">
-                        In today's data-driven world, organizations that effectively harness the power of AI and data analytics gain 
-                        significant competitive advantages. Our specialized team of data scientists, engineers, and AI specialists 
-                        delivers solutions that transform raw data into strategic assets.
-                    </p>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                        <Card className="p-6 border-l-4 border-l-bean">
-                            <div className="text-bean mb-4">
-                                <Database size={28} color='black'/>
+            <div style={{ background: 'linear-gradient(to bottom, #C19A6B 0%, #3B2416 100%)' }} className="py-20">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                            {/* Left Side - Text */}
+                            <div>
+                                <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                                    AI & Data Services
+                                </h2>
+                                <p className="text-lg text-white/90 leading-relaxed">
+                                    In today's data-driven world, organizations that effectively harness the power of AI and data analytics gain
+                                    significant competitive advantages. Our specialized team of data scientists, engineers, and AI specialists
+                                    delivers solutions that transform raw data into strategic assets.
+                                </p>
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Data Engineering</h3>
-                            <p className="text-foreground/70">
-                                Our data engineering team builds robust, scalable data pipelines and infrastructure to ensure your data is accessible, reliable, and ready for analysis.
-                            </p>
-                        </Card>
-                        
-                        <Card className="p-6 border-l-4 border-l-bean">
-                            <div className="text-bean mb-4">
-                                <Activity size={28} color='black'/>
+
+                            {/* Right Side - Banana Image */}
+                            <div>
+                                <img
+                                    src="/images/services_banana.png"
+                                    alt="AI & Data Services"
+                                    className="w-full h-auto object-cover"
+                                />
                             </div>
-                            <h3 className="text-xl font-bold mb-2">Machine Learning & AI</h3>
-                            <p className="text-foreground/70">
-                                We develop and deploy machine learning models and AI solutions that automate processes, generate insights, and create new business opportunities.
-                            </p>
-                        </Card>
-                        
-                        <Card className="p-6 border-l-4 border-l-bean">
-                            <div className="text-bean mb-4">
-                                <BarChart2 size={28} color='black'/>
-                            </div>
-                            <h3 className="text-xl font-bold mb-2">Data Analytics & Visualization</h3>
-                            <p className="text-foreground/70">
-                                Transform complex datasets into clear, actionable insights through advanced analytics and intuitive visual representations.
-                            </p>
-                        </Card>
+                        </div>
+
+                        {/* AI Services Grid */}
+                        <div className="grid md:grid-cols-3 gap-6">
+                            {aiServices.map((service, index) => (
+                                <Card
+                                    key={index}
+                                    className="p-6 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-300"
+                                >
+                                    <div className="mb-4">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
+                                    <p className="text-white/80 text-sm">
+                                        {service.description}
+                                    </p>
+                                </Card>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </PageSection> 
+            </div>
 
-            {/* --- VALUE PROPOSITION SECTION --- */}
-            <PageSection> 
-                <div className="container mx-auto text-center max-w-5xl">
-                    
-                    {/* Main Heading and Sub-text */}
-                    <h2 className="text-3xl md:text-3xl font-bold mb-4 text-gray-900">
-                    <span className="text-gray-900">Bean Infosystems is a preferred partner for</span>
-                    <br className="hidden sm:inline" />
-                    <span className="text-orange-600">Fortune 100 companies</span>
-                    </h2>
-                    
-                    <p className="text-gray-600 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
-                    Engineered for the complex demands of global enterprises: merging cutting-edge AI with governance precision, operational resilience, and uncompromising accountability.
-                    </p>
-                    
-                    {/* Three Value Pillars Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
-                    
-                    {/* 1. Obsessive Customer Focus */}
-                    <div className="p-4">
-                        <div className={iconCircleClasses}>
-                        <Target size={30} color='white'/> 
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900">Obsessive customer focus</h3>
-                        <p className="text-gray-600 text-sm">
-                        Intuitively designed to align effortlessly within your existing workflows & environment
+            {/* Value Proposition Section */}
+            <div style={{ background: 'radial-gradient(circle at bottom right, #C19A6B 0%, #ffffff 75%)' }} className="py-20">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                            Bean Infosystems is a preferred partner for{' '}
+                            <span className="text-[#FF8C00]">Fortune 100 companies</span>
+                        </h2>
+
+                        <p className="text-gray-600 text-lg md:text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
+                            Engineered for the complex demands of global enterprises: merging cutting-edge AI with governance precision, operational resilience, and uncompromising accountability.
                         </p>
-                    </div>
 
-                    {/* 2. Proven Value - Delivery */}
-                    <div className="p-4">
-                        <div className={iconCircleClasses}>
-                        <ThumbsUp size={30} color='white'/> 
+                        {/* Three Value Pillars Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+                            {valuePillars.map((pillar, index) => (
+                                <div key={index} className="p-4">
+                                    <div className="w-16 h-16 mx-auto rounded-full bg-[#FF8C00] flex items-center justify-center mb-4">
+                                        {pillar.icon}
+                                    </div>
+                                    <h3 className="text-xl font-semibold mb-2 text-gray-900">{pillar.title}</h3>
+                                    <p className="text-gray-600 text-sm">
+                                        {pillar.description}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900">Proven value- delivery</h3>
-                        <p className="text-gray-600 text-sm">
-                        Proven track record of delivering Mn$ value to our enterprise customers.
-                        </p>
                     </div>
-
-                    {/* 3. Industry Leading Expertise */}
-                    <div className="p-4">
-                        <div className={iconCircleClasses}>
-                        <Star size={30} color='white'/> 
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2 text-gray-900">Industry leading expertise</h3>
-                        <p className="text-gray-600 text-sm">
-                        Extensive experience with AI/ML technologies, long before AI became mainstream.
-                        </p>
-                    </div>
-                    </div>
-
                 </div>
-            </PageSection>
+            </div>
+
+            {/* CTA Section */}
+            <CTASection />
         </>
     );
 };
