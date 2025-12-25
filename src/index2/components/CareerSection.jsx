@@ -38,7 +38,7 @@ const CareerSection = () => {
 
     return (
         <div className={styles.sectionContainer}>
-            <h2 className={styles.sectionTitle} style={{ backgroundImage: `url(${careerTitleBg})` }}>Career</h2>
+            <h2 className={styles.sectionTitle} style={{ backgroundImage: `url(${careerTitleBg})` }}>Career in AI & Technology</h2>
             <div className={styles.contentWrapper}>
                 {/* Left Column: Job List */}
                 <div className={styles.leftColumn}>

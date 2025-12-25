@@ -113,9 +113,8 @@
     /* Mask edges for fade effect */
     -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-    padding-bottom: 40px;
-    /* Add space for shadow/bottom to not be cut off */
-    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    scroll-behavior: auto;
     /* Hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -128,7 +127,6 @@
 .marqueeTrack {
     display: flex;
     width: max-content;
-    animation: scroll 60s linear infinite;
     padding-bottom: 20px;
     /* Extra safety padding */
 }
@@ -138,17 +136,7 @@
     animation-play-state: paused;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-
-    /* Move half way assuming we duplicated list once */
-}
+/* Removed CSS animation to use JS-based smooth scrolling */
 
 /* Slide Wrapper */
 .slideItem {

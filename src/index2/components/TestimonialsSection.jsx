@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './TestimonialsSection.module.css';
 import techVisualBg from '../../assets/index2/tech_visual_bg_3.jpg';
 // Using industry-relevant HD images instead of person photos
@@ -10,16 +10,67 @@ const ecommerceImage = 'https://images.unsplash.com/photo-1441986300917-64674bd6
 
 const TestimonialsSection = () => {
     const scrollContainerRef = useRef(null);
+    const animationFrameRef = useRef(null);
+    const isHoveredRef = useRef(false);
+    const lastManualScrollTimeRef = useRef(0);
+
+    // Initial scroll position and auto-scroll
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (!container) return;
+
+        // Start from the middle set of triplicated items
+        const resetToMiddle = () => {
+            container.scrollLeft = container.scrollWidth / 3;
+        };
+
+        // Reset once on load (slight delay to ensure scrollWidth is calculated)
+        const initTimeout = setTimeout(resetToMiddle, 100);
+
+        const autoScroll = () => {
+            const now = Date.now();
+            const isManualScrolling = now - lastManualScrollTimeRef.current < 2000;
+
+            if (!isHoveredRef.current && !isManualScrolling && container) {
+                container.scrollLeft += 0.8; // Speed of scroll
+
+                const scrollWidth = container.scrollWidth;
+                const clientWidth = container.clientWidth;
+                const scrollLeft = container.scrollLeft;
+                const singleSetWidth = scrollWidth / 3;
+
+                // Seamless reset logic
+                if (scrollLeft + clientWidth >= (singleSetWidth * 2)) {
+                    // When reaching end of 2nd set, jump back one full set
+                    container.scrollLeft -= singleSetWidth;
+                } else if (scrollLeft <= singleSetWidth / 2) {
+                    // When reaching beginning of 2nd set, jump forward one full set
+                    container.scrollLeft += singleSetWidth;
+                }
+            }
+            animationFrameRef.current = requestAnimationFrame(autoScroll);
+        };
+
+        animationFrameRef.current = requestAnimationFrame(autoScroll);
+
+        return () => {
+            clearTimeout(initTimeout);
+            if (animationFrameRef.current) {
+                cancelAnimationFrame(animationFrameRef.current);
+            }
+        };
+    }, []);
 
     const scroll = (direction) => {
         if (scrollContainerRef.current) {
+            lastManualScrollTimeRef.current = Date.now();
             const scrollAmount = 390; // Card width + padding
-            const currentScroll = scrollContainerRef.current.scrollLeft;
+            const container = scrollContainerRef.current;
             const targetScroll = direction === 'left'
-                ? currentScroll - scrollAmount
-                : currentScroll + scrollAmount;
+                ? container.scrollLeft - scrollAmount
+                : container.scrollLeft + scrollAmount;
 
-            scrollContainerRef.current.scrollTo({
+            container.scrollTo({
                 left: targetScroll,
                 behavior: 'smooth'
             });
@@ -74,8 +125,8 @@ const TestimonialsSection = () => {
         }
     ];
 
-    // Create a long list for seamless scrolling (Duplicated twice to ensure scroll continuity)
-    const marqueeList = [...testimonials, ...testimonials];
+    // Create a long list for seamless infinite scrolling (Triplicated for smooth loop)
+    const marqueeList = [...testimonials, ...testimonials, ...testimonials];
 
     return (
         <div className={styles.sectionContainer}>
@@ -93,7 +144,12 @@ const TestimonialsSection = () => {
                     </svg>
                 </button>
 
-                <div className={styles.marqueeViewport} ref={scrollContainerRef}>
+                <div
+                    className={styles.marqueeViewport}
+                    ref={scrollContainerRef}
+                    onMouseEnter={() => { isHoveredRef.current = true; }}
+                    onMouseLeave={() => { isHoveredRef.current = false; }}
+                >
                     <div className={styles.marqueeTrack}>
                         {marqueeList.map((item, index) => (
                             <div
