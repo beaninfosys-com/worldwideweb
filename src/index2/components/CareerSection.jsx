@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CareerSection.module.css';
-import hiringImage from '../../assets/index2/career_hiring.png';
+import hiringImage from '../../assets/index2/career_pencil_stairs.png';
 import careerTitleBg from '../../assets/index2/career_title_bg_new.jpg';
 
 const CareerSection = () => {

@@ -19,8 +19,8 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <img
-              src="/images/footer_new_tree.png"
-              alt="Footer Image"
+              src="/images/footer_bicycle_tree.png"
+              alt="Bean Infosystems Tree and Bicycle"
               className="w-full h-auto"
             />
           </div>
