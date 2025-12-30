@@ -68,8 +68,8 @@ const TechVisualSection = () => {
                 {[
                     { number: "320+", label: "Projects Completed" },
                     { number: "150+", label: "Happy Clients" },
-                    { number: "110", label: "Team Members" },
-                    { number: "12", label: "Years of Experience" }
+                    { number: "98%", label: "Customer Retention" },
+                    { number: "1000+", label: "Person Years of Experience." }
                 ].map((stat, index) => (
                     <div key={index} className={styles.statItem} style={{ transitionDelay: `${index * 0.1}s` }}>
                         <span className={styles.statNumber}>{stat.number}</span>

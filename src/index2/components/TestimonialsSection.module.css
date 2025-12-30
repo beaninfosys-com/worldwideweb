@@ -301,7 +301,7 @@
 .businessType {
     font-size: 16px;
     font-weight: 600;
-    color: #3F321F;
+    color: #333333;
     text-align: center;
     margin: 12px 0;
     padding: 8px 0;
@@ -324,7 +324,7 @@
 .sectionTitle {
     font-size: 13px;
     font-weight: 600;
-    color: #374151;
+    color: #333333;
     margin-bottom: 0;
     margin-right: 6px;
     text-transform: uppercase;
@@ -334,7 +334,7 @@
 
 .sectionText {
     font-size: 14px;
-    color: #6b7280;
+    color: #333333;
     line-height: 1.5;
     margin: 0;
     display: inline;

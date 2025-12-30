@@ -29,7 +29,7 @@ const navLinks: NavLink[] = [
   { name: 'Trainings', path: '/training', icon: GraduationCap },
   { name: 'Careers', path: '/careers', icon: Users },
   { name: 'Social Impact', path: '/social-impact', icon: Heart },
-  { name: 'Contact', path: '/contact', icon: Mail },
+  { name: 'Contact Us', path: '/contact', icon: Mail },
 ];
 
 const Navbar = () => {

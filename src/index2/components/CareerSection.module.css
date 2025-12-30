@@ -65,7 +65,7 @@
 
 .sectionTitle {
     font-size: clamp(2rem, 5vw, 3.5rem);
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 500;
     margin-bottom: 3rem;
     /* Increased margin */
@@ -78,6 +78,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    padding-bottom: 0.2em;
 }
 
 /* Glassomorphic Job Card */
