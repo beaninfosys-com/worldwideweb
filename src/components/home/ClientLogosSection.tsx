@@ -5,27 +5,27 @@ const ClientLogosSection: React.FC = () => {
   const logoRows = [
     // Row 1 - 5 logos
     [
-      { name: 'Fidelity', logo: 'https://www.beaninfosys.com/img/fidelity-min.png' },
-      { name: 'Benefit', logo: 'https://www.beaninfosys.com/img/benefit-min.png' },
-      { name: 'Toyota', logo: 'https://www.beaninfosys.com/img/toyato.png' },
-      { name: 'Santander', logo: 'https://www.beaninfosys.com/img/santander-min.png' },
-      { name: 'Bristlecone', logo: 'https://www.beaninfosys.com/img/bristlecone-min.png' },
+      { name: 'Fidelity', logo: '/img/fidelity-min.png' },
+      { name: 'Benefit', logo: '/img/benefit-min.png' },
+      { name: 'Toyota', logo: '/img/toyato.png' },
+      { name: 'Santander', logo: '/img/santander-min.png' },
+      { name: 'Bristlecone', logo: '/img/bristlecone-min.png' },
     ],
     // Row 2 - 5 logos
     [
-      { name: 'Eliassen', logo: 'https://www.beaninfosys.com/img/eliassen-min.png' },
-      { name: 'Lions', logo: 'https://www.beaninfosys.com/img/lions-min.png' },
-      { name: 'Oooig', logo: 'https://www.beaninfosys.com/img/oooig-min.png' },
-      { name: 'Apex', logo: 'https://www.beaninfosys.com/img/apex-min.png' },
-      { name: 'Orcasio', logo: 'https://www.beaninfosys.com/img/orcasio-min.png' },
+      { name: 'Eliassen', logo: '/img/eliassen-min.png' },
+      { name: 'Lions', logo: '/img/lions-min.png' },
+      { name: 'Oooig', logo: '/img/oooig-min.png' },
+      { name: 'Apex', logo: '/img/apex-min.png' },
+      { name: 'Orcasio', logo: '/img/orcasio-min.png' },
     ],
     // Row 3 - 5 logos
     [
-      { name: 'Beccon', logo: 'https://www.beaninfosys.com/img/beccon-min.png' },
-      { name: 'Turnery', logo: 'https://www.beaninfosys.com/img/turnery-min.png' },
-      { name: 'SGT', logo: 'https://www.beaninfosys.com/img/sgt.png' },
-      { name: 'Shipium', logo: 'https://www.beaninfosys.com/img/shipium.png' },
-      { name: 'Metricdust', logo: 'https://www.beaninfosys.com/img/metricdust.png' },
+      { name: 'Beccon', logo: '/img/beccon-min.png' },
+      { name: 'Turnery', logo: '/img/turnery-min.png' },
+      { name: 'SGT', logo: '/img/sgt.png' },
+      { name: 'Shipium', logo: '/img/shipium.png' },
+      { name: 'Metricdust', logo: '/img/metricdust.png' },
     ],
   ];
 
