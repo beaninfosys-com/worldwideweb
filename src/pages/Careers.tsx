@@ -182,8 +182,19 @@ const Careers = () => {
               </p>
             </div>
 
+            {/* Job Board iframe */}
+            <iframe
+              id="jobboard-iframe"
+              title="Job Board"
+              src="https://jobdashboard.hireko.ai/boardId/0c8ef557-3458-4784-9e4f-32c30b650f7d?ApiKey=d7f056b03c23-f4e9-4874-8543-755fe8c0eyJzdGFnZSI6ICJwcm9kIiwgInRlbmFudCI6ICJiZWFuaW5mbyJ9"
+              style={{ width: '100%', minHeight: '260vh', border: 'none' }}
+              scrolling="no"
+              allowTransparency={true}
+              allowFullScreen={true}
+            ></iframe>
+
             {/* Filters */}
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
+            {/* <div className="grid md:grid-cols-2 gap-4 mb-8">
               <div>
                 <label className="block mb-2 text-sm font-semibold text-gray-800">Department</label>
                 <select
@@ -208,10 +219,10 @@ const Careers = () => {
                   ))}
                 </select>
               </div>
-            </div>
+            </div> */}
 
             {/* Job Listings */}
-            {filteredJobs.length === 0 ? (
+            {/* {filteredJobs.length === 0 ? (
               <Card className="p-12 text-center bg-white/70 backdrop-blur-md border border-white/30">
                 <Briefcase size={48} className="mx-auto text-gray-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">No positions found</h3>
@@ -263,7 +274,7 @@ const Careers = () => {
                   </Card>
                 ))}
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>
