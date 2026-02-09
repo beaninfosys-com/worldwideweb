@@ -32,7 +32,7 @@ print_red() {
 ###########################################
 setup_aws() {
     print_green "🔑 Initializing AWS CLI profile '${AWS_PROFILE}'..."
-    aws configure list-profiles | grep -q "^${AWS_PROFILE}$" || { 
+    aws configure get aws_access_key_id --profile "${AWS_PROFILE}" &> /dev/null || { 
         print_red "❌ AWS profile '${AWS_PROFILE}' does not exist! Please configure it using: aws configure --profile ${AWS_PROFILE}"
         exit 2
     }

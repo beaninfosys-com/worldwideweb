@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Build the project first
+echo "Building the project..."
+npm run build
+if [ $? -ne 0 ]; then
+    echo "Error: Build failed."
+    exit 1
+fi
+
 # S3 bucket name - hardcoded as requested
 S3_BUCKET_NAME="beaninfosys.com"
 
