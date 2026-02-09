@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import { Briefcase, MapPin, Clock, ArrowRight, Users, Heart, Zap, Lightbulb, Award, Building2 } from 'lucide-react';
 import CTASection from '@/index2/components/CTASection';
+import JobBoard from '@/components/JobBoard';
 
 const Careers = () => {
   const [departmentFilter, setDepartmentFilter] = useState<string>('All');
@@ -183,15 +184,7 @@ const Careers = () => {
             </div>
 
             {/* Job Board iframe */}
-            <iframe
-              id="jobboard-iframe"
-              title="Job Board"
-              src="https://jobdashboard.hireko.ai/boardId/0c8ef557-3458-4784-9e4f-32c30b650f7d?ApiKey=d7f056b03c23-f4e9-4874-8543-755fe8c0eyJzdGFnZSI6ICJwcm9kIiwgInRlbmFudCI6ICJiZWFuaW5mbyJ9"
-              style={{ width: '100%', minHeight: '260vh', border: 'none' }}
-              scrolling="no"
-              allowTransparency={true}
-              allowFullScreen={true}
-            ></iframe>
+            <JobBoard />
 
             {/* Filters */}
             {/* <div className="grid md:grid-cols-2 gap-4 mb-8">
