@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Github,
@@ -99,18 +99,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* India */}
-            <div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900 flex items-start space-x-3">INDIA</h3>
-              <div className="flex items-start space-x-3">
-                {/* Adjusted flag size */}
-                <img src="https://www.beaninfosys.com/img/india.png" height={40} width={60} style={{ minWidth: '70px' }} />
-                {/* Increased text color for better visibility against light gray background and formatted text for alignment */}
-                <span className="text-gray-700 text-xs text-left">
-                  Workafella, Western Aqua 5th Floor #Suite 139,5th Floor, Whitefield's,Hitech City,Hyderabad, Telangana India 500081
-                </span>
-              </div>
-            </div>
           </div>
         </div>
 

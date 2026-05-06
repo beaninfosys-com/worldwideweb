@@ -107,16 +107,7 @@ const Contact = () => {
         "Mckinney, TX, USA 75070"
       ]
     },
-    {
-      icon: <MapPin size={24} color='black' />,
-      title: "India Office",
-      details: [
-        "Workafella, Western Aqua 5th Floor",
-        "#Suite 139, 5th Floor",
-        "Whitefield's, Hitech City",
-        "Hyderabad, Telangana India 500081"
-      ]
-    },
+
     {
       icon: <Mail size={24} color='black' />,
       title: "Email Addresses",
