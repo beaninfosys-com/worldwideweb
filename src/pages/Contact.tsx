@@ -4,7 +4,7 @@ import PageHero from '@/components/layout/PageHero';
 import PageSection from '@/components/layout/PageSection';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
 import CTASection from '@/index2/components/CTASection';
 
 interface FormData {
